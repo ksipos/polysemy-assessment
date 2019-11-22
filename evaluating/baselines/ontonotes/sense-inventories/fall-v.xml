@@ -1,0 +1,350 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="fall-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="descend, decrease" type="">  
+        <commentary>
+            Syntax Is: NP1 FALL (PP)
+            Note: Entails movement, either physical or in measure
+            Includes: FALL AWAY, FALL BACK, FALL BEHIND, FALL DOWN, 
+            FALL IN, FALL OFF, FALL OPEN, FALL OVER
+        </commentary>
+        <examples>
+            The branch fell from the tree.
+            The barometer is falling.
+            The curtain fell on the diva.
+            Rain, snow and sleet were falling.
+            The cabin pressure fell dramatically.
+            Sales fell to 251.2 million from 278.7 million.
+            The vase fell over and water spilled on the floor.
+            He fell to his knees.
+            She fell back in her chair.
+            Her face fell when she heard the news.
+            His eyes fell.
+            State endowments were in part withdrawn, numbers of the clergy fell away.
+            A year after cimbing from worst to first, they fell back to sixth.
+            They danced around until they fell down.
+            The walls of the snowfort fell in.
+            The butten fell off.
+            The real estate market fell off.
+            His jaw fell open.
+            I recently fell over in my garden.
+            He fell back a considerable distance when he saw her up ahead.
+            The Eagles fell behind early and never recovered.
+        </examples>
+        <mappings>
+            <wn version="3.0">1,2,5,11,23,24,26,27</wn>   
+            <wn lemma="fall_away" version="3.0">2</wn>
+            <wn lemma="fall_back" version="3.0">1,2,6</wn>
+            <wn lemma="fall_behind" version="3.0">2</wn>
+            <wn lemma="fall_down" version="3.0">1</wn>
+            <wn lemma="fall_in" version="3.0">1</wn>
+            <wn lemma="fall_off" version="3.0">1,2,3</wn>
+            <wn lemma="fall_open" version="3.0">1</wn>
+            <wn lemma="fall_over" version="3.0">1</wn>
+            <omega/>
+            <pb>fall.01,fall.02</pb>
+            <vn>escape-51.1-2</vn><fn>Change_position_on_a_scale,Motion_directional</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="passively or naturally enter into a state;occur, happen" type="">
+        <commentary>
+            Note: Includes coming into a state of existence (&quot;night fell&quot;)
+            Syntax Includes: 
+            NP1[experiencer] FALL (PP)
+            NP1[experiencer] FALL (ADVP)
+            Includes: FALL ASLEEP, FALL FOR, FALL IN, FALL IN/OUT OF LOVE,
+            FALL INTO PLACE, FALL UNDER
+        </commentary>
+        <examples>
+            She fell ill.
+            We fell into his clutches and paid money to interview him.
+            He fell for the con man's story.
+            This falls into a new category.
+            But then night fell, and sounds started from the nursery.
+            Silence fell upon my lips and my eyes became as distant as theirs.
+            This cd was so boring it made me want to fall asleep!
+            He fell in with the wrong crowd.
+            All the facts finally fell into place, and this allowed us to understand the problem.
+            And from there, everything else fell out nicely without a problem.
+            This concept falls out nicely when using the geometric representation of the data.
+            It fell under the category of extremely dangerous.
+            We fell out over a trivial question.
+            Finally I ran into your website and fell in love with the sets.
+            She fell for the man from Brazil.
+        </examples>
+        <mappings>
+            <wn version="3.0">3,4,32</wn>
+            <wn lemma="fall_asleep" version="3.0">1</wn>
+            <wn lemma="fall_for" version="3.0">1,2</wn>
+            <wn lemma="fall_in" version="3.0">3</wn>
+            <wn lemma="fall_in_love" version="3.0">1</wn>
+            <wn lemma="fall_into" version="3.0">1</wn>
+            <wn lemma="fall_into_place" version="3.0">1</wn>
+            <wn lemma="fall_out" version="3.0">1,2,5</wn>
+            <wn lemma="fall_under" version="3.0">1</wn>
+            <omega/>
+            <pb>fall.01,fall.03,fall.07</pb>
+            <vn>convert-26.6.2</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="3" name="fail, cease, die" type="">
+        <commentary>
+            Includes: FALL AWAY, FALL BACK, FALL BEHIND, FALL BY THE WAYSIDE,
+            FALL FROM GRACE, FALL SHORT, FALL FLAT, FALL THROUGH
+        </commentary>
+        <examples>
+            We must stand or fall.
+            These are fashionable sports which fell by the wayside.
+            Many soldiers fell at Verdum.
+            The cities fell to the enemy.
+            Adam and Eve fell.
+            The government fell overnight.
+            He had fallen from grace in the eyes of republicans.
+            The enemy fell back.
+            As hard as he tried, Phil fell back into a life of addiction.
+            Tell us what books fell flat at your book club, and why.
+            Online customer support fell short during the holidays.
+            The food drive fell short of its goal.
+            Despite their best efforts, the project fell through.
+        </examples>
+        <mappings>
+            <wn version="3.0">6,7,9,12,13,17</wn>
+            <wn lemma="fall_away" version="3.0">1</wn>
+            <wn lemma="fall_back" version="3.0">3,4,6</wn>
+            <wn lemma="fall_behind" version="3.0">1</wn>
+            <wn lemma="fall_by_the_wayside" version="3.0">1</wn>
+            <wn lemma="fall_flat" version="3.0">1</wn>
+            <wn lemma="fall_from_grace" version="3.0">1</wn>
+            <wn lemma="fall_short" version="3.0">1</wn>
+            <wn lemma="fall_short_of" version="3.0">1</wn>
+            <wn lemma="fall_through" version="3.0">1</wn>
+            <omega/>
+            <pb>fall.01,fall.05,fall.06</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="4" name="occur at a particular time/location, contact" type="">
+        <commentary>
+            Syntax Includes:
+            NP1 FALL PP{P NP[location]}
+            NP1 FALL PP[temporal]
+            Note: location may be abstract.
+            Includes: FALL UPON
+        </commentary>
+        <examples>
+            Where his anger fell there fell his sword likewise.
+            Light fell on her face.
+            I fell upon an old photograph today while searching through fileboxes.
+            The accent falls on the first syllable.
+            Christmas falls on a Monday this year.
+            Payments fall on the first of the month.
+        </examples>
+        <mappings>
+            <wn version="3.0">8,10,16</wn>
+            <wn lemma="fall_upon" version="3.0">1</wn>
+            <omega/>
+            <pb>fall.04</pb>
+            <vn>calibratable_cos-45.6-1</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="5" name="be given to, come into the possession of" type="">
+        <commentary>
+            NOTE: Compare to sense 3 (&quot;cities fell to the enemy&quot;)
+            This sense DOES NOT imply failure as sense 3 does.
+        </commentary>
+        <examples>
+            The most difficult task fell to the youngest student.
+            The estate fell to the oldest daughter.
+            The task fell to me.
+            Yeah, it fell to me to show him the light about the girl.
+            The responsibility for passing final judgement on the election fell to the highest official.
+        </examples>
+        <mappings>
+            <wn version="3.0">14,18,19,20,21</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="6" name="emerge, come forth" type="">
+        <commentary>
+            Note: Includes references to birth (used chiefly of lambs)
+            Includes: FALL OUT
+        </commentary>
+        <examples>
+            Silly phrases fell from her mouth.
+            The lambs fell in the afternoon.
+            Grief fell from our hearts.
+            His hair and teeth fell out.
+        </examples>
+        <mappings>
+            <wn version="3.0">28,29,31</wn>
+            <wn lemma="fall_out" version="3.0">3</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7" name="be in a downward position" type="">
+        <commentary>
+            NOTE: compare to sense 1
+            This sense does NOT imply movement.
+        </commentary>
+        <examples>
+            The hills around here fall towards the ocean.
+            Her hair fell about her shoulders.
+            Also the fabric of her dress falls nicely.
+        </examples>
+        <mappings>
+            <wn version="3.0">22,25</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="8" name="vigorously begin" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The prisoners fell to work immediately.
+        </examples>
+        <mappings>
+            <wn version="3.0">30</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="9" name="move in a particular direction" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The line of men fell forward.
+        </examples>
+        <mappings>
+            <wn version="3.0">15</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="10" name="express affection or gratitude, make a show of effort for" type="">
+        <commentary>
+            Includes: FALL ALL OVER, FALL OVER BACKWARDS
+        </commentary>
+        <examples>
+            This student falls all over her former professor when she sees him.
+            She falls over backwards when she sees her mother-in-law.
+        </examples>
+        <mappings>
+            <wn version=""/>
+            <wn lemma="fall_all_over" version="3.0">1</wn>
+            <wn lemma="fall_over_backwards" version="3.0">1</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="11" name="break, separate into pieces" type="">
+        <commentary>
+            Includes: FALL APART
+            Note: Can be used metaphorically
+        </commentary>
+        <examples>
+            She fell apart when her only child died.
+            The Sphinx is falling apart.
+            The freshly baked loaf of bread fell apart when I tried to slice it.
+        </examples>
+        <mappings>
+            <wn version=""/>
+            <wn lemma="fall_apart" version="3.0">1,3,4</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="12" name="become inoperable, dysfunctional" type="">
+        <commentary>
+            Includes: FALL APART
+            Note: Can be used metaphorically
+        </commentary>
+        <examples>
+            The lawn mower finally fell apart.
+        </examples>
+        <mappings>
+            <wn version=""/>
+            <wn lemma="fall_apart" version="3.0">2</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13" name="move into or out of a military formation" type="">
+        <commentary>
+            Includes: FALL IN, FALL OUT
+        </commentary>
+        <examples>
+            Troops, fall in!
+            The soldiers fell out.
+        </examples>
+        <mappings>
+            <wn version=""/>
+            <wn lemma="fall_in" version="3.0">1</wn>
+            <wn lemma="fall_out" version="3.0">2</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="14" name="come to agreement or behave accordingly" type="">
+        <commentary>
+            Includes: FALL IN LINE
+            Syntax Is: NP[agent] FALL IN LINE (PP{with NP})
+        </commentary>
+        <examples>
+            We held out against the tide of the industry but then begrudgingly fell in line.
+            Of course she fell in line. What Bobby tells them to do, they do. 
+        </examples>
+        <mappings>
+            <wn version=""/>
+            <wn lemma="fall_in_line" version="3.0">1</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="15" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="duffielc" sample_score="-"/>
+     
+
+<ita count="473" ann_1_2_agreement="0.758985200846" />
+</inventory>

@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+<inventory lemma="interchange-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="Replace one with another" type="">  
+        <commentary>
+        </commentary>
+        <examples>
+            The con artist interchanged the original with a fake Rembrandt. 
+            Interchange regular mile with fat free milk. 
+            Synonyms can be interchanged without changing the context's meaning. 
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">1</wn>   
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>interchange.01</pb>
+            <vn>NM</vn><fn>NP</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="Change one for another" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            We have been interchanging letters for years. 
+            Interchange this screw for one of a smaller size. 
+            They interchanged guitars.
+            She interchanged gold and silver beads in the bracelet. 
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">2,3</wn>
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>interchange.01</pb>
+            <vn>Amalgamate-22.2-2-1</vn><fn>NP</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="3" name="Reverse course" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The tide interchanged to work against him. 
+            She interchanged and headed west. 
+            Public opinion interchanged when they heard of the scandel. 
+            The trend was interchanged due to teh economic climate. 
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">4</wn>
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>interchange.02</pb>
+            <vn>Amalgamate-22.2-2-1</vn><fn>NP</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="4" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="congerk" sample_score="-"/>
+     
+
+<ita count="27" ann_1_2_agreement="0.518518518519" />
+</inventory>

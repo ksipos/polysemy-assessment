@@ -1,0 +1,590 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="run-v">    
+    <commentary>
+        WordNet 2.1 sense 24 is not included here because it is vague, has no
+        examples, and cannot be grouped into any of these senses with certainty
+    </commentary>
+    <sense group="1" n="1" name="move quickly or freely, travel" type="">  
+        <commentary>
+            may be used metaphorically
+        </commentary>
+        <examples>
+            Don't run or you'll be out of breath!
+            If you see this man, run!
+            Who are these people running around here?
+            She runs around telling everyone her troubles.
+            Just let the dogs run.
+            The children ran amok.
+            She ran ten miles that day.
+            He is running the marathon this year.
+            I just need to run to the store.
+            She ran to the arms of her lover.
+            Savage ran the ball 19 times for 112 yards with a touchdown.
+            The ship once again returned to sea to run the coast between New York and Savannah.
+            Local salmon that run the waters of the Pacific are chinook and coho.
+        </examples>
+        <mappings>
+            <wn version="3.0">1,2,11,14,28,29,33,34,35,37</wn>   
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>run.02</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="2" name="extend over time/space or across a set" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Service runs all the way to Cranbury.
+            The highway from ignorance to knowledge runs both ways.
+            Knowledge runs deep amongst the staff.
+            Musical talent runs in the family.
+            Run the wire behind the cabinet.
+            The film runs five hours.
+            Interest rates run from five to ten percent.
+            Estimates for the losses in the earthquake run as high as two billion.
+            These dresses run small.
+        </examples>
+        <mappings>
+            <wn version="3.0">3,8,12,17,23,30</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>run.04</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="3" name="manage, enact, (cause to) operate" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            She is running a relief operation in the Sudan.
+            They ran the tapes over and over again.
+            Run the dishwasher.
+            Our dishwaser is so quiet that I can't even hear it when it's running.
+            The storyline runs like a stripped down Corvette, there aren't any frills, but it has a lot of balls.
+            That idiot left the car running while he was inside.
+            I can't run Windows on this machine.
+            How do I run a process in the background?
+            The purchasing power argument runs in a slightly different manner.
+            You're the one that always runs the show.
+            I just need to run a quick errand.
+        </examples>
+        <mappings>
+            <wn version="3.0">4,5,7,10,19,13,15,18,21</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>run.01</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="4" name="guide, cause to move along a certain path" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            He ran his eyes over her body.
+            She ran her fingers along the carved figurine.
+            He ran his fingers through her hair.
+        </examples>
+        <mappings>
+            <wn version="3.0">22</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>run.08</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="5" name="flow, as of liquids" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            This stretch of the Missouri runs slow and warm during the summer months.
+            These dyes and colors are guaranteed not to run.
+            He pours hot wax on all wicks, twirling them so that the wax runs evenly.
+            My nose is running.
+        </examples>
+        <mappings>
+            <wn version="3.0">6,27,39</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="6" name="present or perform (be presented); display (be displayed)" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            We ran the ad three times.
+            The story ran for almost a month in the local paper.
+            It's a good idea to run your plan by the program director.
+            Show volunteers run through the show in front of members who critique the performance.
+        </examples>
+        <mappings>
+            <wn version="3.0">20,38</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="7" name="campaign for a certain position" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Who's running for treasurer this year?
+            He announced today that he would run for president.
+        </examples>
+        <mappings>
+            <wn version="3.0">9</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>run.02</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="8" name="be subject to, be affected by" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Rest when you are tired or are running a fever. 
+            You run the danger of damaging your mental and physical health.
+            They actually run a chance of slipping into hypoglycemia.
+        </examples>
+        <mappings>
+            <wn version="3.0">16</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="9" name="keep company" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            He runs with a bad crowd.
+            The heifers run with the bulls to produce offspring.
+        </examples>
+        <mappings>
+            <wn version="3.0">32</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="10" name="trade illegally" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Grandma ran drugs to support her bingo habit.
+            Running moonshine on the back roads was not a job for the fainthearted.
+        </examples>
+        <mappings>
+            <wn version="3.0">25</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>run.08</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="11" name="cause animals to move" type="">
+        <commentary>
+            used of animals in specific domains
+            includes forcing animals to run in a certain path (as of sled dogs, or racehorses)
+            allowing animals to roam free to graze; also includes dogs running wild animals
+            being hunted
+        </commentary>
+        <examples>
+            The handlers ran their dogs around the track.
+            The dogs ran the deer, and the hunters shot them.
+            It's not because he's a cheater, it's because he runs horses where they can win.
+            I run cattle on rolling hills with very little standing water.
+            The Fairbanks area in one of the best places in the world to run sled dogs.
+        </examples>
+        <mappings>
+            <wn version="3.0">26,31,36</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>run.08</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="12" name="unravel" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            I can see heels and pearls flying, hear dresses ripping, nylons running!
+            If snagging happens, simply snip off the loop and the snag won't run.
+        </examples>
+        <mappings>
+            <wn version="3.0">40,41</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="13.1" name="move quickly, run in a particular direction" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The kids ran around all day.
+            Did your dog just run by?
+            I said hello, and he ran off.
+            She ran out of the room crying.
+        </examples>
+        <mappings>
+            <gr_sense>1</gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="run_around" version="3.0">1</wn>
+            <wn lemma="run_by" version="3.0">1</wn>
+            <wn lemma="run_off" version="3.0">2</wn>
+            <wn lemma="run_out" version="3.0">3</wn>
+            <omega></omega><pb>run.02</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.2" name="flee, escape control" type="">
+        <commentary>
+            Includes: RUN AWAY; RUN OFF
+        </commentary>
+        <examples>
+            Did you ever run away from home when you were a kid?
+            Inflation is running away.
+            Mark ran off with his brother's stamp collection.
+            She ran off with Steve to get married.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_away" version="3.0">1,2</wn>
+            <wn lemma="run_off" version="3.0">1,4</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.3" name="flow (in a certain direction or with a certain result)" type="">
+        <commentary>
+            Includes: RUN DOWN; RUN OFF; RUN OUT; RUN OVER
+        </commentary>
+        <examples>
+            Water ran down the outside of the glass.
+            The sewage ran off into the river.
+            Gasoline ran out of the leaky tank bit by bit.
+            The bathtub ran over.
+        </examples>
+        <mappings>
+            <gr_sense>5</gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="run_down" version="3.0">2</wn>
+            <wn lemma="run_off" version="3.0">5</wn>
+            <wn lemma="run_out" version="3.0">2,5</wn>
+            <wn lemma="run_over" version="3.0">2</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.4" name="(cause to) become empty or exhusted of something" type="">
+        <commentary>
+            Includes: RUN DOWN; RUN DRY; RUN LOW; RUN OUT; RUN SHORT; RUN THROUGH
+        </commentary>
+        <examples>
+            I ran myself down during exam week.
+            They ran down their savings when they renovated their kitchen.
+            The keg ran dry half-way through the party.
+            We're running low on sugar.
+            She seemed to run out of energy near the end of the race.
+            My passport ran out last month.
+            The rice stores ran out before the next crop came in.
+            I am running short of patience!
+            They ran through their office supplies by June.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_down" version="3.0">4,6</wn>
+            <wn lemma="run_dry" version="3.0">1</wn>
+            <wn lemma="run_low" version="3.0">1</wn>
+            <wn lemma="run_out" version="3.0">1,4,6,7,8</wn>
+            <wn lemma="run_short" version="3.0">1</wn>
+            <wn lemma="run_through" version="3.0">2</wn>
+            <omega></omega><pb>run.05</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.5" name="meet, encounter" type="">
+        <commentary>
+            Includes: RUN ACROSS; RUN INTO
+        </commentary>
+        <examples>
+            She ran across some old college friends.
+            I ran into Sam yesterday at the hardware store.
+            They ran into several problems with the software.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_across" version="3.0">1</wn>
+            <wn lemma="run_into" version="3.0">1,4</wn>
+            <omega></omega><pb>run.07</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.6" name="injure or kill by traveling over" type="">
+        <commentary>
+            Includes: RUN DOWN; RUN OVER
+        </commentary>
+        <examples>
+            George was run down by a Toyota last night.
+            I accidentally ran over a squirrel.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_down" version="3.0">3</wn>
+            <wn lemma="run_over" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.7" name="extend or continue for a certain amount of time" type="">
+        <commentary>
+            Includes: RUN FOR; RUN ON
+        </commentary>
+        <examples>
+            The movie ran for three hours.
+            That meeting ran on for half the day.
+            Boy, can he run on!
+        </examples>
+        <mappings>
+            <gr_sense>2</gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="run_for" version="3.0">1</wn>
+            <wn lemma="run_on" version="3.0">1,2</wn>
+            <omega></omega><pb>run.04</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.8" name="RUN AFOUL--go against, conflict with" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            He ran afoul of the law.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_afoul" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.9" name="RUN AGROUND--(cause to) come to the ground" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The storm ran the ship aground.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_aground" version="3.0">1,2</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.10" name="RUN ALONG--be in line with" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Oaks run all along the drive.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_along" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.11" name="pursue until caught or found" type="">
+        <commentary>
+            Includes: RUN DOWN
+        </commentary>
+        <examples>
+            The sheriff ran down the suspect in the mall parking lot.
+            I ran down those figures you wanted.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_down" version="3.0">1,7</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.12" name="scan" type="">
+        <commentary>
+            Includes: RUN DOWN
+        </commentary>
+        <examples>
+            She ran down the list, looking for his name.
+        </examples>
+        <mappings>
+            <gr_sense>4</gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="run_down" version="3.0">5</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.13" name="collide" type="">
+        <commentary>
+            Includes: RUN INTO
+        </commentary>
+        <examples>
+            My son ran into a bench his first day with a driver's license.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_into" version="3.0">2,3</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.14" name="drive out" type="">
+        <commentary>
+            Includes: RUN OFF
+        </commentary>
+        <examples>
+            He ran off the trespassers with his shotgun.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_off" version="3.0">3</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.15" name="photocopy" type="">
+        <commentary>
+            Includes: RUN OFF
+        </commentary>
+        <examples>
+            Will you run off 50 copies of this brochure?
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_off" version="3.0">6</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.16" name="decide by a runoff" type="">
+        <commentary>
+            Includes: RUN OFF
+        </commentary>
+        <examples>
+            We'll run off ten finalists to determine the winner.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_off" version="3.0">7</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.17" name="RUN UP--accumulate, increase" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            They ran up the score on their rivals.
+            He ran up considerable debt gambling.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_up" version="3.0">1,4</wn>
+            <omega></omega><pb>run.06</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.18" name="RUN UP--hoist" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The pirates ran up the Jolly Roger, a flag that struck fear into the hearts of many sailors.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_up" version="3.0">2</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.19" name="RUN UP--sew" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            I can run up a skirt for you in no time.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_up" version="3.0">3,5</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="13.20" name="multiword expressions" type="">
+        <commentary>
+            RUN A RISK: gamble, put at risk
+            RUN BASES: baseball term, run around the bases
+            RUN ROUGHSHOD: treat inconsiderately or roughly
+        </commentary>
+        <examples>
+            He's running a risk by letting you in after hours.
+            He ran the bases and tied the score.
+            My mother-in-law runs roughshod over my feelings.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="run_a_risk" version="3.0">1</wn>
+            <wn lemma="run_bases" version="3.0">1</wn>
+            <wn lemma="run_roughshod" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="13.21" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    
+<sense group="1" n="14" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="duffielc,brownsw" sample_score="-"/>
+     
+
+<ita count="554" ann_1_2_agreement="0.808664259928" />
+</inventory>

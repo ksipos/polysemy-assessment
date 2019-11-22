@@ -1,0 +1,24 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="lack-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="be missing or deficiant, be in need or without" type="">  
+        <commentary>
+        </commentary>
+        <examples>
+            This soup lacks salt.
+            He just lacks a little confidence.
+            What we lack in this house is space to store things.
+            We are lacking three members of staff due to illness.
+        </examples>
+        <mappings>
+            <wn version="3.0">1</wn>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <WORD_META authors="hwangd" sample_score="-"/>
+     
+
+<ita count="91" ann_1_2_agreement="1.0" />
+</inventory>

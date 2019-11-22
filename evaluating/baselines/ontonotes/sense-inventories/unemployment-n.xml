@@ -1,0 +1,53 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="unemployment-n">
+    <commentary>
+        
+    </commentary>
+    
+    <sense group="1" n="1" name="not working" type="State">
+        <commentary>
+            the state of being unemployed or not having a job
+        </commentary>
+        <examples>
+            Unemployment is a serious social evil.
+            The rate of unemployment is an indicator of the health of an economy.
+        </examples>
+        <mappings>
+            <wn version="2.0">1</wn>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="2" name="number of people who are not working" type="">
+        <commentary>
+            the number of people who are not employed
+        </commentary>
+        <examples>
+            Unemployment was up considerably this year.
+        </examples>
+        <mappings>
+            <wn version="2.0">-</wn>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <!-- more senses go here -->
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="ajarrett" sample_score=""/>
+
+<ita count="16" ann_1_2_agreement="0.9375" />
+</inventory>

@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+<inventory lemma="elicit-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="evoke an emotion or a response" type="">  
+        <commentary>
+        </commentary>
+        <examples>
+            Emylie elicited fear because she's kind of mean and scary.
+            The professor elicited respect from her students.
+            The break up elicited strong sadness from the young girl.
+            Brutal attacks elicit retaliation from opposing forces.
+            Finals elicit stress from all overworked students.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0"></wn>   
+            <wn lemma="" version="3.0">1</wn>
+            <omega></omega><pb>elicit.01</pb>
+            <vn>NP</vn><fn>Cause_to_start</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="draw out information" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Students elicit information during lecture.
+            Linguists elicit sentences for analysis.
+            The young children were eliciting answers from the teacher.
+            The army elicits information through interrogation.
+            The video elicited a plethora of answers for the trainees.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="" version="3.0">2,3</wn>
+            <omega></omega><pb>elicit.01</pb>
+            <vn>NP</vn><fn>Cause_to_start</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="donaldpl" sample_score="-"/>
+     
+
+<ita count="112" ann_1_2_agreement="0.892857142857" />
+</inventory>

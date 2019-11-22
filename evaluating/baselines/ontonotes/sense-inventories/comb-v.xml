@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+<inventory lemma="comb-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="Physically smoothen, neaten, or straighten,
+   as with a comb." type="">  
+        <commentary>
+            Includes: COMB OUT
+            Syntax Includes:
+            NP1[agent] COMB NP2[patient]
+            NP1[instrument] COMB NP2[patient]
+        </commentary>
+        <examples>
+            Comb your hair before going outside!
+            Workers comb out the wool. 
+            The women comb the yarn in preparation for spinning.
+            The wine bristles comb the hair neatly.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">1,3</wn>   
+            <wn lemma="comb_out" version="3.0">2</wn>
+            <omega></omega><pb>comb.02</pb>
+            <vn>braid-41.2.2,wipe_instr-10.4.2-1</vn><fn>Grooming</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="Search an area thoroughly for a sought entity." type="">
+        <commentary>
+        </commentary>
+        <examples>
+            They combed the area for the missing child.
+            We combed the neighborhood for that dog. 
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">2</wn>
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>comb.01</pb>
+            <vn>search-35.2</vn><fn>Scrutiny,Scouring,Seeking</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="3" name="Remove unwanted elements." type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The company combed out the incompetent people.
+            The new law combs out the old inequities.
+            The process combs out impurities in the solution.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="comb_out" version="3.0">1</wn>
+            <omega></omega><pb>NM</pb>
+            <vn>NM</vn><fn>Scouring,Scrutiny,Seeking</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="4" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="corvey" sample_score="-"/>
+     
+
+<ita count="7" ann_1_2_agreement="0.857142857143" />
+</inventory>

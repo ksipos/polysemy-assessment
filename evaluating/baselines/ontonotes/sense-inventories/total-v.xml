@@ -1,0 +1,52 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="total-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="add up, amount to, sum up, tally" type="">  
+        <commentary>
+            Includes: TOTAL UP
+        </commentary>
+        <examples>
+            &quot;His medical bills totaled just under $500.&quot;
+            &quot;In the end, the export totaled 28.6 thousand tons.&quot;
+            &quot;The length of the object totals 2.7 meters.&quot;
+            &quot;Present the coupon before they total your bill.&quot;
+            &quot;Total the number of hours you spent working on this project.&quot;
+        </examples>
+        <mappings>
+            <wn version="3.0">1,2</wn>   
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="damage beyond the point of repair" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            &quot;My son totaled our new car.&quot;
+            &quot;The rock start totals his guitar at every concert.&quot;
+        </examples>
+        <mappings>
+            <wn version="3.0">3</wn>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="hwangd" sample_score="-"/>
+     
+
+<ita count="179" ann_1_2_agreement="1.0" />
+</inventory>

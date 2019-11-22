@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+<inventory lemma="groom-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="give a neat appearance to, neaten" type="">  
+        <commentary>
+            Syntax Is: NP1[agent] GROOM NP2[patient[animate]]
+        </commentary>
+        <examples>
+            He fed and groomed the horses that would be used in the battles.
+            He groomed himself incessantly.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">2,3</wn>   
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>NP</pb>
+            <vn>groom-41.1.2</vn><fn>Grooming</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="prepare, train" type="">
+        <commentary>
+            Syntax Is: NP1[agent[human]] GROOM NP2[patient]
+        </commentary>
+        <examples>
+            Dennis Gossard balks at the suggestion he groomed his son to be a
+            blue-chip quarterback.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">1</wn>
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>NP</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="greenlm" sample_score="-"/>
+     
+
+<ita count="1" ann_1_2_agreement="1.0" />
+</inventory>

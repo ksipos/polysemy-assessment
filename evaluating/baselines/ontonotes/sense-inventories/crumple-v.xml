@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+<inventory lemma="crumple-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="Fall apart; break into pieces." type="">  
+        <commentary>
+            Note: May be metaphorical.   
+        </commentary>
+        <examples>
+            The building crumpled after the explosion. 
+            The cookie crumpled in my hands. 
+            Negotiations crumpled.  
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">1</wn>   
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="(Cause to) gather together, become compact,
+         or collapse (without breaking into pieces)." type="">
+        <commentary>
+        </commentary>
+        <examples>
+            His knees crumpled and he sat down.
+            She crumpled her lips together.
+            This fabric won't crumple so there's no need to iron.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">2,3,4</wn>
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>crumple.01</pb>
+            <vn>bend-45.2,carve-21.2-1</vn><fn></fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="corvey" sample_score="-"/>
+     
+
+<ita count="2" ann_1_2_agreement="1.0" />
+</inventory>

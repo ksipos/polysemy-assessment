@@ -1,0 +1,24 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="decrease-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="diminish, lessen" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The atmosphere decreases as you go higher.
+            The deficit was decreased by 20 percent with the booming economy.
+            They will be decreasing the staff in three departments next month.
+        </examples>
+        <mappings>
+            <wn version="3.0">1,2</wn>
+            <omega/>
+            <pb>decrease.01</pb>
+            <vn>calibratable_cos-45.6-1,other_cos-45.4</vn>
+            <fn>Change_position_on_a_scale,Cause_change_of_scalar_position</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <WORD_META authors="ahouston" sample_score="-"/>
+
+<ita count="54" ann_1_2_agreement="0.981481481481" />
+</inventory>

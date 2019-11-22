@@ -1,0 +1,54 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="rename-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="give a new name to" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            They renamed everything after their politicians.
+            National College was renamed National American University.
+            The village of Porkhovo was renamed to Yanovo.
+        </examples>
+        <mappings>
+            <gr_sense/>
+            <wn version="3.0">1</wn>
+            <wn lemma="" version="3.0"/>
+            <omega/>
+            <pb>rename.01</pb>
+            <vn/>
+            <fn/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="appoint again" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            He was renamed to another two-year term in 1999.
+        </examples>
+        <mappings>
+            <gr_sense/>
+            <wn version="3.0">2</wn>
+            <omega/>
+            <pb/>
+            <vn/>
+            <fn/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="brownsw" sample_score="-"/>
+
+<ita count="12" ann_1_2_agreement="0.833333333333" />
+</inventory>

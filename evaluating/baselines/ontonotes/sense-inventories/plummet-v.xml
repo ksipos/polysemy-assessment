@@ -1,0 +1,25 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="plummet-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="drop or fall sharply" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Market share may have plummeted.
+            Support for the US-led war on terror has plummeted in Spain.
+            The Asbury Park Press plummeted after Gannett bought it from independent ownership.
+            He plummeted from the airplane.
+        </examples>
+        <mappings>
+            <wn version="3.0">1</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <WORD_META authors="duffielc" sample_score="-"/>
+
+<ita count="60" ann_1_2_agreement="1.0" />
+</inventory>

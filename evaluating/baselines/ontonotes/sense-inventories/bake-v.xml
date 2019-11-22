@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+<inventory lemma="bake-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="cook and make edible by putting in a hot oven" type="">  
+        <commentary>
+        </commentary>
+        <examples>
+            Xavier baked a cake in the oven.
+            Julie baked muffins for the president.
+            Steve loves to bake in his kitchen.     
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">1,2</wn>   
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>bake.01</pb>
+            <vn>build-26.1,cooking-45.3,preparing-26.3</vn><fn>Cooking_creation</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="heat by a natural force" type="">
+        <commentary>
+            NOTE:  Compare to sense 3.  NP1 of sense 2 has "actor" status, whereas NP1
+            of sense 3 has "undergoer" status.
+            
+            INCLUDES:  NP1[-animate] BAKE NP2 (PP)
+        </commentary>
+        <examples>
+            The sun bakes the valley in the summer.
+            The heat of the humid, hazy afternoon baked the churchgoers.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">3</wn>
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>NM</pb>
+            <vn>NM</vn><fn>Apply_heat</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="3" name="be very hot, due to hot weather or exposure
+         to the sun" type="">
+        <commentary>
+            INCLUDES:  NP1 BAKE PP{P NP[-animate]}
+        </commentary>
+        <examples>
+            The town was baking in the sun.
+            My fair, Irish skin will surely bake if I don't use SPF 90! 
+            The churchgoers baked in the heat of the humid, hazy afternoon.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">4</wn>
+            <wn lemma="" version="3.0"></wn>
+            <omega></omega><pb>NM</pb>
+            <vn>NM</vn><fn>Absorb_heat</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="4" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="gouldk " sample_score="-"/>
+     
+
+<ita count="4" ann_1_2_agreement="0.5" />
+</inventory>

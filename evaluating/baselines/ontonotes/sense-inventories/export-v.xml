@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory
+  SYSTEM 'inventory.dtd'>
+<inventory lemma="export-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="sell or transport an item or idea abroad" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Will they export this computer model to Asia?
+            The rebels were trying to export their revolution to neighboring countries.
+        </examples>
+        <mappings>
+            <wn version="3.0">1,3</wn>
+            <omega/>
+            <pb>export.01</pb>
+            <vn>NP</vn><fn>Import_export,Sending</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="transfer data into a format usable by other programs" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Export your data to avoid recalculating it after restoring it in QA.
+        </examples>
+        <mappings>
+            <wn version="3.0">2</wn>
+            <omega/>
+            <pb>export.01</pb>
+            <vn>NP</vn><fn>Import_export,Sending</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="ahouston,greenlm" sample_score="-"/>
+
+<ita count="62" ann_1_2_agreement="0.854838709677" />
+</inventory>

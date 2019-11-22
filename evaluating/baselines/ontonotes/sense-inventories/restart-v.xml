@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+<inventory lemma="restart-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="to start again (after an interruption)" type="">  
+        <commentary>
+        </commentary>
+        <examples>
+            I just restarted the computer and it fixed itself.
+            The Quail Valley council will be restarted this Saturday. 
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0">1,2</wn>   
+            <wn lemma="" version=""></wn>
+            <omega></omega><pb>restart.01</pb>
+            <vn></vn><fn>Activity_resume</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <WORD_META authors="clarklm" sample_score="-"/>
+     
+
+<ita count="12" ann_1_2_agreement="1.0" />
+</inventory>

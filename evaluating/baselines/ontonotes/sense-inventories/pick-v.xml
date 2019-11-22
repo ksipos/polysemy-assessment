@@ -1,0 +1,332 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="pick-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="select carefully from a group" type="">
+        <commentary>
+            NOTE: be careful not to include the VPC PICK_OUT in this sense
+            (even though it has a similar meaning)--for all VPCs, choose the 
+            last sense
+        </commentary>
+        <examples>
+            She finally picked her successor.
+            Sports Illustrated ruffled feathers when they picked the Panthers to win the Super Bowl.
+            Hovind insisted that he pick the judges himself without any confirmation of their neutrality.
+            Looks like I picked the wrong week to quit sniffing glue.
+        </examples>
+        <mappings>
+            <wn version="3.0">1</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>pick.01</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="look for and gather/pluck" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Shuksan and Rainier strawberries are picked fresh daily and are of commercial quality.
+            If you picked the flowers from the parking lot at work you lose points.
+            I picked the vegetables from the vine myself and brought them to you!
+        </examples>
+        <mappings>
+            <wn version="3.0">2</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>pick.01</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="3" name="lightly pluck or hit at" type="">
+        <commentary>
+            Note: can be used metaphorically
+            Includes: PICK ON
+        </commentary>
+        <examples>
+            After slow-cooking, you can easily pick the meat off the bone.
+            Remove the leg quarters from the pan and pick the bones clean.
+            Presley's Vince Everett learns how to pick a guitar while doing time in Jailhouse Rock.
+            She just picked her sandwich, but never really ate anything.
+            Quit picking on me!
+            I've got a bone to pick with you.
+        </examples>
+        <mappings>
+            <wn version="3.0">3,5,6,9,11,12</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>pick.02,pick.07</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="4" name="steal" type="">
+        <commentary>
+            Note: used in the idiomatic expression &quot;pick pockets&quot;
+        </commentary>
+        <examples>
+            How now, Dame Partlet, have you inquired yet who picked my pocket?
+        </examples>
+        <mappings>
+            <wn version="3.0">7</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="5" name="strike hard" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The next day we chopped and picked the ice out and built fires inside.
+            The skater picked the ice with her skate.
+        </examples>
+        <mappings>
+            <wn version="3.0">10</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="6" name="trigger, incite (an argument)" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            If you're gonna pick a fight with a technology cult, for Pete's sake, don't go after the Linux nerds.
+        </examples>
+        <mappings>
+            <wn version="3.0">4</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.1" name="physically lift" type="">
+        <commentary>
+            Includes: PICK UP
+            NOTE: This sense is reserved only for the physical act of lifting.
+        </commentary>
+        <examples>
+            If she starts to cry, pick her up and give her a cuddle.
+            I went to pick up the receiver, but it had stopped ringing.
+            He picked the book up from the table and held it in his hands.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_up" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.2" name="get, acquire, gather, or collect" type="">
+        <commentary>
+            Includes: PICK UP
+        </commentary>
+        <examples>
+            He picked up the book and started to read.
+            Have you ever picked up a hitchhiker?
+            She picked up the children at the day care center.
+            Where should he go in the waning hours of the campaign to pick up more votes?
+            I picked up some food for snack.
+            I really picked up a bargain during the weekend sale.
+        </examples>
+        <mappings>
+            <gr_sense>2</gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_up" version="3.0">2,3,4,6,8</wn>
+            <omega></omega><pb>pick.04</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.3" name="notice or perceive; learn without being taught" type="">
+        <commentary>
+            Includes: PICK UP
+        </commentary>
+        <examples>
+            In most cases people are able to pick up the signal within a day.
+            I was always the one that picked up the smell of the flats first. 
+            Police dogs picked up the scent of the two men from clothes they had left behind.
+            She is quick on picking up on the seasonal trends.
+            Someone is bound to pick up you are new to this job.
+            When you live in a country you soon pick up the language.
+        </examples>
+        <mappings>
+            <wn lemma="pick_up" version="3.0">5,9,14</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.4" name="increase or improve" type="">
+        <commentary>
+            Includes: PICK UP
+        </commentary>
+        <examples>
+            The wind picked up late Saturday afternoon.
+            I'm hoping that the number will pick up as soon as this season is over.
+            I watched it at a very low time in my life and it picked up my spirits.
+            Her performance in school really picked up.
+            Her acting career picked up as she started appearing in sitcoms.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_up" version="3.0">12,13,16</wn>
+            <omega></omega><pb>pick.05</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.5" name="emphasize" type="">
+        <commentary>
+            Includes: PICK UP, PICK OUT
+        </commentary>
+        <examples>
+            The lettering was later picked out in gold lustre.
+            The scarf picks up the color of the skirt.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_up" version="3.0">10</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.6" name="recognize, choose, and take from a selection" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            It is easy for them to pick off the most lucrative business and ignore the rest.
+            I scan through daily and pick off the best articles.
+            At the shop, Jen picked out a red tea named chocolate mint over ice.
+            Can you pick out the three deliberate mistakes in this paragraph?
+            The critics picked him out as the outstanding male dancer of the decade.
+            They hang around until the fish are thoroughly picked over in February.
+        </examples>
+        <mappings>
+            <gr_sense>1</gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_off" version="3.0">2</wn>
+            <wn lemma="pick_out" version="3.0">1,2</wn>
+            <wn lemma="pick_over" version="3.0">1</wn>
+            <omega></omega><pb>pick.03</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.7" name="criticize; find fault with" type="">  
+        <commentary>
+            Includes: PICK APART, PICK AT
+        </commentary>
+        <examples>
+            My master picked his defenses apart with ruthless efficiency.
+            You fail to see the main points and want to pick apart the argument devoid of context.
+            He picked at the way in which the papers were not referenced correctly.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>   
+            <wn lemma="pick_apart" version="3.0">1</wn>
+            <wn lemma="pick_at" version="3.0">3</wn>
+            <omega></omega><pb>pick.02</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.8" name="lightly pluck or hit at" type="">
+        <commentary>
+            Includes: PICK AT
+        </commentary>
+        <examples>
+            He shook his head and picked at the dust between his feet.
+            Stop picking at your face and make it bleed.
+            Often he sat alone and just picked at his food. 
+        </examples>
+        <mappings>
+            <gr_sense>3</gr_sense>
+            <wn lemma="pick_at" version="3.0">1,2</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.9" name="arrest" type="">
+        <commentary>
+            Includes: PICK UP
+        </commentary>
+        <examples>
+            He was picked up by the police for drug dealing.
+            The police picked her up just outside Canterbury.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_up" version="3.0">7</wn>
+            <omega></omega><pb>pick.09</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.10" name="make sexual or romantic advances" type="">
+        <commentary>
+            Includes: PICK UP
+        </commentary>
+        <examples>
+            In the '70s, you picked up women by blowing cigarette smoke in their face.
+            A man works odd jobs, picks up women, and drinks.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_up" version="3.0">11</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.11" name="shoot or target one by one" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            I fired, raising a sweat as I picked the targets off again without a miss.
+            Most of the chickens that roosted outside soon got picked off by various predators.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_off" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7.12" name="accept a challenge" type="">
+        <commentary>
+            Includes: PICK UP THE GAUNTLET
+        </commentary>
+        <examples>
+            He is bound to pick up the gauntlet thrown down by McClaren.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="pick_up_the_gauntlet" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="7.13" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+<sense group="1" n="8" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="duffielc, vieweg" sample_score="-"/>
+
+<ita count="169" ann_1_2_agreement="0.727810650888" />
+</inventory>

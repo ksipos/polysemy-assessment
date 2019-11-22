@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="rebuild-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="build again" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            They will rebuild the ancient ruins.
+            How can we ever hope to rebuild the devastated spirits of those children?
+            When it was destroyed by fire, the owners rebuilt a new property in 1923.
+        </examples>
+        <mappings>
+            <gr_sense/>
+            <wn version="3.0">1</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>rebuild.01</pb>
+            <vn/>
+            <fn/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <WORD_META authors="duffielc" sample_score="-"/>
+
+<ita count="38" ann_1_2_agreement="0.973684210526" />
+</inventory>

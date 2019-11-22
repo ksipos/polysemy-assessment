@@ -1,0 +1,71 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="shore-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="support" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Shayne's ponds are dug on the coastal flatlands, shored by timbering and fed by a canal.
+            They shored up their arguments with any shred of evidence they could find.
+            How do we shore up our sagging profits?
+            Rick shored up the dock with the remaining timber.
+        </examples>
+        <mappings>
+            <gr_sense/>
+            <wn version="3.0">3</wn>
+            <wn lemma="shore_up" version="3.0">1</wn>
+            <omega/>
+            <pb>shore.01</pb>
+            <vn/>
+            <fn/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="land on shore" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Theladas' ship shored on Stea shortly after being attacked.
+        </examples>
+        <mappings>
+            <gr_sense/>
+            <wn version="3.0">2</wn>
+            <omega/>
+            <pb/>
+            <vn/>
+            <fn/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="3" name="serve as a shore to" type="">
+        <commentary>
+            Note: No attested examples could be found.
+        </commentary>
+        <examples>
+        </examples>
+        <mappings>
+            <gr_sense/>
+            <wn version="3.0">1</wn>
+            <omega/>
+            <pb/>
+            <vn/>
+            <fn/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="4" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="brownsw" sample_score="-"/>
+
+<ita count="15" ann_1_2_agreement="0.933333333333" />
+</inventory>

@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+<inventory lemma="scorch-v">    
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="make hot and dry, become singed" type="">  
+        <commentary>
+            Syntax Includes:
+        </commentary>
+        <examples>
+            The heat scorched the countryside.
+            The exposed tree scorched in the hot sun.
+            The sun scorched the grass.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0"></wn>   
+            <wn lemma="" version="3.0">1,5</wn>
+            <omega></omega><pb>NP</pb>
+            <vn>Other_cos-45.4</vn><fn>NP</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="become superficially burned" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            My eyebrows scorched when I bent over the flames.
+            The cat was scorched when she walked too close to the fire.
+            The iron scorched the hair on my arm.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="" version="3.0">2</wn>
+            <omega></omega><pb>NP</pb>
+            <vn>Other_cos-45.4</vn><fn>NP</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="3" name="burn slightly to affect color" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The cook scorched the chicken for his blackened chicken salad.
+            The flames scorched the cieling.
+            The fire scorched the wood above the mantlepiece.
+            The shirt was scorched a nasty yellow color.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="" version="3.0">4</wn>
+            <omega></omega><pb>NP</pb>
+            <vn>Other_cos-45.4</vn><fn>Absorb_heat</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="4" name="destroy completely, as if by fire" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The wildfire scorched the forest and several villages.
+            The invaders scorched the land.
+            The bosque was scorched from end to end.
+        </examples>
+        <mappings>
+            <gr_sense></gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="" version="3.0">3</wn>
+            <omega></omega><pb>scorch.01</pb>
+            <vn>Other_cos-45.4</vn><fn>NP</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="5" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="donaldpl" sample_score="-"/>
+     
+
+<ita count="20" ann_1_2_agreement="0.4" />
+</inventory>

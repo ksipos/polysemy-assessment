@@ -1,0 +1,67 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="slash-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="cut with violent motions" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            
+        </examples>
+        <mappings>
+            <wn version="3.0">1,2,3</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>slash.01</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="2" name="reduce drastically" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Mobile phone roaming fees have been slashed.
+            Pilot training time has been slashed.
+            Canada's Conservative government slashed funds for environmental programs.
+        </examples>
+        <mappings>
+            <wn version="3.0">4</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>slash.02</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="3" name="thrash about" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Link made not a sound as he slashed around.
+            Trick's legs slashed around and almost hit some gray-haired guy wearing a suit.
+        </examples>
+        <mappings>
+            <wn version="3.0">5</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+<sense group="1" n="4" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="duffielc" sample_score="-"/>
+
+<ita count="44" ann_1_2_agreement="0.886363636364" />
+</inventory>

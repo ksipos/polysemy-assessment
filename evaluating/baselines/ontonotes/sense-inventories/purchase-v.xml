@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="purchase-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="buy, obtain via finacncial transaction" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            He is purchasing that lot for ten thousand dollars.
+            He couldn't purchase her loyalty for any price.
+            Can a stairway to heaven be purchased?
+        </examples>
+        <mappings>
+            <wn version="3.0">1</wn>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <WORD_META authors="ahouston" sample_score="-"/>
+
+<ita count="208" ann_1_2_agreement="0.990384615385" />
+</inventory>

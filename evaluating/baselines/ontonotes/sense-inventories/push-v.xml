@@ -1,0 +1,205 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="push-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="press, exert force upon" type="">
+        <commentary>
+            Syntax is: NP1[agent] PUSH (NP2[patient])
+            Note: may be abstract, as in exerting psychological pressure on someone
+        </commentary>
+        <examples>
+            He pushed the table into a corner.
+            She pushed against the wall with all her strength.
+            He pushed her to finish her doctorate.
+            He is pushing his body insanely to the limits.
+        </examples>
+        <mappings>
+            <wn version="3.0">1,2,5</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>push.01,push.02</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="2" name="strive toward a goal" type="">
+        <commentary>
+            Syntax Includes:
+            NP1 PUSH (PP[temporal]) COMP
+            NP1 PUSH (PP[temporal]) PP{for NP}
+        </commentary>
+        <examples>
+            She pushed for years to make a decent living.
+            The liberal party pushed for reforms.
+            The dean is pushing for his favorite candidate.
+        </examples>
+        <mappings>
+            <wn version="3.0">4,7,9</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>push.02</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="3" name="sell, attempt to sell" type="">
+        <commentary>
+            Syntax is: NP1[agent] PUSH NP2[patient]
+        </commentary>
+        <examples>
+            The salesman is aggressively pushing the new computer model.
+            The guy hanging around the school is pushing drugs.
+            I worked my regular job then pushed Amway in the evenings.
+        </examples>
+        <mappings>
+            <wn version="3.0">3,8</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>push.01</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="4" name="approach a certain measurement, whether of age, speed, temperature, etc." type="">
+        <commentary>
+            Syntax is: NP1[agent[human]] BE PUSHING NP2
+        </commentary>
+        <examples>
+            Well, for a guy pushing fifty, I guess that's about as best as you can do.
+            I'm pushing sixty-five in a fifty when I see flashing lights behind me.
+            In those canyons, it was pushing 100 degrees.
+            Spiderman had been around for twenty-five years or so, but Superman and Batman were both pushing fifty.
+        </examples>
+        <mappings>
+            <wn version="3.0">6</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>push.03</pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="5" name="make strenuous efforts during birth" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            &quot;Now push hard!&quot; the doctor said to the woman.
+        </examples>
+        <mappings>
+            <wn version="3.0">10</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    <sense group="1" n="6.1" name="attempt to move something in a particular direction through force" type="">
+        <commentary>
+            Includes: PUSH AWAY, PUSH BACK, PUSH DOWN, PUSH UP
+        </commentary>
+        <examples>
+            She pushed him away and said, "Leave me alone."
+            They pushed back the opposing forces.
+            I pushed him down as the bullets sailed over our heads.
+            They pushed up on the hatch until it popped open.
+        </examples>
+        <mappings>
+            <gr_sense>1</gr_sense>
+            <wn version="3.0"></wn>
+            <wn lemma="push_away" version="3.0">1</wn>
+            <wn lemma="push_back" version="3.0">1</wn>
+            <wn lemma="push_down" version="3.0">1</wn>
+            <wn lemma="push_up" version="3.0">1,2</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="6.2" name="erupt, obtrude" type="">
+        <commentary>
+            Includes: PUSH OUT, PUSH THROUGH
+        </commentary>
+        <examples>
+            His hair pushed out from under his hat.
+            The tooth finally pushed through the gums.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="push_out" version="3.0">1</wn>
+            <wn lemma="push_through" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="6.3" name="move oneself forward" type="">
+        <commentary>
+            Includes: PUSH FORWARD, PUSH ON
+        </commentary>
+        <examples>
+            She pushed forward until she was at the front of the crowd.
+            "Goodbye," said Pooh and Piglet for the last time, and they pushed on to Owl's house.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="push_forward" version="3.0">1</wn>
+            <wn lemma="push_on" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="6.4" name="PUSH AROUND--bully, boss around" type="">
+        <commentary>
+            Is: PUSH AROUND
+        </commentary>
+        <examples>
+            Her brother was always pushing her around.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="push_around" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="6.5" name="PUSH ASIDE--dismiss, bar from attention" type="">
+        <commentary>
+            Is: PUSH ASIDE
+        </commentary>
+        <examples>
+            Physics is too important to be pushed aside.
+        </examples>
+        <mappings>
+            <wn version="3.0"></wn>
+            <wn lemma="push_aside" version="3.0">1</wn>
+            <omega></omega><pb></pb>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="6.6" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    
+<sense group="1" n="7" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="duffielc,brownsw,vieweg" sample_score="-"/>
+
+<ita count="187" ann_1_2_agreement="0.75935828877" />
+</inventory>

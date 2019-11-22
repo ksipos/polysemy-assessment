@@ -32,7 +32,7 @@ for pca in range(4, (20 + 2), 2):
     ################
 
     # L = 10
-    for L in range(1,15):
+    for L in range(1,30):
         histo_counters = []
         histoL_counter = {}
         number_of_embeddings, embeddings_dimension = embeddings.shape
@@ -63,7 +63,7 @@ for pca in range(4, (20 + 2), 2):
         for l, counters in enumerate(histo_counters):
             coef = 1.0/(2**(L-l))
             for k, v in counters.items():
-               total_histo_counter[k] = total_histo_counter.get(k, 0) + (coef * (float(v)/embeddings_dimension * 2**l))
+               total_histo_counter[k] = total_histo_counter.get(k, 0) + (coef * (float(v)/(embeddings_dimension * 2**l)))
         for k, v in total_histo_counter.items():
             total_histo_counter[k] = v/float(freq_weight[k])
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="scare-n">
+    <commentary>
+    </commentary>
+    
+    <sense group="1" n="1" name="widespread panic or anxiety of a populace" type="Event">
+        <commentary>
+            SCARE[+event][+social][+panic][+widespread][+of_populace]
+        </commentary>
+        <examples>
+            There has been a recent scare about the safety of spinach and lettuce.
+            Everyone had to leave the building because of a bomb scare.
+            The scare about the insolvency of major banks sent stocks tumbling today.
+        </examples>
+        <mappings>
+            <wn version="3.0">1</wn>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    
+    <sense group="1" n="2" name="personal emotion of fright" type="Event">
+        <commentary>
+            SCARE[+state][+emotional][+personal][+fright]
+        </commentary>
+        <examples>
+            It gave us quite a scare when Johnny fell out of the tree.
+            The scare from the lightening boom sent the cat under the couch.
+            The new slasher horror film is a scare a minute.
+        </examples>
+        <mappings>
+            <wn version="3.0">2</wn>
+            <omega/>
+            <pb/>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    
+    
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="ahouston" sample_score="-"/>
+
+<ita count="1" ann_1_2_agreement="1.0" />
+</inventory>

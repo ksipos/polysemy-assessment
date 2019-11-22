@@ -1,0 +1,269 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="cut-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="make an incision or separation" type="">
+        <commentary>
+            Note: differs from sense #2 because in this sense you are not reducing or diminishing
+            You are separating or inserting or removing. 
+            Syntax Is:
+            NP1 CUT NP2[patient[concrete]]
+        </commentary>
+        <examples>
+            He cut the rope in half.
+            The surgeon cut cleanly with the scalpel.
+            The new knives cut beautifully.
+            They cut the grain during the fine fall weather.
+            He cut his finger on the broken glass.
+            They cut our supply lines.
+            Cut the deck.
+            The boat cut through the water.
+            Use the soap. It will cut the grease.
+            His criticism cut me deeply.
+            Cut away the branch.
+            They cut down the trees behind their house.
+            Cut in the butter.
+            The shovel cut right into the rich soil.
+            Van Gogh cut off his own ear.
+            Father cut up the ham.
+            She cut her nails short.
+            I really need to get my hair cut.
+            The gardener cut back the bushes.
+        </examples>
+        <mappings>
+            <wn version="3.0">1,4,16,24,25,26,28,29,30,32,41</wn>
+            <wn lemma="cut_away" version="3.0">2</wn>
+            <wn lemma="cut_back" version="3.0">3</wn>
+            <wn lemma="cut_down" version="3.0">2,4,5,6</wn>
+            <wn lemma="cut_in" version="3.0">1,5</wn>
+            <wn lemma="cut_into" version="3.0">1</wn>
+            <wn lemma="cut_off" version="3.0">3,5,6</wn>
+            <wn lemma="cut_up" version="3.0">1,2,3,4</wn>
+            <wn lemma="cut_to_ribbons" version="3.0">1</wn>
+            <omega/>
+            <pb>cut.01,cut.04,cut.08</pb>
+            <vn>braid-41.2.2,cut-21.1-1,hurt-40.8.3-2,split-23.2</vn><fn>Cause_harm,Experience_bodily_harm</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="trim, reduce, dilute, eliminate" type="">
+        <commentary>
+            Syntax Is:
+            NP1 CUT NP2
+            NOTE: careful!  The phrase &quot;cut short&quot; is in sense 5,
+            referring to &quot;cease, stop, put an end to&quot;
+            Includes: CUT DOWN, CUT CORNERS, CUT BACK
+        </commentary>
+        <examples>
+            She was cut down in her prime.
+            You need to cut calories if you want to lose weight.
+            This cuts into my earnings.
+            The company wants to cut back on health benefits.
+            The editor recommended cutting several chapters from the manuscript.
+            Cut the whiskey with water.
+            The coach cut two players from the team.
+            You need to cut back on your drinking.
+            You can tell he cut corners because the quality is lower than usual.
+            They cut down on expenses.
+            Cut out the extra text.
+        </examples>
+        <mappings>
+            <wn version="3.0">2,5,33,34,35,37,38</wn>
+            <wn lemma="cut_back" version="3.0">2,4</wn>
+            <wn lemma="cut_corners" version="3.0">1</wn>
+            <wn lemma="cut_down" version="3.0">1,3</wn>
+            <omega/>
+            <pb>cut.02,cut.03,cut.05</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="3" name="make or form (as if) by incision or grinding" type="">
+        <commentary>
+            Syntax Is:
+            NP1 CUT NP2[patient]
+            NOTE: NP2 is the thing formed or made.
+            NOTE: The &quot;cutting&quot; is the act of CREATING NP2
+        </commentary>
+        <examples>
+            I love how she cuts my hair.
+            He learned to cut diamonds from a master.
+            She cut paper dolls all morning.
+            They cut the trenches in a matter of hours.
+            He cut the dress in the latest fashion.
+            They cut the deal after much negotiation.
+            Richards cut the film in 12 days, and we released it on time.
+            She cut all her major titles again.
+            It's my dream to cut a record.
+            Would you cut me a CD of that?
+            She cut a check for the full amount.
+        </examples>
+        <mappings>
+            <wn version="3.0">6,7,9,10,18,19,20,21,22</wn>
+            <wn lemma="cut_out" version="3.0">2</wn>
+            <omega/>
+            <pb>cut.01,cut.03</pb>
+            <vn>build-26.1-1</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="4" name="turn abruptly or travel in a certain direction" type="">
+        <commentary>
+            Syntax Includes:
+            NP1 CUT ADVP
+            NP1 CUT PP
+            NOTE: rare transitive usage in Ping-Pong, meaning
+            to &quot;hit a ball so that it turns in the 
+            opposite direction&quot;
+        </commentary>
+        <examples>
+            The car cut to the left at the intersection.
+            We cut through the neighbor's yard to get home sooner.
+            They cut across the platform and behind the curtain.
+            Opinions on the bombing cut across party lines.
+            The boxer cut upward toward his chin.
+            It cuts abruptly from one scene to the next.
+            The cameraman cut away from the departing train to focus on the heroine.
+            The film cut back to an earlier event in the story.
+            Did you see him cut in front of me?
+            If you want to dance with her, why not just cut in?
+            She was cut off at the turn.
+            The way he cuts the ping-pong ball puts a nasty spin on it.
+        </examples>
+        <mappings>
+            <wn version="3.0">3,8,14,15,17</wn>
+            <wn lemma="cut_across" version="3.0">1,2,3</wn>
+            <wn lemma="cut_away" version="3.0">1</wn>
+            <wn lemma="cut_back" version="3.0">1</wn>
+            <wn lemma="cut_in" version="3.0">2,3,4</wn>
+            <wn lemma="cut_off" version="3.0">4</wn>
+            <wn lemma="cut_out" version="3.0">3,5</wn>
+            <wn lemma="cut_through" version="3.0">1</wn>
+            <wn lemma="cut_to" version="3.0">1</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>meander-47.7</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="5" name="stop, cease, turn off" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Would you cut all that racket!
+            You should always cut the engine when you refuel.
+            She cut him dead at the meeting.
+            We had to cut short our conversation.
+            The director shouted to cut the scene.
+            He was cut off right near the end of his speech.
+            The motor cut out at the most inopportune time.
+            He cut class and met his girlfriend out behind the school.
+        </examples>
+        <mappings>
+            <wn version="3.0">11,27,31,36</wn>
+            <wn lemma="cut_off" version="3.0">1,2</wn>
+            <wn lemma="cut_out" version="3.0">6</wn>
+            <wn lemma="cut_short" version="3.0">1</wn>
+            <omega/>
+            <pb>cut.03,cut.06</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="6" name="sever contact with; isolate" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            They cut their son off without a penny.
+            The town was cut off from civilization during the snowstorm.
+        </examples>
+        <mappings>
+            <wn version="3.0"/>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="7" name="grow through the gums" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            The baby is cutting a new tooth.
+            The new tooth is cutting
+        </examples>
+        <mappings>
+            <wn version="3.0">39,40</wn>
+            <wn lemma="" version="3.0"/>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="8" name="do, manage successfully" type="">
+        <commentary>
+            Note: Usually in the negative.
+        </commentary>
+        <examples>
+            The new player just cannot cut it.
+            He could not cut the long hours and decided to quit.
+            So you think you can cut it?
+            You will have your work cut out for you.
+        </examples>
+        <mappings>
+            <wn version="3.0">12</wn>
+            <wn lemma="" version="3.0"/>
+            <omega/>
+            <pb>cut.03,cut.09</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="9" name="have a certain appearance" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            He cuts a nice figure.
+        </examples>
+        <mappings>
+            <wn version="3.0">13</wn>
+            <wn lemma="" version="3.0"/>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="10" name="frolic" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            When he heard the good news, he cut a caper, grabbed her hands and spun her around.
+            Do you ever cut loose and have a good time?
+        </examples>
+        <mappings>
+            <wn version="3.0">23</wn>
+            <wn lemma="" version="3.0"/>
+            <omega/>
+            <pb>cut.07</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="11" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="brownsw,duffielc,vieweg" sample_score="-"/>
+
+<ita count="259" ann_1_2_agreement="0.749034749035" />
+</inventory>

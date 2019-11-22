@@ -1,0 +1,119 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="accept-v">
+    <commentary>
+    </commentary>
+     
+    <sense group="1" n="1" name="take on, consent to" type="">
+        <commentary>
+            Note: The acceptor has some sort of authority in the &quot;accepting&quot;; does not imply
+            a mere toleration of something.
+        </commentary>
+        <examples>
+            She is accepting an offer from IBM.
+            We couldn't accept another invitation this month.
+            He has accepted too many responsibilities.
+            Are you willing to accept the risk?
+            That hotel won't accept having dogs in your room.
+            Don't accept packages from strangers.
+            The committee is accepting proposals until Monday.
+            Female dogs will only accept males when they are in heat. 
+        </examples>
+        <mappings>
+            <wn version="3.0">2,3,5,6,9,10,11</wn>
+            <omega/>
+            <pb>accept.01</pb>
+            <vn>approve-77,obtain-13.5.2</vn><fn>Receiving</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+     
+    <sense group="1" n="2" name="tolerate" type="">
+        <commentary>
+            Note: NP1[agent] ACCEPT NP2[theme]
+            NP1[agent] ACCEPT SCOMP[finite]
+            No authority is needed for this type of acceptance; usually refers to accepting situations
+        </commentary>
+        <examples>
+            People did not accept atonal music at that time.
+            He has gradually been accepting his loss of mobility from the disease.
+            Do you think she'll accept our style of office humor?
+        </examples>
+        <mappings>
+            <wn version="3.0">4,7</wn>
+            <omega/>
+            <pb>accept.01</pb>
+            <vn>approve-77,characterize-29.2-1-1</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+     
+    <sense group="1" n="3" name="believe, hold as true" type="">
+        <commentary>
+            NP[agent[human]] ACCEPT NP[theme]
+            NP[agent[human]] ACCEPT SCOMP[finite]
+            refers to accepting ideas, not situations (see sense 1)
+        </commentary>
+        <examples>
+            At first Einstein didn't accept that the universe could be expanding.
+            To accept both p and not p is a contradiction.
+            The Creationists don't accept Darwinian evolution.
+        </examples>
+        <mappings>
+            <wn version="3.0">1</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>approve-77,characterize-29.2-1-1</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="4" name="admit to a group" type="">
+        <commentary>
+            NP1[agent] ACCEPT NP2[patient]
+            Note: the Group is the NP doing the accepting
+        </commentary>
+        <examples>
+            Harvard accepted her brother for next year.
+            The company isn't accepting any more interns for this summer.
+            Through the direction and help of Gomez, she was accepted to the program. 
+        </examples>
+        <mappings>
+            <wn version="3.0">5</wn>
+            <omega/>
+            <pb>accept.01</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+     
+    <sense group="1" n="5" name="physically retain or hold" type="">
+        <commentary>
+            NP1[theme[inanimate]] ACCEPT NP2[theme[attribute]]
+        </commentary>
+        <examples>
+            The spackle on the wall won't accept paint without a coat of primer.
+            They need an additive for the cloth to accept the dye.
+        </examples>
+        <mappings>
+            <wn version="3.0">8</wn>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+     
+<sense group="1" n="6" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="ahouston,duffielc,vieweg,brownsw" sample_score="-"/>
+
+<ita count="278" ann_1_2_agreement="0.715827338129" />
+</inventory>

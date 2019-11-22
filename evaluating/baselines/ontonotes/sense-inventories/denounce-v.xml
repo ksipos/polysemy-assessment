@@ -1,0 +1,54 @@
+<?xml version="1.0" ?><!DOCTYPE inventory  SYSTEM 'inventory.dtd'><inventory lemma="denounce-v">
+    <commentary>
+    </commentary>
+    <sense group="1" n="1" name="to accuse, condemn or judge as wrong" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            Signs, placards, and graffiti drawn on walls and pavements denounced the invaders.
+            The opposition parties denounced it as a sell-out.
+            The paper regularly runs editorials denouncing her for marrying a foreigner.
+        </examples>
+        <mappings>
+            <gr_sense/>
+            <wn version="3.0">1,2,4</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>denounce.01</pb>
+            <vn>judgement-33</vn><fn>Judgment_communication</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+    <sense group="1" n="2" name="formally announce the termination of an agreement" type="">
+        <commentary>
+        </commentary>
+        <examples>
+            This treaty may be denounced by any contracting party by notification.
+            Winston Churchill denounced the agreement in the House of Commons.
+        </examples>
+        <mappings>
+            <gr_sense/>
+            <wn version="3.0">3</wn>
+            <wn lemma="" version=""/>
+            <omega/>
+            <pb>NM</pb>
+            <vn>NM</vn><fn>NM</fn>
+        </mappings>
+        <SENSE_META clarity=""/>
+    </sense>
+<sense group="1" n="3" name="none of the above" type="">
+  <commentary>
+Automatically generated NOTA sense (bbn)
+  </commentary>
+  <examples>
+  </examples>
+  <mappings>
+    <wn version="2.1"></wn>
+    <omega></omega><pb></pb>
+    <fn></fn>
+  </mappings><SENSE_META clarity=""/>
+</sense>
+    <WORD_META authors="duffielc,greenlm" sample_score="-"/>
+
+<ita count="39" ann_1_2_agreement="0.974358974359" />
+</inventory>

@@ -13,7 +13,7 @@ for word in words:
     word_synsets = []
     existing = set()
     if len(word) < 3 or has_numbers(word):
-        print(word)
+        print('Ignoring:', word)
         data[word] = []
         data_all_synsets[word] = []
         continue
@@ -27,9 +27,10 @@ for word in words:
         if key not in existing:
             existing.add(key)
             word_synsets.append([lemma, lemma.key()])
-    if len(word_synsets) > 1:
-        data[word] = word_synsets
-        
+    data[word] = word_synsets
+    if len(word_synsets) < 1:
+        data_all_synsets[word] = []
+
 tot = 0
 wordnet_original = open("wordnet_original.txt", 'w')
 wordnet_restricted = open("wordnet_restricted.txt", 'w')

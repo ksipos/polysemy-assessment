@@ -2,28 +2,19 @@ from rank_metrics import ndcg_at_k, dcg_at_k
 from os import listdir
 from operator import itemgetter
 import random
-
-def assing_value(ground_truth_index, ranked_dict):
-    scores = [0] * len(ranked_dict)    
-    values_dict = {pair[0]:pair[1] for pair in ground_truth_index}
-    norm = float(max(values_dict.values()))
-
-    for index, pair in enumerate(sorted(ranked_dict.items(), key=itemgetter(1), reverse=True)):
-        word, score = pair
-        if word in values_dict:
-            scores[index] = values_dict[word]/norm
-    return scores
-
+    
 def ndcg(input_ranking_file, ground_truth_index, method, normalize_layers=1):
     with open(input_ranking_file, 'r') as f:
         data = [line.replace("\n", "").split(",") for line in f]
-        data = {data_tuple[0]: float(data_tuple[1])/normalize_layers for data_tuple in data}
-        scores = assing_value(ground_truth_index, data)
-        method=1
-        values_dict = {pair[0]:pair[1] for pair in ground_truth_index}
-        norm = float(max(values_dict.values()))
-        return dcg_at_k(scores, len(ground_truth_index) + 1, 1, method=method)/dcg_at_k([pair[1]/norm for pair in ground_truth_index], len(ground_truth_index) + 1, 1, method=method)
-#        return ndcg_at_k(scores, len(ground_truth_index) + 1, norm, method=method)
+    ranking = {data_tuple[0]: float(data_tuple[1])/normalize_layers for data_tuple in data}
+    values_dict = {pair[0]:pair[1] for pair in ground_truth_index}
+
+    # Reorder ground-truth's scores using provided rankings' order
+    scores = [values_dict[pair[0]] for pair in sorted(ranking.items(), key=itemgetter(1), reverse=True) if pair[0] in values_dict]
+
+    norm = float(max(values_dict.values()))
+    norm = 1.0
+    return dcg_at_k([s/norm for s in scores], method=method)/dcg_at_k([pair[1]/norm for pair in ground_truth_index], method=method)
 
 def compare_against_baseline(ground_truth_file, wordlist, pyramid_path, method):
     result_scores = {}
@@ -59,7 +50,7 @@ def compare_against_baseline(ground_truth_file, wordlist, pyramid_path, method):
 
     ############################# WN-Domains #############################
 
-    result_scores['wn-domains'] = ndcg('/data/home/cxypolop/Projects/openpaas_elmo/clustering/results/wndomains_ranking.txt', index, method)
+    result_scores['wndomains'] = ndcg('/data/home/cxypolop/Projects/openpaas_elmo/clustering/results/wndomains_ranking.txt', index, method)
 
     ############################# Pyramid #############################
 
@@ -91,9 +82,11 @@ for baseline in baselines:
         k, v = pair
         total_scores[k] = total_scores.get(k, 0) + v
 
+# Normalizing over number of baselines
 for k, v in total_scores.items():
     total_scores[k] = float(v)/float(len(baselines))
 
+# Sort and write to disk
 total_scores = sorted(total_scores.items(), key=itemgetter(1), reverse=True)
 with open('ndcg_results/total_average_score.txt', 'w') as f:
     f.write("\n".join([r[0] + ": " + str(round(r[1], 3)) for r in total_scores]))

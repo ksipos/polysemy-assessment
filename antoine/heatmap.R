@@ -1,7 +1,12 @@
 #!/usr/bin/Rscript
 
+library(reticulate)
 library(pheatmap)
 library(RColorBrewer)
+
+use_condaenv('my_env_3')
+
+rbo = import('rbo') # see https://github.com/changyaochen/rbo
 
 # = = = = = = = = = = = = = = = = functions
 
@@ -18,98 +23,9 @@ normalize_range = function(x, from_to){
   (x - min(x)) / max(x - min(x)) * (from_to[2] - from_to[1]) + from_to[1]
 }
 
-# three functions below taken from the source of the gespeR package
-# https://github.com/cbg-ethz/gespeR/blob/master/R/gespeR-concordance.R
-# kept just in case, not used now
-
-# x The ranked list
-# side The side to be evaluated ("top" or "bottom" of ranked list)
-# The mid point to split a list, e.g. to split between positive and negative values choose mid=0
-# A vector of selected identifiers
-.select.ids <- function(x, side=c("top", "bottom"), mid=NULL) {
-  side <- match.arg(side)
-  if (side == "top")  {
-    x <- sort(x, decreasing=TRUE)
-    if (is.null(mid))
-      return(names(x))
-    else 
-      return(names(x)[which(x > mid)])
-  } else if (side == "bottom") {
-    x <- sort(x, decreasing=FALSE)
-    if (is.null(mid)) 
-      return(names(x))
-    else 
-      return(names(x)[which(x < mid)])
-  }
-}
-
-
-# x List 1
-# y List 2
-# p The weighting parameter in [0, 1]. High p implies strong emphasis on top ranked elements
-# k The evaluation depth
-# uneven.lengths Indicator if lists have uneven lengths
-
-.rbo.ext <- function(x, y, p, k, uneven.lengths = TRUE) {
-  if (length(x) <= length(y)) {
-    S <- x
-    L <- y
-  } else {
-    S <- y
-    L <- x
-  }
-  l <- min(k, length(L))
-  s <- min(k, length(S))
-  
-  if (uneven.lengths) {
-    Xd <- sapply(1:l, function(i) length(intersect(S[1:i], L[1:i])))
-    ((1-p) / p) *
-      ((sum(Xd[seq(1, l)] / seq(1, l) * p^seq(1, l))) +
-         (sum(Xd[s] * (seq(s+1, l) - s) / (s * seq(s+1, l)) * p^seq(s+1, l)))) +
-      ((Xd[l] - Xd[s]) / l + (Xd[s] / s)) * p^l  
-  } else {
-    #stopifnot(l == s)
-    k <- min(s, k)
-    Xd <- sapply(1:k, function(i) length(intersect(x[1:i], y[1:i])))
-    Xk <- Xd[k]
-    (Xk / k) * p^k + (((1-p)/p) * sum((Xd / seq(1,k)) * p^seq(1,k)))
-  }
-}
-
-
-# s List 1
-# t List 2
-# p Weighting parameter in [0, 1]. High p implies strong emphasis on top ranked elements
-# k Evaluation depth for extrapolation
-# side Evaluate similarity between the top or the bottom of the ranked lists
-# mid Set the mid point to for example only consider positive or negative scores
-# uneven.lengths Indicator if lists have uneven lengths
-
-# examples
-# a = c(1,2,3)
-# b = c(1,2,3)
-# names(a) = c('a','b','c')
-# names(b) = c('a','b','c')
-# rbo(a,b,p=0.9,side='top',mid=NULL,uneven.lengths=FALSE)
-# names(b) = rev(c('a','b','c'))
-# rbo(a,b,p=0.9,side='top',mid=NULL,uneven.lengths=FALSE)
-
-rbo <- function(s, t, p, k=floor(max(length(s), length(t))/2), side=c("top", "bottom"), mid=NULL, uneven.lengths = TRUE) {
-  side <- match.arg(side)
-  if (!is.numeric(s) | !is.numeric(t))
-    stop("Input vectors are not numeric.")
-  if (is.null(names(s)) | is.null(names(t)))
-    stop("Input vectors are not named.")
-  ids <- switch(side,
-                "top"=list(s=.select.ids(s, "top", mid), t=.select.ids(t, "top", mid)),
-                "bottom"=list(s=.select.ids(s, "bottom", mid), t=.select.ids(t, "bottom", mid))
-  )
-  min(1, .rbo.ext(ids$s, ids$t, p, k, uneven.lengths = uneven.lengths))
-}
-
 
 score_ranking = function(evaluated,gt,metric){
-  # evaluated and gt are named lists of words and their scores, sorted by decreasing order of scores and normalized between 0 and 100
+  # evaluated and gt are named lists of words and their scores, sorted by decreasing order of scores
   # metric should be one of c('kendall','spearman','ndcg','p@k','rbo')
   
   evaluated_words = names(evaluated)
@@ -125,6 +41,21 @@ score_ranking = function(evaluated,gt,metric){
     truth = sort(final_scores,decreasing=TRUE) # best possible way to position the evaluated words
     to_return = dcg(final_scores)/dcg(truth)
     
+  } else if (metric=='rbo'){
+    
+    # rbo accepts lists of unique elements only, so we replace the ground truth scores by unique integers
+    # ! the assumption is that gt is already sorted by decreasing order!
+    names_gt = names(gt)
+    gt = normalize_range(rev(1:length(gt)),c(1,100))
+    names(gt) = names_gt
+    
+    final_scores = as.numeric(gt[evaluated_words]) # replace words in the evaluated method's ranking by their scores in the GT
+    
+    truth = sort(final_scores,decreasing=TRUE) # best possible way to position the evaluated words
+    
+    rs = rbo$RankingSimilarity(final_scores,truth)
+    to_return = rs$rbo(p=0.9)
+    
   } else if (metric %in% c('kendall','spearman')){
     
     gt = gt[overlapping_words] # align the two rankings based on words
@@ -136,12 +67,6 @@ score_ranking = function(evaluated,gt,metric){
     top10pct_gt = names(gt)[1:round(0.1*length(gt))]
     to10pct_eval = names(evaluated)[1:round(0.1*length(evaluated))]
     to_return = length(which(to10pct_eval%in%top10pct_gt))/length(to10pct_eval)
-    
-  } else if (metric == 'rbo'){
-    
-    # not clear how this should be used
-    # plus, there is a tuning parameter p
-    stop('rbo currently not supported')
     
   }
   
@@ -161,10 +86,10 @@ score_ranking = function(evaluated,gt,metric){
 
 new_range = c(1,100) # range to which all scores are mapped when normalizing
 
-best_name = 'D4L13'
+best_name = 'D6L12'
 
 path_root = 'C:/Users/mvazirg/Desktop/polysemous_words/' #as.character(args[1])
-metric = 'ndcg' #as.character(args[2])
+metric = 'rbo' #as.character(args[2])
 get_best = 0 #as.numeric(args[3])
 
 if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){

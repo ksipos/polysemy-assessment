@@ -13,9 +13,14 @@ normalize = function(x){
   (x-min(x))/(max(x)-min(x))
 }
 
+# taken from https://stackoverflow.com/questions/18303420/how-to-map-a-vector-to-a-different-range-in-r
+normalize_range = function(x, from_to){
+  (x - min(x)) / max(x - min(x)) * (from_to[2] - from_to[1]) + from_to[1]
+}
 
 # three functions below taken from the source of the gespeR package
 # https://github.com/cbg-ethz/gespeR/blob/master/R/gespeR-concordance.R
+# kept just in case, not used now
 
 # x The ranked list
 # side The side to be evaluated ("top" or "bottom" of ranked list)
@@ -104,7 +109,7 @@ rbo <- function(s, t, p, k=floor(max(length(s), length(t))/2), side=c("top", "bo
 
 
 score_ranking = function(evaluated,gt,metric){
-  # evaluated and gt are named lists of words and their scores, sorted by decreasing order of scores
+  # evaluated and gt are named lists of words and their scores, sorted by decreasing order of scores and normalized between 0 and 100
   # metric should be one of c('kendall','spearman','ndcg','p@k','rbo')
   
   evaluated_words = names(evaluated)
@@ -146,7 +151,7 @@ score_ranking = function(evaluated,gt,metric){
 
 # = = = = = = = = = = = = = = = =
 
-args = commandArgs(trailingOnly=TRUE)
+#args = commandArgs(trailingOnly=TRUE)
 
 # Rscript --vanilla heatmap.R path_root metric get_best
 # Rscript --vanilla heatmap.R C:/Users/mvazirg/Desktop/polysemous_words/ ndcg 1
@@ -154,9 +159,13 @@ args = commandArgs(trailingOnly=TRUE)
 # if get_best==1, the best parameter combination is obtained
 # if get_best==0, the best parameter combination (whose ranking should have been copied from '.\pyramid_matching\results\' to 'path_to_evaluation' and renamed, e.g., 'D6L11') is compared to the ground truths
 
-path_root = as.character(args[1])
-metric = as.character(args[2])
-get_best = as.numeric(args[3])
+new_range = c(1,100) # range to which all scores are mapped when normalizing
+
+best_name = 'D4L13'
+
+path_root = 'C:/Users/mvazirg/Desktop/polysemous_words/' #as.character(args[1])
+metric = 'ndcg' #as.character(args[2])
+get_best = 0 #as.numeric(args[3])
 
 if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
   stop("metric is not one of 'kendall','spearman','ndcg','p@k','rbo'")
@@ -186,11 +195,12 @@ if(get_best==1){
       elts = unlist(strsplit(y,split=','))
       to_return = as.numeric(elts[2])
       names(to_return) = elts[1]
+      to_return = to_return[!to_return==0] # remove entries with null score (NA words)
       to_return
     })
   })
   
-  rankings = lapply(rankings,function(x) sort(normalize(unlist(x)),decreasing=TRUE))
+  rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
   names(rankings) = method_names
   
   # = = = = = = = = = = = = = = = =
@@ -212,7 +222,8 @@ if(get_best==1){
     if(max(u_x)==min(u_x)){
       to_return = NULL
     } else {
-      to_return = normalize(u_x)
+      u_x = u_x[!u_x==0] # remove entries with null score (NA words)
+      to_return = normalize_range(u_x,new_range)
     }
     sort(to_return,decreasing=TRUE)
   })
@@ -234,12 +245,10 @@ if(get_best==1){
   for (combo in combos){
     
     evaluated = rankings_combo[[combo]]
-    evaluated = evaluated[!evaluated==0] # remove entries with null scores (NA words)
     
     scores = list()
     for (gt_name in method_names){ # kept all names as a sanity check (to verify we get ones on the diagonal) 
       gt = rankings[[gt_name]]
-      gt = gt[!gt==0] # remove entries with null score (NA words)
       scores[[gt_name]] = score_ranking(evaluated,gt,metric)
     }
     
@@ -269,8 +278,6 @@ if(get_best==1){
 
 # = = = = = = = = = = = = = = = = = = = = = = =
 
-# best for NDCG is D6L11
-
 if (get_best==0){
   
   method_names = list.files(path_to_evaluation) # should not include frequency
@@ -284,24 +291,26 @@ if (get_best==0){
       elts = unlist(strsplit(y,split=','))
       to_return = as.numeric(elts[2])
       names(to_return) = elts[1]
+      to_return = to_return[!to_return==0] # remove entries with null score (NA words)
       to_return
     })
   })
   
-  rankings = lapply(rankings,function(x) sort(normalize(unlist(x)),decreasing=TRUE))
+  rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
   names(rankings) = method_names
   
   avg_len = round(mean(unlist(lapply(rankings,length))))
   
   n_runs = 30
   rankings[['random']] = lapply(1:n_runs,function(x){
-    to_return = rlnorm(avg_len,meanlog=0,sdlog=1)
+    to_return = rlnorm(avg_len,meanlog=0,sdlog=1) # sample from lognormal distribution
     names(to_return) = sample(names(rankings[['frequency']]),avg_len,replace=FALSE)
-    sort(normalize(to_return),decreasing=TRUE)
+    sort(normalize_range(to_return,new_range),decreasing=TRUE)
   })
   
   # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
- method_names = c('D6L11','random','frequency','google','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
+ method_names = c(best_name,'random','frequency','google','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
+ method_names_pretty = gsub('_',' ',method_names)
   
   pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)
       
@@ -313,7 +322,7 @@ if (get_best==0){
         } else {
           to_hist = rankings[[name]]
         }
-        hist(to_hist[!to_hist==0],xlim=c(0,1),col='skyblue',border=FALSE,main=name,xlab='normalized scores',ylab='counts')
+        hist(to_hist,xlim=new_range,col='skyblue',border=FALSE,main=name,xlab='normalized scores',ylab='counts')
       }
       
   dev.off()
@@ -331,18 +340,18 @@ if (get_best==0){
       gt = rankings[[gt_name]]
       
       if (name == 'random' & gt_name != 'random'){
-        all_scores = unlist(lapply(evaluated,function(x) score_ranking(x[!x==0],gt[!gt==0],metric)))
+        all_scores = unlist(lapply(evaluated,function(x) score_ranking(x,gt,metric)))
         scores[j,i] = mean(all_scores)
       } else if (name != 'random' & gt_name == 'random'){
-        all_scores = unlist(lapply(gt,function(x) score_ranking(evaluated[!evaluated==0],x[!x==0],metric)))
+        all_scores = unlist(lapply(gt,function(x) score_ranking(evaluated,x,metric)))
         scores[j,i] = mean(all_scores)
       } else if (name == 'random' & gt_name == 'random'){
         all_scores = unlist(lapply(evaluated,function(x){
-          mean(unlist(lapply(gt,function(y) score_ranking(x[!x==0],y[!y==0],metric))))
+          mean(unlist(lapply(gt,function(y) score_ranking(x,y,metric))))
         }))
         scores[j,i] = mean(all_scores)
       } else {
-      scores[j,i] = score_ranking(evaluated[!evaluated==0],gt[!gt==0],metric)
+      scores[j,i] = score_ranking(evaluated,gt,metric)
       }
       
       j = j + 1
@@ -355,12 +364,12 @@ if (get_best==0){
   }
   
   scores = round(scores*100,2)
-  rownames(scores) = method_names
-  colnames(scores) = method_names
+  rownames(scores) = method_names_pretty
+  colnames(scores) = method_names_pretty
   
   pdf(paste0(path_to_plots,'heatmap_',metric,'.pdf'),paper='a4r',width=15,height=7.5)
       
-      pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=18,display_numbers=TRUE,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main='evaluated methods as columns')
+      pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=18,display_numbers=TRUE,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric) # evaluated methods as columns
       
   dev.off()
   

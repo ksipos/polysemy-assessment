@@ -1,0 +1,31 @@
+#language="EN"
+#name='../french_wikipedia_text'
+#name='../french_test'
+#name='../parsed_text.txt'
+
+#PUNCT=";:,.()@!#$%^&*-+_[]{}\"/\\=?>< «»|"
+
+#gawk '{for(x=1;$x;++x)print tolower($x)}' "$name" | tr "${PUNCT}" "@" | sed 's/@//g' | sort | uniq -c > test.txt
+
+#gawk '{for(x=1;$x;++x)print tolower($x)}' "$name" | sed 's/ //g' | sort | uniq -c
+#> test.txt
+
+#cat test.txt | sed -e 's/^[ \t]*//' > unigrams.txt
+
+#sort -t ' ' -k1,1rn -k2,2 unigrams.txt > "$language""_"sorted_unigrams.txt
+
+###### French
+
+name='../french_wikipedia_text'
+gawk '{for(x=1;$x;++x)print tolower($x)}' "$name" | sed 's/ //g' | sort | uniq -c > fr_tmp.txt
+cat fr_tmp.txt | sed -e 's/^[ \t]*//' > fr_unigrams.txt
+sort -t ' ' -k1,1rn -k2,2 fr_unigrams.txt > fr_sorted_unigrams.txt
+
+
+###### English
+name='../parsed_text.txt'
+gawk '{for(x=1;$x;++x)print tolower($x)}' "$name" | sed 's/ //g' | sort | uniq -c > en_tmp.txt
+cat en_tmp.txt | sed -e 's/^[ \t]*//' > en_unigrams.txt
+sort -t ' ' -k1,1rn -k2,2 en_unigrams.txt > en_sorted_unigrams.txt
+
+

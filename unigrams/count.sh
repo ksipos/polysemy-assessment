@@ -3,8 +3,9 @@
 #name='../french_wikipedia_text'
 
 ###### English
-name='../parsed_text.txt'
-lang="en"
+#name='../parsed_text.txt'
+name="../french_wikipedia_text"
+lang="fr"
 
 echo "Starting pipeline for language: " "$lang"
 echo "Counting unigrams..."
@@ -24,11 +25,13 @@ python preprocess_unigrams.py "$lang""_sorted_unigrams.txt"
 
 echo "Exporting lines containing words..."
 
+# After this point needs to be tested for french
+
 output="$lang""_sentenceLines/"
 mkdir $output
 while IFS= read -r line
 do
-	grep -n -w "$line" "$name"  | cut -d":" -f1 > "$output""$line"
+	grep -i -n -w "$line" "$name"  | cut -d":" -f1 > "$output""$line"
 done < "$lang""_wordlist.txt"
 
 echo "Exporting selected sentences..." 

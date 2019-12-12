@@ -17,7 +17,7 @@ def remove_punc(row):
     else:
         word = re.sub(number_pattern, " ", word)
     #    word = re.sub(punctuation, '', word)
-        word = word.translate(str.maketrans('', '', string.punctuation))
+        word = word.translate(str.maketrans('', '', punctuation))
     row['word'] = word.strip()
     return row
 

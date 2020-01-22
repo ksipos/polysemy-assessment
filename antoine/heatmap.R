@@ -88,11 +88,11 @@ score_ranking = function(evaluated,gt,metric){
 
 new_range = c(1,100) # range to which all scores are mapped when normalizing
 
-best_name = ''
+best_name = 'D2L8'
 
 path_root = 'C:/Users/mvazirg/Desktop/polysemous_words/' #as.character(args[1])
 metric = 'kendall' #as.character(args[2])
-get_best = 1 #as.numeric(args[3])
+get_best = 0 #as.numeric(args[3])
 
 if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
   stop("metric is not one of 'kendall','spearman','ndcg','p@k','rbo'")
@@ -103,10 +103,10 @@ if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
 # see: https://stats.stackexchange.com/questions/8071/how-to-choose-between-pearson-and-spearman-correlation
 # - http://codalism.com/research/papers/wmz10_tois.pdf 
 
-path_to_plots = paste0(path_root,'/antoine/plots/')
+path_to_plots = paste0(path_root,'/antoine/plots/english/')
 path_to_grid = paste0(path_root,'/pyramid_matching/results/')
-path_to_baselines = paste0(path_root,'/evaluating/scores_baselines/')
-path_to_evaluation = paste0(path_root,'/evaluating/scores_evaluation/')
+path_to_baselines = paste0(path_root,'/evaluating/english/scores_baselines/')
+path_to_evaluation = paste0(path_root,'/evaluating/english/scores_evaluation/')
 
 # = = = = = = = = = = = = = = = =
 
@@ -207,7 +207,7 @@ if(get_best==1){
 
 if (get_best==0){
   
-  method_names = list.files(path_to_evaluation) # should not include frequency
+  method_names = list.files(path_to_evaluation)
   
   rankings = lapply(method_names,function(x) readLines(paste0(path_to_evaluation,x)))
   

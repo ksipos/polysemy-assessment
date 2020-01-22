@@ -79,14 +79,14 @@ score_ranking = function(evaluated,gt,metric){
 #args = commandArgs(trailingOnly=TRUE)
 
 # Rscript --vanilla heatmap.R path_root metric get_best
-# Rscript --vanilla heatmap.R C:/Users/mvazirg/Desktop/polysemous_words/ ndcg 1
+# example: Rscript --vanilla heatmap.R C:/Users/mvazirg/Desktop/polysemous_words/ ndcg 1
 
 # if get_best==1, the best parameter combination is obtained
 # if get_best==0, the best parameter combination (whose ranking should have been copied from '.\pyramid_matching\results\' to 'path_to_evaluation' and renamed, e.g., 'D6L11') is compared to the ground truths
 
 new_range = c(1,100) # range to which all scores are mapped when normalizing
 
-best_name = 'D6L12'
+best_name = 'foo' #'D6L12'
 
 path_root = 'C:/Users/mvazirg/Desktop/polysemous_words/' #as.character(args[1])
 metric = 'rbo' #as.character(args[2])

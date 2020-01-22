@@ -76,21 +76,23 @@ score_ranking = function(evaluated,gt,metric){
 
 # = = = = = = = = = = = = = = = =
 
+# TODO heatmap of score vs PCA dimensions and max levels
+
 #args = commandArgs(trailingOnly=TRUE)
 
 # Rscript --vanilla heatmap.R path_root metric get_best
 # example: Rscript --vanilla heatmap.R C:/Users/mvazirg/Desktop/polysemous_words/ ndcg 1
 
 # if get_best==1, the best parameter combination is obtained
-# if get_best==0, the best parameter combination (whose ranking should have been copied from '.\pyramid_matching\results\' to 'path_to_evaluation' and renamed, e.g., 'D6L11') is compared to the ground truths
+# if get_best==0, the best parameter combination (whose ranking should have been copied from '.\pyramid_matching\results\' to 'path_to_evaluation' and renamed, e.g., 'D6L11') and written below (best_name) ! is compared to the ground truths
 
 new_range = c(1,100) # range to which all scores are mapped when normalizing
 
-best_name = 'foo' #'D6L12'
+best_name = ''
 
 path_root = 'C:/Users/mvazirg/Desktop/polysemous_words/' #as.character(args[1])
-metric = 'rbo' #as.character(args[2])
-get_best = 0 #as.numeric(args[3])
+metric = 'kendall' #as.character(args[2])
+get_best = 1 #as.numeric(args[3])
 
 if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
   stop("metric is not one of 'kendall','spearman','ndcg','p@k','rbo'")
@@ -292,9 +294,17 @@ if (get_best==0){
   rownames(scores) = method_names_pretty
   colnames(scores) = method_names_pretty
   
+  if (metric != 'ndcg'){ # symmetric metric, show only one triangle
+    scores[upper.tri(scores)] = NA
+    scores_show = scores
+    scores_show[upper.tri(scores_show)] = ''
+  } else {
+    scores_show = scores
+  }
+  
   pdf(paste0(path_to_plots,'heatmap_',metric,'.pdf'),paper='a4r',width=15,height=7.5)
       
-      pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=18,display_numbers=TRUE,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric) # evaluated methods as columns
+      pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=18,display_numbers=scores_show,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric,na_col='#FFFFFF') # evaluated methods as columns
       
   dev.off()
   

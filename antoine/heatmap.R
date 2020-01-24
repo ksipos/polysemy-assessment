@@ -1,5 +1,4 @@
-#!/usr/bin/Rscript
-
+library(xtable)
 library(reticulate)
 library(pheatmap)
 library(RColorBrewer)
@@ -74,25 +73,19 @@ score_ranking = function(evaluated,gt,metric){
   
 }
 
-# = = = = = = = = = = = = = = = =
+# = = = = = = = = = = = = = = = = arguments
 
 # TODO heatmap of score vs PCA dimensions and max levels
 
-#args = commandArgs(trailingOnly=TRUE)
+args = commandArgs(trailingOnly=TRUE)
 
-# Rscript --vanilla heatmap.R path_root metric get_best
-# example: Rscript --vanilla heatmap.R C:/Users/mvazirg/Desktop/polysemous_words/ ndcg 1
-
-# if get_best==1, the best parameter combination is obtained
-# if get_best==0, the best parameter combination (whose ranking should have been copied from '.\pyramid_matching\results\' to 'path_to_evaluation' and renamed, e.g., 'D6L11') and written below (best_name) ! is compared to the ground truths
+# Rscript --vanilla heatmap.R path_root metric
+# example: Rscript --vanilla heatmap.R C:/Users/mvazirg/Desktop/polysemous_words/ ndcg
 
 new_range = c(1,100) # range to which all scores are mapped when normalizing
 
-best_name = 'D2L8'
-
-path_root = 'C:/Users/mvazirg/Desktop/polysemous_words/' #as.character(args[1])
-metric = 'kendall' #as.character(args[2])
-get_best = 0 #as.numeric(args[3])
+path_root = as.character(args[1])
+metric = as.character(args[2])
 
 if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
   stop("metric is not one of 'kendall','spearman','ndcg','p@k','rbo'")
@@ -107,206 +100,211 @@ path_to_plots = paste0(path_root,'/antoine/plots/english/')
 path_to_grid = paste0(path_root,'/pyramid_matching/results/')
 path_to_baselines = paste0(path_root,'/evaluating/english/scores_baselines/')
 path_to_evaluation = paste0(path_root,'/evaluating/english/scores_evaluation/')
+path_to_best_combos = paste0(path_root,'/evaluating/english/best_combos_per_metric/')
+
+# = = = = = = = = = = = = = = = = finding best parameter combination
+
+method_names = list.files(path_to_baselines) # not including frequency
+rankings = lapply(method_names,function(x) readLines(paste0(path_to_baselines,x)))
+
+method_names = unlist(lapply(method_names,function(x) if (grepl('wordnet',x)){unlist(strsplit(x,split='\\.'))[1]} else {unlist(strsplit(x,split='_'))[1]}))
+
+rankings = lapply(rankings,function(x) {
+  lapply(x,function(y){
+    elts = unlist(strsplit(y,split=','))
+    to_return = as.numeric(elts[2])
+    names(to_return) = elts[1]
+    to_return = to_return[!to_return==0] # remove entries with null score (NA words)
+    to_return
+  })
+})
+
+rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
+names(rankings) = method_names
 
 # = = = = = = = = = = = = = = = =
 
-if(get_best==1){
-  
-  method_names = list.files(path_to_baselines) # not including frequency
-  rankings = lapply(method_names,function(x) readLines(paste0(path_to_baselines,x)))
-  
-  method_names = unlist(lapply(method_names,function(x) if (grepl('wordnet',x)){unlist(strsplit(x,split='\\.'))[1]} else {unlist(strsplit(x,split='_'))[1]}))
-  
-  rankings = lapply(rankings,function(x) {
-    lapply(x,function(y){
-      elts = unlist(strsplit(y,split=','))
-      to_return = as.numeric(elts[2])
-      names(to_return) = elts[1]
-      to_return = to_return[!to_return==0] # remove entries with null score (NA words)
-      to_return
-    })
+combos = list.files(path_to_grid)
+rankings_combo = lapply(combos,function(x) readLines(paste0(path_to_grid,x)))
+
+rankings_combo = lapply(rankings_combo,function(x) {
+  lapply(x,function(y){
+    elts = unlist(strsplit(y,split=','))
+    to_return = as.numeric(elts[2])
+    names(to_return) = elts[1]
+    to_return
   })
+})
+
+rankings_combo = lapply(rankings_combo,function(x) {
+  u_x = unlist(x)
+  if(max(u_x)==min(u_x)){
+    to_return = NULL
+  } else {
+    u_x = u_x[!u_x==0] # remove entries with null score (NA words)
+    to_return = normalize_range(u_x,new_range)
+  }
+  sort(to_return,decreasing=TRUE)
+})
+
+names(rankings_combo) = combos
+
+# remove combinations for which the scores are all the same
+lens = unlist(lapply(rankings_combo,length))
+names(rankings_combo)[which(lens==0)]
+rankings_combo = rankings_combo[!lens==0]
+combos = combos[!lens==0]
+
+# = = = = = = = = finding out the best combo = = = = = = = = = = = = 
+
+stopifnot(names(rankings_combo)==combos)
+
+mean_scores = list()
+
+for (combo in combos){
   
-  rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
-  names(rankings) = method_names
+  evaluated = rankings_combo[[combo]]
   
-  # = = = = = = = = = = = = = = = =
-  
-  combos = list.files(path_to_grid)
-  rankings_combo = lapply(combos,function(x) readLines(paste0(path_to_grid,x)))
-  
-  rankings_combo = lapply(rankings_combo,function(x) {
-    lapply(x,function(y){
-      elts = unlist(strsplit(y,split=','))
-      to_return = as.numeric(elts[2])
-      names(to_return) = elts[1]
-      to_return
-    })
-  })
-  
-  rankings_combo = lapply(rankings_combo,function(x) {
-    u_x = unlist(x)
-    if(max(u_x)==min(u_x)){
-      to_return = NULL
-    } else {
-      u_x = u_x[!u_x==0] # remove entries with null score (NA words)
-      to_return = normalize_range(u_x,new_range)
-    }
-    sort(to_return,decreasing=TRUE)
-  })
-  
-  names(rankings_combo) = combos
-  
-  # remove combinations for which the scores are all the same
-  lens = unlist(lapply(rankings_combo,length))
-  names(rankings_combo)[which(lens==0)]
-  rankings_combo = rankings_combo[!lens==0]
-  combos = combos[!lens==0]
-  
-  # = = = = = = = = finding out the best combo = = = = = = = = = = = = 
-  
-  stopifnot(names(rankings_combo)==combos)
-  
-  mean_scores = list()
-  
-  for (combo in combos){
-    
-    evaluated = rankings_combo[[combo]]
-    
-    scores = list()
-    for (gt_name in method_names){ # kept all names as a sanity check (to verify we get ones on the diagonal) 
-      gt = rankings[[gt_name]]
-      scores[[gt_name]] = score_ranking(evaluated,gt,metric)
-    }
-    
-    mean_scores[[combo]] = mean(unlist(scores))
-    
+  scores = list()
+  for (gt_name in method_names){ # kept all names as a sanity check (to verify we get ones on the diagonal) 
+    gt = rankings[[gt_name]]
+    scores[[gt_name]] = score_ranking(evaluated,gt,metric)
   }
   
-  mean_scores = round(unlist(mean_scores)*100,2)
+  mean_scores[[combo]] = mean(unlist(scores))
   
-  cat('\n best combos:\n')
-  print(head(sort(mean_scores,decreasing=TRUE)))
-  cat('\n worst combos:\n')
-  print(tail(sort(mean_scores,decreasing=TRUE)))
-  cat('\n * * * best combo:',names(sort(mean_scores,decreasing=TRUE))[1],'* * *')
-  
-  pdf(paste0(path_to_plots,'boxplot_',metric,'.pdf'),width=4,height=6.5,paper='a4')
-      
-      par(mgp=c(1.5,0.5,0)) # title, tick labels, ticks
-      par(mar=c(8,4,8,4)) # bottom, left, top, right
-      
-      boxplot(mean_scores,ylab=paste(metric,'(%)'),boxwex=0.8)
-      title(paste(metric,'distribution'), sub=paste0('n=',length(mean_scores)),line=0.5)
-      
-  dev.off()
-
 }
+
+mean_scores = round(unlist(mean_scores)*100,2)
+
+mean_scores = sort(mean_scores,decreasing=TRUE)
+
+to_print = as.data.frame(c(head(mean_scores),tail(mean_scores)))
+
+best_name = rownames(to_print)[1]
+
+rownames(to_print) = gsub('pca','D',rownames(to_print))
+rownames(to_print) = gsub('\\_','',rownames(to_print))
+print(xtable(to_print))
+
+best_name_renamed = rownames(to_print)[1]
+
+pdf(paste0(path_to_plots,'boxplot_',metric,'.pdf'),width=4,height=6.5,paper='a4')
+    
+    par(mgp=c(1.5,0.5,0)) # title, tick labels, ticks
+    par(mar=c(8,4,8,4)) # bottom, left, top, right
+    
+    boxplot(mean_scores,ylab=paste(metric,'(%)'),boxwex=0.8)
+    title(paste(metric,'distribution'), sub=paste0('n=',length(mean_scores)),line=0.5)
+    
+dev.off()
 
 # = = = = = = = = = = = = = = = = = = = = = = =
 
-if (get_best==0){
-  
-  method_names = list.files(path_to_evaluation)
-  
-  rankings = lapply(method_names,function(x) readLines(paste0(path_to_evaluation,x)))
-  
-  method_names = unlist(lapply(method_names,function(x) if (grepl('wordnet',x)){unlist(strsplit(x,split='\\.'))[1]} else {unlist(strsplit(x,split='_'))[1]}))
-  
-  rankings = lapply(rankings,function(x) {
-    lapply(x,function(y){
-      elts = unlist(strsplit(y,split=','))
-      to_return = as.numeric(elts[2])
-      names(to_return) = elts[1]
-      to_return = to_return[!to_return==0] # remove entries with null score (NA words)
-      to_return
-    })
+file.copy(from=paste0(path_to_grid,best_name),to=paste0(path_to_evaluation,best_name_renamed),overwrite=TRUE)
+
+file.copy(from=paste0(path_to_grid,best_name),to=paste0(path_to_best_combos,best_name_renamed),overwrite=TRUE)
+
+
+method_names = list.files(path_to_evaluation)
+
+rankings = lapply(method_names,function(x) readLines(paste0(path_to_evaluation,x)))
+
+method_names = unlist(lapply(method_names,function(x) if (grepl('wordnet',x)){unlist(strsplit(x,split='\\.'))[1]} else {unlist(strsplit(x,split='_'))[1]}))
+
+rankings = lapply(rankings,function(x) {
+  lapply(x,function(y){
+    elts = unlist(strsplit(y,split=','))
+    to_return = as.numeric(elts[2])
+    names(to_return) = elts[1]
+    to_return = to_return[!to_return==0] # remove entries with null score (NA words)
+    to_return
   })
-  
-  rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
-  names(rankings) = method_names
-  
-  avg_len = round(mean(unlist(lapply(rankings,length))))
-  
-  n_runs = 30
-  rankings[['random']] = lapply(1:n_runs,function(x){
-    to_return = rlnorm(avg_len,meanlog=0,sdlog=1) # sample from lognormal distribution
-    names(to_return) = sample(names(rankings[['frequency']]),avg_len,replace=FALSE)
-    sort(normalize_range(to_return,new_range),decreasing=TRUE)
-  })
-  
-  # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
- method_names = c(best_name,'random','frequency','google','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
- method_names_pretty = gsub('_',' ',method_names)
-  
-  pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)
-      
-      par(mfrow=c(2,4))
-      
-      for (name in tail(method_names,-1)){ # all except pyramid (will be plotted separately)
-        if (name=='random'){
-          to_hist = rankings[[name]][[1]]
-        } else {
-          to_hist = rankings[[name]]
-        }
-        hist(to_hist,xlim=new_range,col='skyblue',border=FALSE,main=name,xlab='normalized scores',ylab='counts')
-      }
-      
-  dev.off()
-  
-  
-  scores = matrix(nrow=length(method_names),ncol=length(method_names))
-  i = 1 # col index (evaluated methods)
-  j = 1 # row index (GTs)
-  
-  for (name in method_names){ # column name
+})
+
+rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
+names(rankings) = method_names
+
+avg_len = round(mean(unlist(lapply(rankings,length))))
+
+n_runs = 30
+rankings[['random']] = lapply(1:n_runs,function(x){
+  to_return = rlnorm(avg_len,meanlog=0,sdlog=1) # sample from lognormal distribution
+  names(to_return) = sample(names(rankings[['frequency']]),avg_len,replace=FALSE)
+  sort(normalize_range(to_return,new_range),decreasing=TRUE)
+})
+
+# re-order/re-name to optimize the heatmap (our method, random, and frequency first)
+method_names = c(best_name_renamed,'random','frequency','google','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
+method_names_pretty = gsub('_',' ',method_names)
+
+pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)
     
-    evaluated = rankings[[name]]
+    par(mfrow=c(2,4))
     
-    for (gt_name in method_names){ # kept all names as a sanity check (to verify we get ones on the diagonal) 
-      gt = rankings[[gt_name]]
-      
-      if (name == 'random' & gt_name != 'random'){
-        all_scores = unlist(lapply(evaluated,function(x) score_ranking(x,gt,metric)))
-        scores[j,i] = mean(all_scores)
-      } else if (name != 'random' & gt_name == 'random'){
-        all_scores = unlist(lapply(gt,function(x) score_ranking(evaluated,x,metric)))
-        scores[j,i] = mean(all_scores)
-      } else if (name == 'random' & gt_name == 'random'){
-        all_scores = unlist(lapply(evaluated,function(x){
-          mean(unlist(lapply(gt,function(y) score_ranking(x,y,metric))))
-        }))
-        scores[j,i] = mean(all_scores)
+    for (name in tail(method_names,-1)){ # all except pyramid (will be plotted separately)
+      if (name=='random'){
+        to_hist = rankings[[name]][[1]]
       } else {
-      scores[j,i] = score_ranking(evaluated,gt,metric)
+        to_hist = rankings[[name]]
       }
-      
-      j = j + 1
-      
+      hist(to_hist,xlim=new_range,col='skyblue',border=FALSE,main=name,xlab='normalized scores',ylab='counts')
     }
     
-    j = 1
-    i = i + 1
+dev.off()
+
+
+scores = matrix(nrow=length(method_names),ncol=length(method_names))
+i = 1 # col index (evaluated methods)
+j = 1 # row index (GTs)
+
+for (name in method_names){ # column name
+  
+  evaluated = rankings[[name]]
+  
+  for (gt_name in method_names){ # kept all names as a sanity check (to verify we get ones on the diagonal) 
+    gt = rankings[[gt_name]]
+    
+    if (name == 'random' & gt_name != 'random'){
+      all_scores = unlist(lapply(evaluated,function(x) score_ranking(x,gt,metric)))
+      scores[j,i] = mean(all_scores)
+    } else if (name != 'random' & gt_name == 'random'){
+      all_scores = unlist(lapply(gt,function(x) score_ranking(evaluated,x,metric)))
+      scores[j,i] = mean(all_scores)
+    } else if (name == 'random' & gt_name == 'random'){
+      all_scores = unlist(lapply(evaluated,function(x){
+        mean(unlist(lapply(gt,function(y) score_ranking(x,y,metric))))
+      }))
+      scores[j,i] = mean(all_scores)
+    } else {
+    scores[j,i] = score_ranking(evaluated,gt,metric)
+    }
+    
+    j = j + 1
     
   }
   
-  scores = round(scores*100,2)
-  rownames(scores) = method_names_pretty
-  colnames(scores) = method_names_pretty
-  
-  if (metric != 'ndcg'){ # symmetric metric, show only one triangle
-    scores[upper.tri(scores)] = NA
-    scores_show = scores
-    scores_show[upper.tri(scores_show)] = ''
-  } else {
-    scores_show = scores
-  }
-  
-  pdf(paste0(path_to_plots,'heatmap_',metric,'.pdf'),paper='a4r',width=15,height=7.5)
-      
-      pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=18,display_numbers=scores_show,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric,na_col='#FFFFFF') # evaluated methods as columns
-      
-  dev.off()
+  j = 1
+  i = i + 1
   
 }
+
+scores = round(scores*100,2)
+rownames(scores) = method_names_pretty
+colnames(scores) = method_names_pretty
+
+if (metric != 'ndcg'){ # symmetric metric, show only one triangle
+  scores[upper.tri(scores)] = NA
+  scores_show = scores
+  scores_show[upper.tri(scores_show)] = ''
+} else {
+  scores_show = scores
+}
+
+pdf(paste0(path_to_plots,'heatmap_',metric,'.pdf'),paper='a4r',width=15,height=7.5)
+    
+    pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=18,display_numbers=scores_show,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric,na_col='#FFFFFF') # evaluated methods as columns
+    
+dev.off()
+
 

@@ -88,8 +88,16 @@ path_root = as.character(args[1])
 metric = as.character(args[2])
 language = as.character(args[3])
 
+if (is.na(metric)){
+  stop('please specify a metric')
+}
+
 if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
   stop("metric is not one of 'kendall','spearman','ndcg','p@k','rbo'")
+}
+
+if (is.na(language)){
+  stop('please specify a language')
 }
 
 if (!language%in%c('english','french')){
@@ -106,6 +114,10 @@ path_to_grid = paste0(path_root,'/pyramid_matching/results/',language,'/')
 path_to_baselines = paste0(path_root,'/evaluating/',language,'/scores_baselines/')
 path_to_evaluation = paste0(path_root,'/evaluating/',language,'/scores_evaluation/')
 path_to_best_combos = paste0(path_root,'/evaluating/',language,'/best_combos_per_metric/')
+path_to_save_console = paste0(path_root,'/antoine/console_output/',language,'/')
+
+con = file(paste0(path_to_save_console,metric,'_output_console.txt'))
+sink(con, append=TRUE)
 
 # = = = = = = = = = = = = = = = = finding best parameter combination
 
@@ -312,4 +324,4 @@ pdf(paste0(path_to_plots,'heatmap_',metric,'.pdf'),paper='a4r',width=15,height=7
     
 dev.off()
 
-
+sink()

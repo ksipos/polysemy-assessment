@@ -86,9 +86,14 @@ new_range = c(1,100) # range to which all scores are mapped when normalizing
 
 path_root = as.character(args[1])
 metric = as.character(args[2])
+language = as.character(args[3])
 
 if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
   stop("metric is not one of 'kendall','spearman','ndcg','p@k','rbo'")
+}
+
+if (!language%in%c('english','french')){
+  stop(paste(language,'is currently not supported!'))
 }
 
 # relevant links about the metrics:
@@ -96,11 +101,11 @@ if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
 # see: https://stats.stackexchange.com/questions/8071/how-to-choose-between-pearson-and-spearman-correlation
 # - http://codalism.com/research/papers/wmz10_tois.pdf 
 
-path_to_plots = paste0(path_root,'/antoine/plots/english/')
-path_to_grid = paste0(path_root,'/pyramid_matching/results/')
-path_to_baselines = paste0(path_root,'/evaluating/english/scores_baselines/')
-path_to_evaluation = paste0(path_root,'/evaluating/english/scores_evaluation/')
-path_to_best_combos = paste0(path_root,'/evaluating/english/best_combos_per_metric/')
+path_to_plots = paste0(path_root,'/antoine/plots/',language,'/')
+path_to_grid = paste0(path_root,'/pyramid_matching/results/',language,'/')
+path_to_baselines = paste0(path_root,'/evaluating/',language,'/scores_baselines/')
+path_to_evaluation = paste0(path_root,'/evaluating/',language,'/scores_evaluation/')
+path_to_best_combos = paste0(path_root,'/evaluating/',language,'/best_combos_per_metric/')
 
 # = = = = = = = = = = = = = = = = finding best parameter combination
 

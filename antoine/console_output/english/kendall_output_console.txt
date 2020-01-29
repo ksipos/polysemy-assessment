@@ -2,8 +2,10 @@
  [7] "pca16_L1" "pca17_L1" "pca18_L1" "pca19_L1" "pca2_L1"  "pca20_L1"
 [13] "pca3_L1"  "pca4_L1"  "pca5_L1"  "pca6_L1"  "pca7_L1"  "pca8_L1" 
 [19] "pca9_L1" 
+null device 
+          1 
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Sat Jan 25 09:39:20 2020
+% Wed Jan 29 12:49:42 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rr}

@@ -1,9 +1,10 @@
 library(xtable)
+library(fields)
 library(reticulate)
 library(pheatmap)
 library(RColorBrewer)
 
-use_condaenv('my_env_3')
+use_condaenv('my_env_3') # just a Python 3 environment with the 'rbo' module installed
 
 rbo = import('rbo') # see https://github.com/changyaochen/rbo
 
@@ -24,7 +25,7 @@ normalize_range = function(x, from_to){
 
 
 score_ranking = function(evaluated,gt,metric){
-  # evaluated and gt are named lists of words and their scores, sorted by decreasing order of scores
+  # evaluated and gt (ground truth) are named lists of words and their scores, sorted by decreasing order of scores
   # metric should be one of c('kendall','spearman','ndcg','p@k','rbo')
   
   evaluated_words = names(evaluated)
@@ -93,7 +94,7 @@ if (is.na(metric)){
 }
 
 if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
-  stop("metric is not one of 'kendall','spearman','ndcg','p@k','rbo'")
+  stop('metric is not one of kendall, spearman, ndcg, p@k, rbo')
 }
 
 if (is.na(language)){
@@ -166,7 +167,8 @@ rankings_combo = lapply(rankings_combo,function(x) {
 
 names(rankings_combo) = combos
 
-# remove combinations for which the scores are all the same
+# remove combinations for which there is no ranking (the scores were all the same, so normalization failed)
+# this corresponds to the combinations with only one level in the pyramid
 lens = unlist(lapply(rankings_combo,length))
 names(rankings_combo)[which(lens==0)]
 rankings_combo = rankings_combo[!lens==0]
@@ -194,15 +196,48 @@ for (combo in combos){
 
 mean_scores = round(unlist(mean_scores)*100,2)
 
+# = = generate heatmap of scores vs PCA dimensions vs pyramid levels = =
+
+pca_dims = unlist(lapply(names(mean_scores), function(x) unlist(strsplit(x,split='_'))[1]))
+pca_dims = sort(unique(as.numeric(gsub('pca','',pca_dims))),decreasing=FALSE)
+
+my_levels = unlist(lapply(names(mean_scores), function(x) unlist(strsplit(x,split='_'))[2]))
+my_levels = sort(unique(as.numeric(gsub('L','',my_levels))),decreasing=FALSE)
+
+for_heatmap = matrix(nrow=length(my_levels),ncol=length(pca_dims))
+
+for (i in 1:length(my_levels)){
+  for (j in 1:length(pca_dims)){
+    for_heatmap[i,j] = mean_scores[[paste0('pca',pca_dims[j],'_L',my_levels[i])]]
+  }
+}
+
+pdf(paste0(path_to_plots,'heatmap_parameters_',metric,'.pdf'),paper='a4r',width=7.5,height=7.5)
+
+x = my_levels
+y = pca_dims
+z = t(apply(for_heatmap, 2, rev)) # see: https://stackoverflow.com/questions/31882079/r-image-plots-matrix-rotated
+
+image.plot(z,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:100],xaxt='n',yaxt='n',xlab='nb of PCA dimensions',ylab='nb of pyramid levels',main=metric,cex.main=2.5,cex.lab=1.5)
+
+axis(1,at=seq(0,1,length.out=length(y)),label=y)
+axis(2,at=seq(0,1,length.out=length(x)),label=rev(x))
+
+dev.off()
+
+
+# = = generate LaTeX table = =
+
+#  (will be saved to text file where console output is re-directed)
+
 mean_scores = sort(mean_scores,decreasing=TRUE)
-
 to_print = as.data.frame(c(head(mean_scores),tail(mean_scores)))
-
 best_name = rownames(to_print)[1]
-
 rownames(to_print) = gsub('pca','D',rownames(to_print))
 rownames(to_print) = gsub('\\_','',rownames(to_print))
 print(xtable(to_print))
+
+# = = = =
 
 best_name_renamed = rownames(to_print)[1]
 

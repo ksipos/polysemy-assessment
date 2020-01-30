@@ -5,7 +5,7 @@
 null device 
           1 
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Wed Jan 29 12:49:42 2020
+% Thu Jan 30 10:30:02 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rr}

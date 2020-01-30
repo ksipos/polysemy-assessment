@@ -287,7 +287,7 @@ rankings[['random']] = lapply(1:n_runs,function(x){
 })
 
 # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
-method_names = c(best_name_renamed,'random','frequency','google','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
+method_names = c(best_name_renamed,'random','frequency','oxford','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
 method_names_pretty = gsub('_',' ',method_names)
 
 pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)

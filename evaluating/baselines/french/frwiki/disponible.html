@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Haute disponibilité — Wikipédia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRequestId":"XjBQSgpAADkAADECpMQAAAFX","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Haute_disponibilité","wgTitle":"Haute disponibilité","wgCurRevisionId":160958172,"wgRevisionId":160958172,"wgArticleId":337489,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Article contenant un appel à traduction en anglais","Article avec une section vide ou incomplète","Portail:Sécurité de l'information/Articles liés",
+"Portail:Sécurité informatique/Articles liés","Portail:Informatique/Articles liés","Disponibilité (informatique)","Sûreté de fonctionnement","Ingénierie"],"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgRelevantPageName":"Haute_disponibilité","wgRelevantArticleId":337489,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Disponible","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"fr","pageLanguageDir":"ltr","pageVariantFallbacks":"fr"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!0},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"français","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Haute_disponibilit%C3%A9","wgWikibaseItemId":"Q1622420",
+"wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ArchiveLinks","ext.gadget.MonobookToolbarStandard","ext.gadget.Wdsearch","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups",
+"ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1dpod",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"fr"});
+});mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=fr&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=fr&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=fr&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.15"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/3/35/Typical_dual-node_HA.jpg"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/fr.m.wikipedia.org/wiki/Haute_disponibilit%C3%A9"/>
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit"/>
+<link rel="edit" title="Modifier" href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (fr)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//fr.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://fr.wikipedia.org/wiki/Haute_disponibilit%C3%A9"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Haute_disponibilité rootpage-Haute_disponibilité skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="fr">Haute disponibilité</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">Un article de Wikip&eacute;dia, l&#039;encyclop&eacute;die libre.</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">(Redirigé depuis <a href="/w/index.php?title=Disponible&amp;redirect=no" class="mw-redirect" title="Disponible">Disponible</a>)</span></div>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Sauter &agrave; la navigation</a>
+		<a class="mw-jump-link" href="#p-search">Sauter &agrave; la recherche</a>
+		<div id="mw-content-text" lang="fr" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/Fichier:Typical_dual-node_HA.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/Typical_dual-node_HA.jpg/220px-Typical_dual-node_HA.jpg" decoding="async" width="220" height="288" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/3/35/Typical_dual-node_HA.jpg 1.5x" data-file-width="324" data-file-height="424" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/Fichier:Typical_dual-node_HA.jpg" class="internal" title="Agrandir"></a></div>Exemple de cluster à haute disponibilité</div></div></div>
+<p>La <b>haute disponibilité</b> ou <b>high availability</b> (<b>HA</b>) est un terme souvent utilisé en <a href="/wiki/Informatique" title="Informatique">informatique</a>, à propos d'architecture de système ou d'un service pour désigner le fait que cette architecture ou ce service a un <a href="/wiki/Taux_de_disponibilit%C3%A9" class="mw-redirect" title="Taux de disponibilité">taux de disponibilité</a> convenable.
+</p><p>La disponibilité est aujourd'hui un enjeu important des infrastructures informatiques. Une étude de 2007 estime que la non-disponibilité des services informatiques peut avoir un coût de 440&#160;000&#160;euros de l'heure<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>, ces coûts se chiffrant en milliards d'euros à l'échelle d'un pays<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>. L'indisponibilité des services informatiques est particulièrement critique dans le domaine de l'industrie, notamment en cas d'arrêt d'une chaîne de production.
+</p><p>Deux moyens complémentaires sont utilisés pour améliorer la disponibilité&#160;:
+</p>
+<ul><li>la mise en place d'une infrastructure matérielle spécialisée, généralement en se basant sur de la redondance matérielle. Est alors créé un <a href="/wiki/Grappe_de_serveurs" title="Grappe de serveurs">cluster</a> de haute-disponibilité (par opposition à un cluster de calcul)&#160;: une grappe d'ordinateurs dont le but est d'assurer un service en évitant au maximum les indisponibilités&#160;;</li>
+<li>la mise en place de processus adaptés permettant de réduire les erreurs, et d'accélérer la reprise en cas d'erreur. <a href="/wiki/ITIL" class="mw-redirect" title="ITIL">ITIL</a> contient de nombreux processus de ce type.</li></ul>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="fr" dir="ltr"><h2>Sommaire</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Mesure_du_taux_de_disponibilité"><span class="tocnumber">1</span> <span class="toctext">Mesure du taux de disponibilité</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Techniques_améliorant_la_disponibilité"><span class="tocnumber">2</span> <span class="toctext">Techniques améliorant la disponibilité</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Dépendance_vis-à-vis_des_autres_applications"><span class="tocnumber">3</span> <span class="toctext">Dépendance vis-à-vis des autres applications</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Répartition_de_charge_et_sensibilité"><span class="tocnumber">4</span> <span class="toctext">Répartition de charge et sensibilité</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Redondance_différentielle"><span class="tocnumber">5</span> <span class="toctext">Redondance différentielle</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Redondance_avec_système_de_vote"><span class="tocnumber">6</span> <span class="toctext">Redondance avec système de vote</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#«_Shadow_operations_»"><span class="tocnumber">7</span> <span class="toctext">«&#160;Shadow operations&#160;»</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Les_processus_qui_permettent_d&#39;améliorer_la_disponibilité"><span class="tocnumber">8</span> <span class="toctext">Les processus qui permettent d'améliorer la disponibilité</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Les_processus_qui_réduisent_le_nombre_de_pannes"><span class="tocnumber">8.1</span> <span class="toctext">Les processus qui réduisent le nombre de pannes</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Les_processus_réduisant_la_durée_des_pannes"><span class="tocnumber">8.2</span> <span class="toctext">Les processus réduisant la durée des pannes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Cluster_haute_disponibilité"><span class="tocnumber">9</span> <span class="toctext">Cluster haute disponibilité</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Certification"><span class="tocnumber">10</span> <span class="toctext">Certification</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Voir_aussi"><span class="tocnumber">11</span> <span class="toctext">Voir aussi</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Articles_connexes"><span class="tocnumber">11.1</span> <span class="toctext">Articles connexes</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Liens_externes"><span class="tocnumber">11.2</span> <span class="toctext">Liens externes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Notes_et_références"><span class="tocnumber">12</span> <span class="toctext">Notes et références</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Mesure_du_taux_de_disponibilit.C3.A9"></span><span class="mw-headline" id="Mesure_du_taux_de_disponibilité">Mesure du taux de disponibilité</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=1" class="mw-editsection-visualeditor" title="Modifier la section : Mesure du taux de disponibilité">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=1" title="Modifier la section : Mesure du taux de disponibilité">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La disponibilité se mesure souvent en pourcentage&#160;:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Disponibilité en&#160;%
+</th>
+<th>Indisponibilité par année
+</th>
+<th>Indisponibilité par mois<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span class="cite_crochet">[</span>3<span class="cite_crochet">]</span></a></sup>
+</th>
+<th>Indisponibilité par semaine
+</th></tr>
+<tr>
+<td>90&#160;% («&#160;un neuf&#160;»)
+</td>
+<td>36,5 jours
+</td>
+<td>72 heures
+</td>
+<td>16,8 heures
+</td></tr>
+<tr>
+<td>95&#160;%
+</td>
+<td>18,25 jours
+</td>
+<td>36 heures
+</td>
+<td>8,4 heures
+</td></tr>
+<tr>
+<td>98&#160;%
+</td>
+<td>7,30 jours
+</td>
+<td>14,4 heures
+</td>
+<td>3,36 heures
+</td></tr>
+<tr>
+<td>99&#160;% («&#160;deux neuf&#160;»)
+</td>
+<td>3,65 jours
+</td>
+<td>7,20 heures
+</td>
+<td>1,68 heures
+</td></tr>
+<tr>
+<td>99,5&#160;%
+</td>
+<td>1,83 jours
+</td>
+<td>3,60 heures
+</td>
+<td>50,4 minutes
+</td></tr>
+<tr>
+<td>99,8&#160;%
+</td>
+<td>17,52 heures
+</td>
+<td>86,23 minutes
+</td>
+<td>20,16 minutes
+</td></tr>
+<tr>
+<td>99,9&#160;% («&#160;trois neuf&#160;»)
+</td>
+<td>8,76 heures
+</td>
+<td>43,2 minutes
+</td>
+<td>10,1 minutes
+</td></tr>
+<tr>
+<td>99,95&#160;%
+</td>
+<td>4,38 heures
+</td>
+<td>21,56 minutes
+</td>
+<td>5,04 minutes
+</td></tr>
+<tr>
+<td>99,99&#160;% («&#160;quatre neuf&#160;»)
+</td>
+<td>52,56 minutes
+</td>
+<td>4,32 minutes
+</td>
+<td>1,01 minutes
+</td></tr>
+<tr>
+<td>99,999&#160;% («&#160;cinq neuf&#160;»)
+</td>
+<td>5,26 minutes
+</td>
+<td>25,9 secondes
+</td>
+<td>6,05 secondes
+</td></tr>
+<tr>
+<td>99,9999&#160;% («&#160;six neuf&#160;»)
+</td>
+<td>31,5 secondes
+</td>
+<td>2,59 secondes
+</td>
+<td>0,605 secondes
+</td></tr></tbody></table>
+<p>L'amalgame est souvent fait, à tort, entre la haute disponibilité et le <a href="/wiki/Plan_de_reprise_d%27activit%C3%A9_(informatique)" class="mw-redirect" title="Plan de reprise d&#39;activité (informatique)">plan de reprise d'activité</a>. Il s'agit de deux tâches différentes, complémentaires pour atteindre la <a href="/wiki/Plan_de_continuit%C3%A9" title="Plan de continuité">disponibilité continue</a>.
+</p>
+<h2><span id="Techniques_am.C3.A9liorant_la_disponibilit.C3.A9"></span><span class="mw-headline" id="Techniques_améliorant_la_disponibilité">Techniques améliorant la disponibilité</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=2" class="mw-editsection-visualeditor" title="Modifier la section : Techniques améliorant la disponibilité">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=2" title="Modifier la section : Techniques améliorant la disponibilité">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>De nombreuses techniques sont utilisées pour améliorer la disponibilité&#160;:
+</p>
+<ul><li>la <a href="/wiki/Redondance_des_mat%C3%A9riels" title="Redondance des matériels">redondance des matériels</a> et la mise en <a href="/wiki/Grappe_de_serveurs" title="Grappe de serveurs">cluster</a>&#160;;</li>
+<li>la sécurisation des données&#160;: <a href="/wiki/RAID_(informatique)" title="RAID (informatique)">RAID</a>, <a href="/wiki/Gestion_par_volumes_logiques#Clichés_(snapshots)" title="Gestion par volumes logiques">snapshots</a>, <a href="/w/index.php?title=Oracle_Data_Guard&amp;action=edit&amp;redlink=1" class="new" title="Oracle Data Guard (page inexistante)">Oracle Data Guard</a>&#160;<a href="https://en.wikipedia.org/wiki/Oracle_Data_Guard" class="extiw" title="en:Oracle Data Guard"><span class="indicateur-langue" title="Équivalent de l’article «&#32;Oracle Data Guard&#32;» dans une autre langue">(en)</span></a>, BCV (Business Copy Volume), <a href="/wiki/SRDF" title="SRDF">SRDF (Symmetrix Remote Data Facility)</a>, <a href="/wiki/DRBD" title="DRBD">DRBD</a>&#160;;</li>
+<li>la possibilité de reconfigurer le serveur «&#160;à chaud&#160;» (c’est-à-dire lorsque celui-ci fonctionne)&#160;;</li>
+<li><a href="/wiki/Mode_d%C3%A9grad%C3%A9" title="Mode dégradé">mode dégradé</a> ou un <a href="/wiki/Mode_panique" title="Mode panique">mode panique</a>&#160;;</li>
+<li>plan de secours&#160;;</li>
+<li>et sécurisation des sauvegardes&#160;: externalisation, centralisation sur site tiers.</li></ul>
+<p>La haute disponibilité exige le plus souvent un local adapté: alimentation stabilisée, climatisation sur plancher, avec filtre à particules, service de maintenance, service de gardiennage et de sécurité contre la malveillance et le vol. Attention aussi au risque d'incendie et de dégât des eaux. Les câbles d'alimentation et de communication doivent être multiples et enterrés. Ils ne doivent pas être saillants dans le parking souterrain de l'immeuble, ce qui est trop souvent vu dans les immeubles parisiens. Ces critères sont les premiers à entrer en compte lors du choix d'un prestataire d'hébergement (cas de la location d'un local à haute disponibilité).
+</p><p>Pour chaque niveau de l’architecture, pour chaque composant, chaque liaison entre composants, il faut établir&#160;:
+</p>
+<ul><li>Comment détecter une panne&#160;? Exemples&#160;:  Tests de vie TCP Health Check implémenté par un boîtier Alteon<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span class="cite_crochet">[</span>4<span class="cite_crochet">]</span></a></sup>, programme de test invoqué périodiquement («&#160;<a href="/wiki/Heartbeat_(programme)" class="mw-redirect" title="Heartbeat (programme)">heartbeat</a>&#160;»), interface de type «&#160;diagnostic&#160;» sur les composants…</li>
+<li>Comment le composant est-il sécurisé, redondé, secouru… Exemples&#160;: serveur de secours, cluster système, clustering <a href="/wiki/Websphere" class="mw-redirect" title="Websphere">Websphere</a>, stockage RAID, sauvegardes, double attachement SAN, mode dégradé, matériel non utilisé libre (spare) prêt à être réinstallé..</li>
+<li>Comment désire-t-on enclencher la bascule en mode secours / dégradé. Manuellement après analyse&#160;? Automatiquement&#160;?</li>
+<li>Comment s’assurer que le système de secours reparte sur un état stable et connu. Exemples&#160;: on repart d’une copie de la base et on réapplique les archives logs, relance des batchs depuis un état connu, commit à 2 phases pour les transactions mettant à jour plusieurs gisements de données…</li>
+<li>Comment l’application redémarre sur le mécanisme de secours. Exemples&#160;: redémarrage de l’application, redémarrage des batchs interrompus, activation d’un mode dégradé, reprise de l’adresse IP du serveur défaillant par le serveur de secours…</li>
+<li>Comment reprendre éventuellement les transactions ou sessions en cours. Exemples&#160;: persistance de session sur le serveur applicatif, mécanisme pour assurer une réponse à un client pour une transaction qui s’est bien effectuée avant défaillance mais pour laquelle le client n’a pas eu de réponse…</li>
+<li>Comment revenir à la situation nominale. Exemples&#160;:
+<ul><li>si un mode dégradé permet en cas de défaillance d’une base de données de stocker des transactions en attente dans un fichier, comment les transactions sont-elles ré-appliquées quand la base de données redevient active.</li>
+<li>si un composant défaillant a été désactivé, comment s’effectue sa réintroduction en service actif (nécessité par exemple de resynchroniser des données, de retester le composant…)</li></ul></li></ul>
+<h2><span id="D.C3.A9pendance_vis-.C3.A0-vis_des_autres_applications"></span><span class="mw-headline" id="Dépendance_vis-à-vis_des_autres_applications">Dépendance vis-à-vis des autres applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=3" class="mw-editsection-visualeditor" title="Modifier la section : Dépendance vis-à-vis des autres applications">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=3" title="Modifier la section : Dépendance vis-à-vis des autres applications">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Pour une application qui sollicite d’autres applications avec des <a href="/wiki/Intergiciel" class="mw-redirect" title="Intergiciel">middlewares</a> en mode synchrone (<a href="/wiki/Service_web" title="Service web">service webs</a> en <a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">http</a>, <a href="/wiki/Tuxedo_(logiciel)" title="Tuxedo (logiciel)">Tuxedo</a>, <a href="/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture">Corba</a>, <a href="/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">EJB</a>) le taux de disponibilité de l’application sera fortement lié à la disponibilité des applications dont elle dépend. La sensibilité des applications dont on dépend doit donc être équivalente ou supérieure à la sensibilité de l’application elle-même.
+</p><p>Sinon, il faut envisager
+</p>
+<ul><li>l’utilisation d’un middleware asynchrone&#160;: <a href="/wiki/MQ_Series" class="mw-redirect" title="MQ Series">MQ Series</a>, JMS, <a href="/w/index.php?title=SonicMQ&amp;action=edit&amp;redlink=1" class="new" title="SonicMQ (page inexistante)">SonicMQ</a>, CFT</li>
+<li>la mise en œuvre d’un mode dégradé quand une application dont on dépend est défaillante.</li></ul>
+<p>Pour cette raison on privilégiera l’utilisation de middlewares asynchrones pour privilégier une bonne disponibilité quand c’est possible.
+</p>
+<h2><span id="R.C3.A9partition_de_charge_et_sensibilit.C3.A9"></span><span class="mw-headline" id="Répartition_de_charge_et_sensibilité">Répartition de charge et sensibilité</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=4" class="mw-editsection-visualeditor" title="Modifier la section : Répartition de charge et sensibilité">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=4" title="Modifier la section : Répartition de charge et sensibilité">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La sensibilité est souvent gérée en redondant les éléments avec un mécanisme de répartition de charge.
+(un cluster Websphere avec un load-balancing Alteon par exemple). Pour que ce système apporte un réel gain en termes de fiabilité, il faut vérifier que si un des éléments est défaillant, les éléments restants disposent d’une puissance suffisante pour assurer le service.
+</p><p>Autrement dit, dans le cas de deux serveurs actifs avec répartition de charge, la puissance d’un seul serveur doit permettre d’assurer la totalité de la charge. Avec trois serveurs, la puissance d’un seul serveur doit permettre d’assurer 50&#160;% de la charge (en supposant que la probabilité d’avoir un incident sur deux serveurs en même temps est négligeable).
+</p><p>Pour assurer une bonne disponibilité, il est inutile de mettre un grand nombre de serveurs se secourant mutuellement. Par exemple, un élément disponible à 99&#160;% redondé une fois donne une disponibilité de 99,99&#160;% (probabilité que les deux éléments soit défaillants au même moment = 1/100x1/100 = 1/10000).
+</p>
+<h2><span id="Redondance_diff.C3.A9rentielle"></span><span class="mw-headline" id="Redondance_différentielle">Redondance différentielle</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=5" class="mw-editsection-visualeditor" title="Modifier la section : Redondance différentielle">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=5" title="Modifier la section : Redondance différentielle">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La redondance d’un élément est généralement effectuée en choisissant de redonder avec plusieurs composants identiques.
+Ceci suppose, pour être efficace, qu’une défaillance d’un des composants est aléatoire et indépendante d’une défaillance d’un des autres composants. C’est par exemple le cas des pannes matérielles.
+</p><p>Ce n’est pas le cas de toutes les défaillances&#160;: par exemple, une faille du système d’exploitation ou une anomalie d’un composant logiciel peuvent survenir, quand les conditions sont favorables, sur l’ensemble des composants à la fois.
+Pour cette raison, quand l’application est extrêmement sensible, on considèrera de redonder les éléments avec des composants de natures différentes mais assurant les mêmes fonctions. Ceci peut conduire à&#160;:
+</p>
+<ul><li>choisir des serveurs de nature différentes, avec des OS différents, des produits logiciels d’infrastructure différents&#160;;</li>
+<li>développer le même composant deux fois en respectant à chaque fois les contrats d’interface qui s’appliquent au composant.</li></ul>
+<h2><span id="Redondance_avec_syst.C3.A8me_de_vote"></span><span class="mw-headline" id="Redondance_avec_système_de_vote">Redondance avec système de vote</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=6" class="mw-editsection-visualeditor" title="Modifier la section : Redondance avec système de vote">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=6" title="Modifier la section : Redondance avec système de vote">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dans ce mode, différents composants traitent les mêmes entrées et produisent donc (en principe) les mêmes sorties.
+</p><p>Les résultats produits par tous les composants sont collectés, puis un <a href="/wiki/Algorithmique" title="Algorithmique">algorithme</a> est mis en œuvre pour produire le résultat final. L’algorithme peut être simple (vote à la majorité) ou complexe (moyenne, <a href="/wiki/Moyenne_pond%C3%A9r%C3%A9e" title="Moyenne pondérée">moyenne pondérée</a>, médiane…), l’objectif étant d’éliminer les résultats erronés imputables à un dysfonctionnement sur l’un des composants et/ou de fiabiliser un résultat en combinant plusieurs résultats légèrement différents.
+</p><p>Ce procédé&#160;:
+</p>
+<ul><li>ne permet pas de <a href="/wiki/R%C3%A9partition_de_charge" title="Répartition de charge">répartition de charge</a>&#160;;</li>
+<li>introduit le problème de fiabilisation du composant gérant l’algorithme de vote.</li></ul>
+<p>Ce procédé est utilisé généralement dans les cas suivants
+</p>
+<ul><li>Des systèmes reposant sur des <a href="/wiki/Capteur" title="Capteur">capteurs</a> (exemple&#160;: capteurs de température) pour lesquels les capteurs sont redondés</li>
+<li>Des systèmes ou plusieurs composants différents assurant la même fonction sont utilisés (cf. redondance différentielle) et pour lesquels un meilleur résultat final peut être obtenu en combinant les résultats produits par les composants (exemple&#160;: système de <a href="/wiki/Reconnaissance_de_formes" title="Reconnaissance de formes">reconnaissance de formes</a> utilisant plusieurs algorithmes pour obtenir un meilleur taux de reconnaissance.</li></ul>
+<h2><span id=".C2.AB_Shadow_operations_.C2.BB"></span><span class="mw-headline" id="«_Shadow_operations_»">«&#160;Shadow operations&#160;»</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=7" class="mw-editsection-visualeditor" title="Modifier la section : « Shadow operations »">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=7" title="Modifier la section : « Shadow operations »">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Lors du dysfonctionnement d’un composant redondé et après l’avoir réparé, on peut souhaiter le réintroduire en service actif, vérifier son bon fonctionnement effectif, mais sans que les résultats soient utilisés.
+Dans ce cas, les entrées sont traitées par un (ou plusieurs) composants réputés fiables. Ceux-ci produisent le résultat exploité par le reste du système. Les mêmes entrées sont également traitées par le composant réintroduit qui est dit en mode «&#160;shadow&#160;». On peut vérifier le bon fonctionnement du composant en comparant les résultats produits avec ceux des composants fiables.
+Ce procédé est souvent utilisé dans les systèmes à base de vote car il suffit d’exclure le composant en mode «&#160;shadow&#160;» du vote final.
+</p>
+<h2><span id="Les_processus_qui_permettent_d.27am.C3.A9liorer_la_disponibilit.C3.A9"></span><span class="mw-headline" id="Les_processus_qui_permettent_d'améliorer_la_disponibilité">Les processus qui permettent d'améliorer la disponibilité</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=8" class="mw-editsection-visualeditor" title="Modifier la section : Les processus qui permettent d&#039;améliorer la disponibilité">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=8" title="Modifier la section : Les processus qui permettent d&#039;améliorer la disponibilité">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>On peut distinguer deux rôles dans ces processus.
+</p>
+<h3><span id="Les_processus_qui_r.C3.A9duisent_le_nombre_de_pannes"></span><span class="mw-headline" id="Les_processus_qui_réduisent_le_nombre_de_pannes">Les processus qui réduisent le nombre de pannes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=9" class="mw-editsection-visualeditor" title="Modifier la section : Les processus qui réduisent le nombre de pannes">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=9" title="Modifier la section : Les processus qui réduisent le nombre de pannes">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En se basant sur le fait que <b>mieux vaut prévenir que guérir</b>, mettre en place des processus de contrôle qui permettront de réduire le nombre d'incidents sur le système permet d'améliorer la disponibilité. Deux processus permettent de jouer ce rôle&#160;:
+</p>
+<ul><li>Le processus de gestion des changements&#160;: 60&#160;% des erreurs sont liées à un changement récent. En mettant en place un processus formalisé, accompagné de tests suffisants (et réalisés dans un environnement de pré-production correct), de nombreux incidents peuvent être éliminés.</li>
+<li>Un processus de gestion pro-active des erreurs&#160;: les incidents peuvent bien souvent être détectés avant de survenir&#160;: les temps de réponse augmentent… Un processus affecté à cette tâche, et muni des outils adéquats (système de mesure, de reporting…) pourra intervenir avant même que l'incident n'arrive.</li></ul>
+<p>En mettant en place ces deux processus, de nombreux incidents peuvent être évités.
+</p>
+<h3><span id="Les_processus_r.C3.A9duisant_la_dur.C3.A9e_des_pannes"></span><span class="mw-headline" id="Les_processus_réduisant_la_durée_des_pannes">Les processus réduisant la durée des pannes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=10" class="mw-editsection-visualeditor" title="Modifier la section : Les processus réduisant la durée des pannes">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=10" title="Modifier la section : Les processus réduisant la durée des pannes">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Les pannes finissent toujours par arriver. À ce moment-là, le processus de reprise en cas d'erreur est primordial pour que le service soit restauré au plus vite. Ce processus doit avoir un objectif&#160;: permettre à l'utilisateur d'utiliser un service le plus rapidement possible. La réparation définitive doit donc être évitée car elle prend beaucoup plus de temps. Ce processus devra donc mettre en place une solution de contournement du problème.
+</p>
+<h2><span id="Cluster_haute_disponibilit.C3.A9"></span><span class="mw-headline" id="Cluster_haute_disponibilité">Cluster haute disponibilité</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=11" class="mw-editsection-visualeditor" title="Modifier la section : Cluster haute disponibilité">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=11" title="Modifier la section : Cluster haute disponibilité">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Un <a href="/wiki/Grappe_de_serveurs" title="Grappe de serveurs">cluster</a> haute disponibilité (par opposition à un cluster de calcul) est une grappe d'ordinateurs dont le but est d'assurer un service en évitant au maximum les indisponibilités.
+</p><p>Voici une liste non exhaustive d'applications de clustering pour <a href="/wiki/UNIX" class="mw-redirect" title="UNIX">UNIX</a> (fonctionnant sous <a href="/wiki/AIX" title="AIX">AIX</a>, <a href="/wiki/HP-UX" title="HP-UX">HP-UX</a>, <a href="/wiki/Linux" title="Linux">Linux</a> ou Solaris)&#160;:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://www.evidian.com/products/high-availability-software-for-application-clustering/">Evidian SafeKit</a> (load balancing, réplication temps réel et failover)</li>
+<li><a href="/wiki/Hewlett-Packard" title="Hewlett-Packard">HP</a> <a href="/w/index.php?title=MC/ServiceGuard_pour_HP-UX&amp;action=edit&amp;redlink=1" class="new" title="MC/ServiceGuard pour HP-UX (page inexistante)">MC/ServiceGuard pour HP-UX</a></li>
+<li><a href="/wiki/IBM" title="IBM">IBM</a> <a href="/wiki/HACMP" title="HACMP">HACMP</a></li>
+<li><a href="/wiki/Bull_(entreprise)" title="Bull (entreprise)">Bull</a> <a href="/wiki/Application_Roll-over_Facility" title="Application Roll-over Facility">Application Roll-over Facility</a></li>
+<li><a href="/wiki/Symantec" class="mw-redirect" title="Symantec">Symantec</a> <a href="/w/index.php?title=Veritas_Cluster_Server&amp;action=edit&amp;redlink=1" class="new" title="Veritas Cluster Server (page inexistante)">Veritas Cluster Server</a></li>
+<li><a href="/w/index.php?title=Open_Source_Linux&amp;action=edit&amp;redlink=1" class="new" title="Open Source Linux (page inexistante)">Open Source Linux</a> <a href="/wiki/Pacemaker_(logiciel)" title="Pacemaker (logiciel)">Pacemaker (logiciel)</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.opensvc.com/howto.getting.started.html">OpenSVC</a> (Logiciels Libres Gratuits)</li>
+<li><a rel="nofollow" class="external text" href="http://www.oracle.com/us/products/servers-storage/solaris/cluster-067314.html">Oracle Solaris Cluster</a> (ex SUN Cluster)</li></ul>
+<h2><span class="mw-headline" id="Certification">Certification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=12" class="mw-editsection-visualeditor" title="Modifier la section : Certification">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=12" title="Modifier la section : Certification">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Il existe des organismes de certification, comme l'<a href="/wiki/Uptime_Institute" title="Uptime Institute">Uptime Institute</a> (appelé parfois <span class="citation">«&#160;The Global Data Center Authority&#160;»</span>) qui ont défini des classifications dans le domaine des <a href="/wiki/Datacenter" class="mw-redirect" title="Datacenter">Datacenters</a>, en distinguant quatre types de "Tiers"<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span class="cite_crochet">[</span>5<span class="cite_crochet">]</span></a></sup>, ainsi que des critères de <a href="/wiki/R%C3%A9silience" class="mw-disambig" title="Résilience">résilience</a>.
+</p>
+<h2><span class="mw-headline" id="Voir_aussi">Voir aussi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=13" class="mw-editsection-visualeditor" title="Modifier la section : Voir aussi">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=13" title="Modifier la section : Voir aussi">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Articles_connexes">Articles connexes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=14" class="mw-editsection-visualeditor" title="Modifier la section : Articles connexes">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=14" title="Modifier la section : Articles connexes">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/Plan_de_reprise_d%27activit%C3%A9_(informatique)" class="mw-redirect" title="Plan de reprise d&#39;activité (informatique)">Plan de reprise d'activité</a></li>
+<li><a href="/wiki/Plan_de_continuit%C3%A9" title="Plan de continuité">Plan de continuité</a></li></ul>
+<h3><span class="mw-headline" id="Liens_externes">Liens externes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=15" class="mw-editsection-visualeditor" title="Modifier la section : Liens externes">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=15" title="Modifier la section : Liens externes">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="bandeau-section metadata bandeau-niveau-information incomplet">&#8194;<span class="plainlinks">Cette section est vide, insuffisamment détaillée ou incomplète. <a class="external text" href="https://fr.wikipedia.org/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit">Votre aide</a> est la bienvenue&#160;!</span> <a href="/wiki/Aide:Comment_modifier_une_page" title="Aide:Comment modifier une page">Comment faire&#160;?</a></div>
+<h2><span id="Notes_et_r.C3.A9f.C3.A9rences"></span><span class="mw-headline" id="Notes_et_références">Notes et références</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit&amp;section=16" class="mw-editsection-visualeditor" title="Modifier la section : Notes et références">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit&amp;section=16" title="Modifier la section : Notes et références">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="references-small decimal" style="-moz-column-width:72em; -webkit-column-width:72em; column-width:72em;"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink noprint"><a href="#cite_ref-1">↑</a> </span><span class="reference-text"><span class="ouvrage"><a rel="nofollow" class="external text" href="http://www.silicon.fr/les-pannes-informatiques-coutent-tres-cher-aux-entreprises-22933.html">«&#160;<cite style="font-style: normal;">silicon.fr</cite>&#160;»</a> <small style="line-height:1em;">(consulté le <span class="nowrap">9 décembre 2010</span>)</small></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink noprint"><a href="#cite_ref-2">↑</a> </span><span class="reference-text"><span class="ouvrage"><a rel="nofollow" class="external text" href="http://www.journaldunet.com/solutions/dsi/couts-indisponibilite-des-donnees-en-france.shtml">«&#160;<cite style="font-style: normal;">journaldunet</cite>&#160;»</a> <small style="line-height:1em;">(consulté le <span class="nowrap">9 décembre 2010</span>)</small></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink noprint"><a href="#cite_ref-3">↑</a> </span><span class="reference-text">Une période de 30 jours est utilisée pour ce calcul.</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink noprint"><a href="#cite_ref-4">↑</a> </span><span class="reference-text"><abbr class="abbr indicateur-langue" title="Langue&#32;: anglais">(en)</abbr> <a href="https://en.wikipedia.org/wiki/Alteon_WebSystems" class="extiw" title="en:Alteon WebSystems">Alteon WebSystems</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink noprint"><a href="#cite_ref-5">↑</a> </span><span class="reference-text"><a rel="nofollow" class="external free" href="http://www.uptimeinstitute.com/professional-services/professional-services-tier-certification">http://www.uptimeinstitute.com/professional-services/professional-services-tier-certification</a> <span class="noarchive"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20180723035706/http://www.uptimeinstitute.com/professional-services/professional-services-tier-certification">«&#160;Copie archivée&#160;»</a> <small>(version du 23 juillet 2018 sur l'<i><a href="/wiki/Internet_Archive" title="Internet Archive">Internet Archive</a></i>)</small></span></span>
+</li>
+</ol>
+</div>
+<ul id="bandeau-portail" class="bandeau-portail"><li><span class="bandeau-portail-element"><span class="bandeau-portail-icone"><a href="/wiki/Portail:S%C3%A9curit%C3%A9_de_l%27information" title="Portail de la sécurité de l’information"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Logo_securite_informatique.png/24px-Logo_securite_informatique.png" decoding="async" width="24" height="24" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Logo_securite_informatique.png/36px-Logo_securite_informatique.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Logo_securite_informatique.png/48px-Logo_securite_informatique.png 2x" data-file-width="128" data-file-height="128" /></a></span> <span class="bandeau-portail-texte"><a href="/wiki/Portail:S%C3%A9curit%C3%A9_de_l%27information" title="Portail:Sécurité de l&#39;information">Portail de la sécurité de l’information</a></span> </span></li> <li><span class="bandeau-portail-element"><span class="bandeau-portail-icone"><a href="/wiki/Portail:S%C3%A9curit%C3%A9_informatique" title="Portail de la sécurité informatique"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Circle-icons-key.svg/24px-Circle-icons-key.svg.png" decoding="async" width="24" height="24" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Circle-icons-key.svg/36px-Circle-icons-key.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Circle-icons-key.svg/48px-Circle-icons-key.svg.png 2x" data-file-width="512" data-file-height="512" /></a></span> <span class="bandeau-portail-texte"><a href="/wiki/Portail:S%C3%A9curit%C3%A9_informatique" title="Portail:Sécurité informatique">Portail de la sécurité informatique</a></span> </span></li>                   </ul>
+<!-- 
+NewPP limit report
+Parsed by mw1332
+Cached time: 20200128131116
+Cache expiry: 2592000
+Dynamic content: false
+Complications: []
+CPU time usage: 0.264 seconds
+Real time usage: 0.391 seconds
+Preprocessor visited node count: 780/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 10754/2097152 bytes
+Template argument size: 1250/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3181/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.101/10.000 seconds
+Lua memory usage: 3.14 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  323.501      1 -total
+ 41.75%  135.066      1 Modèle:Références
+ 25.86%   83.664      1 Modèle:Portail
+ 17.55%   56.788      1 Modèle:En
+ 16.66%   53.909      1 Modèle:Indication_de_langue
+ 14.22%   45.989      2 Modèle:Lien_web
+ 10.02%   32.414      1 Modèle:...
+  9.31%   30.110      1 Modèle:Catégorisation_badges
+  8.84%   28.610      1 Modèle:Unité
+  8.16%   26.386      1 Modèle:Suivi_des_biographies
+-->
+
+<!-- Saved in parser cache with key frwiki:pcache:idhash:337489-0!canonical and timestamp 20200128131116 and revision id 160958172
+ -->
+</div><noscript><img src="//fr.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		
+		<div class="printfooter">Ce document provient de «&#160;<a dir="ltr" href="https://fr.wikipedia.org/w/index.php?title=Haute_disponibilité&amp;oldid=160958172">https://fr.wikipedia.org/w/index.php?title=Haute_disponibilité&amp;oldid=160958172</a>&#160;».</div>
+		
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Cat%C3%A9gorie:Accueil" title="Catégorie:Accueil">Catégories</a> : <ul><li><a href="/wiki/Cat%C3%A9gorie:Disponibilit%C3%A9_(informatique)" title="Catégorie:Disponibilité (informatique)">Disponibilité (informatique)</a></li><li><a href="/wiki/Cat%C3%A9gorie:S%C3%BBret%C3%A9_de_fonctionnement" title="Catégorie:Sûreté de fonctionnement">Sûreté de fonctionnement</a></li><li><a href="/wiki/Cat%C3%A9gorie:Ing%C3%A9nierie" title="Catégorie:Ingénierie">Ingénierie</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Catégories cachées : <ul><li><a href="/wiki/Cat%C3%A9gorie:Article_contenant_un_appel_%C3%A0_traduction_en_anglais" title="Catégorie:Article contenant un appel à traduction en anglais">Article contenant un appel à traduction en anglais</a></li><li><a href="/wiki/Cat%C3%A9gorie:Article_avec_une_section_vide_ou_incompl%C3%A8te" title="Catégorie:Article avec une section vide ou incomplète">Article avec une section vide ou incomplète</a></li><li><a href="/wiki/Cat%C3%A9gorie:Portail:S%C3%A9curit%C3%A9_de_l%27information/Articles_li%C3%A9s" title="Catégorie:Portail:Sécurité de l&#039;information/Articles liés">Portail:Sécurité de l'information/Articles liés</a></li><li><a href="/wiki/Cat%C3%A9gorie:Portail:S%C3%A9curit%C3%A9_informatique/Articles_li%C3%A9s" title="Catégorie:Portail:Sécurité informatique/Articles liés">Portail:Sécurité informatique/Articles liés</a></li><li><a href="/wiki/Cat%C3%A9gorie:Portail:Informatique/Articles_li%C3%A9s" title="Catégorie:Portail:Informatique/Articles liés">Portail:Informatique/Articles liés</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+				
+
+<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Outils personnels</h3>
+	<ul >
+		
+		<li id="pt-anonuserpage">Non connecté</li>
+		<li id="pt-anontalk"><a href="/wiki/Sp%C3%A9cial:Mes_discussions" title="La page de discussion pour les contributions depuis cette adresse IP [n]" accesskey="n">Discussion</a></li><li id="pt-anoncontribs"><a href="/wiki/Sp%C3%A9cial:Mes_contributions" title="Une liste des modifications effectuées depuis cette adresse IP [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Sp%C3%A9cial:Cr%C3%A9er_un_compte&amp;returnto=Haute+disponibilit%C3%A9" title="Nous vous encourageons à créer un compte utilisateur et vous connecter ; ce n’est cependant pas obligatoire.">Créer un compte</a></li><li id="pt-login"><a href="/w/index.php?title=Sp%C3%A9cial:Connexion&amp;returnto=Haute+disponibilit%C3%A9" title="Nous vous encourageons à vous connecter ; ce n’est cependant pas obligatoire. [o]" accesskey="o">Se connecter</a></li>
+	</ul>
+</div>
+				<div id="left-navigation">
+					
+<div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Espaces de noms</h3>
+	<ul >
+		<li id="ca-nstab-main" class="selected"><a href="/wiki/Haute_disponibilit%C3%A9" title="Voir le contenu de la page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Discussion:Haute_disponibilit%C3%A9" rel="discussion" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+	</ul>
+</div>
+		<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+			<h3 id="p-variants-label">
+				<span>Variantes</span>
+			</h3>
+			<ul class="menu">
+							</ul>
+		</div>
+						</div>
+				<div id="right-navigation">
+					
+<div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Affichages</h3>
+	<ul >
+		<li id="ca-view" class="collapsible selected"><a href="/wiki/Haute_disponibilit%C3%A9">Lire</a></li><li id="ca-ve-edit" class="collapsible"><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;veaction=edit" title="Modifier cette page [v]" accesskey="v">Modifier</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=edit" title="Vous pouvez modifier cette page ! [e]" accesskey="e">Modifier le code</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=history" title="Historique des versions de cette page [h]" accesskey="h">Voir l’historique</a></li>
+	</ul>
+</div>
+		<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+			<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+			<h3 id="p-cactions-label"><span>Plus</span></h3>
+			<ul class="menu">
+							</ul>
+		</div>
+		
+<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Rechercher</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Rechercher dans Wikipédia" title="Rechercher dans Wikipédia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" value="Spécial:Recherche" name="title"/>
+			
+			<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:Accueil_principal" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:Accueil_principal" title="Accueil général [z]" accesskey="z">Accueil</a></li><li id="n-thema"><a href="/wiki/Portail:Accueil">Portails thématiques</a></li><li id="n-randompage"><a href="/wiki/Sp%C3%A9cial:Page_au_hasard" title="Affiche un article au hasard [x]" accesskey="x">Article au hasard</a></li><li id="n-contact"><a href="/wiki/Wikip%C3%A9dia:Contact">Contact</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Contribuer" aria-labelledby="p-Contribuer-label">
+			<h3 id="p-Contribuer-label">Contribuer</h3>
+			<div class="body">
+								<ul>
+					<li id="n-aboutwp"><a href="/wiki/Aide:D%C3%A9buter">Débuter sur Wikipédia</a></li><li id="n-help"><a href="/wiki/Aide:Accueil" title="Accès à l’aide">Aide</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Accueil_de_la_communaut%C3%A9" title="À propos du projet, ce que vous pouvez faire, où trouver les informations">Communauté</a></li><li id="n-recentchanges"><a href="/wiki/Sp%C3%A9cial:Modifications_r%C3%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_fr.wikipedia.org&amp;uselang=fr" title="Soutenez-nous">Faire un don</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Sp%C3%A9cial:Pages_li%C3%A9es/Haute_disponibilit%C3%A9" title="Liste des pages liées qui pointent sur celle-ci [j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="/wiki/Sp%C3%A9cial:Suivi_des_liens/Haute_disponibilit%C3%A9" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="/wiki/Aide:Importer_un_fichier" title="Importer des fichiers [u]" accesskey="u">Téléverser un fichier</a></li><li id="t-specialpages"><a href="/wiki/Sp%C3%A9cial:Pages_sp%C3%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li><li id="t-permalink"><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;oldid=160958172" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;action=info" title="Plus d’informations sur cette page">Informations sur la page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1622420" title="Lien vers l’élément de référentiel des données connectées [g]" accesskey="g">Élément Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Sp%C3%A9cial:Citer&amp;page=Haute_disponibilit%C3%A9&amp;id=160958172" title="Informations sur la manière de citer cette page">Citer cette page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Imprimer / exporter</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Sp%C3%A9cial:Livre&amp;bookcmd=book_creator&amp;referer=Haute+disponibilit%C3%A9">Créer un livre</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Sp%C3%A9cial:ElectronPdf&amp;page=Haute+disponibilit%C3%A9&amp;action=show-download-screen">Télécharger comme PDF</a></li><li id="t-print"><a href="/w/index.php?title=Haute_disponibilit%C3%A9&amp;printable=yes" title="Version imprimable de cette page [p]" accesskey="p">Version imprimable</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">Dans d’autres langues</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Alta_disponibilitat" title="Alta disponibilitat — catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Vysok%C3%A1_dostupnost" title="Vysoká dostupnost — tchèque" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Hochverf%C3%BCgbarkeit" title="Hochverfügbarkeit — allemand" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/High_availability" title="High availability — anglais" lang="en" hreflang="en" class="interlanguage-link-target">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Alta_disponibilidad" title="Alta disponibilidad — espagnol" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/High_availability" title="High availability — finnois" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7" title="高可用性 — japonais" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B3%A0%EA%B0%80%EC%9A%A9%EC%84%B1" title="고가용성 — coréen" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/H%C3%B8y_tilgjengelighet" title="Høy tilgjengelighet — norvégien bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/System_wysokiej_niezawodno%C5%9Bci" title="System wysokiej niezawodności — polonais" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Disponibilitate_%C3%AEnalt%C4%83" title="Disponibilitate înaltă — roumain" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%B0%D1%8F_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D1%8C" title="Высокая доступность — russe" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Y%C3%BCksek_eri%C5%9Filebilirlik" title="Yüksek erişilebilirlik — turc" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7" title="高可用性 — chinois" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1622420#sitelinks-wikipedia" title="Modifier les liens interlangues" class="wbc-editpage">Modifier les liens</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 16 juillet 2019 à 19:21.</li>
+								<li id="footer-info-copyright"><span style="white-space: normal"><a class="internal" href="/wiki/Wikip%C3%A9dia:Citation_et_r%C3%A9utilisation_du_contenu_de_Wikip%C3%A9dia" title="Droit d'auteur">Droit d'auteur</a> : les textes sont disponibles sous <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr" title="Licence Creative Commons Attribution - partage dans les mêmes conditions 3.0 non transposé">licence Creative Commons attribution, partage dans les mêmes conditions</a> ; d’autres conditions peuvent s’appliquer. Voyez les <a href="https://wikimediafoundation.org/wiki/Conditions_d%27utilisation" title="Conditions d’utilisation de la Wikimedia Foundation">conditions d’utilisation</a> pour plus de détails, ainsi que les <a class="internal" href="/wiki/Wikip%C3%A9dia:Cr%C3%A9dits_graphiques" title="Droit d'auteur de certaines icônes">crédits graphiques</a>. En cas de réutilisation des textes de cette page, voyez <a class="internal" href="/wiki/Sp%C3%A9cial:Citer/Haute_disponibilit%C3%A9" title="Citer ou réutiliser cette page">comment citer les auteurs et mentionner la licence</a>.<br />
+Wikipedia® est une marque déposée de la <a href="https://wikimediafoundation.org/" title="Wikimedia Foundation">Wikimedia Foundation, Inc.</a>, organisation de bienfaisance régie par le paragraphe <a class="internal" href="/wiki/501c" title="501c">501(c)(3)</a> du code fiscal des États-Unis.</span><br /></li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/fr" class="extiw" title="m:Privacy policy/fr">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:%C3%80_propos_de_Wikip%C3%A9dia" title="Wikipédia:À propos de Wikipédia">À propos de Wikipédia</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Avertissements_g%C3%A9n%C3%A9raux" title="Wikipédia:Avertissements généraux">Avertissements</a></li>
+								<li id="footer-places-contact"><a href="//fr.wikipedia.org/wiki/Wikipédia:Contact">Contact</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Développeurs</a></li>
+								<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/v2/#/fr.wikipedia.org">Statistiques</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Déclaration sur les témoins (cookies)</a></li>
+								<li id="footer-places-mobileview"><a href="//fr.m.wikipedia.org/w/index.php?title=Haute_disponibilit%C3%A9&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Version mobile</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.264","walltime":"0.391","ppvisitednodes":{"value":780,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":10754,"limit":2097152},"templateargumentsize":{"value":1250,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3181,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  323.501      1 -total"," 41.75%  135.066      1 Modèle:Références"," 25.86%   83.664      1 Modèle:Portail"," 17.55%   56.788      1 Modèle:En"," 16.66%   53.909      1 Modèle:Indication_de_langue"," 14.22%   45.989      2 Modèle:Lien_web"," 10.02%   32.414      1 Modèle:...","  9.31%   30.110      1 Modèle:Catégorisation_badges","  8.84%   28.610      1 Modèle:Unité","  8.16%   26.386      1 Modèle:Suivi_des_biographies"]},"scribunto":{"limitreport-timeusage":{"value":"0.101","limit":"10.000"},"limitreport-memusage":{"value":3290922,"limit":52428800}},"cachereport":{"origin":"mw1332","timestamp":"20200128131116","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Haute disponibilit\u00e9","url":"https:\/\/fr.wikipedia.org\/wiki\/Haute_disponibilit%C3%A9","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1622420","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1622420","author":{"@type":"Organization","name":"Contributeurs aux projets de Wikim\u00e9dia"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2005-07-26T09:20:19Z","dateModified":"2019-07-16T18:21:55Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/3\/35\/Typical_dual-node_HA.jpg"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":175,"wgHostname":"mw1262"});});</script>
+</body>
+</html>

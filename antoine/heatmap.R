@@ -107,11 +107,11 @@ if (!language%in%c('english','french')){
 }
 
 if (language=='english'){
-  method_names = method_names_en
+  method_names_optim = method_names_en
 }
 
 if (language=='french'){
-  method_names = method_names_fr
+  method_names_optim = method_names_fr
 }
 
 # relevant links about the metrics:
@@ -131,7 +131,7 @@ sink(con, append=TRUE)
 
 # = = = = = = = = = = = = = = = = finding best parameter combination
 
-method_names = list.files(path_to_baselines) # not including frequency
+method_names = list.files(path_to_baselines) # not including frequency!
 rankings = lapply(method_names,function(x) readLines(paste0(path_to_baselines,x)))
 
 method_names = unlist(lapply(method_names,function(x) if (grepl('wordnet',x)){unlist(strsplit(x,split='\\.'))[1]} else {unlist(strsplit(x,split='_'))[1]}))
@@ -296,7 +296,7 @@ rankings[['random']] = lapply(1:n_runs,function(x){
 })
 
 # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
-method_names = c(c(best_name_renamed,'random','frequency'),method_names)
+method_names = c(c(best_name_renamed,'random','frequency'),method_names_optim)
 
 method_names_pretty = gsub('_',' ',method_names)
 

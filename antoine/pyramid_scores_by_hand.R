@@ -1,15 +1,14 @@
-my_score = function(level,n_levels,coverage){
-  coverage/(2^(n_levels-level))
-}
+levels = 0:2
 
-levels = 1:3
+n_dims = 2
+n_bins = unlist(lapply(levels,function(x) 2^(x*n_dims)))
 
 # word 1
-covs = c(3/4,7/16,10/64)
-sum(unlist(lapply(levels,function(level) my_score(level,length(levels),covs[level]))))
+covs = c(3,7,10)/n_bins
+sum(unlist(lapply(levels,function(level) covs[level+1]/(2^(max(levels)-level)))))
 
 # word 2
-covs = c(1/4,4/16,7/64)
-sum(unlist(lapply(levels,function(level) my_score(level,length(levels),covs[level]))))
+covs = c(1,4,7)/n_bins
+sum(unlist(lapply(levels,function(level) covs[level+1]/(2^(max(levels)-level)))))
 
 

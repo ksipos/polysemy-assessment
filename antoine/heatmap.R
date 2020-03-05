@@ -8,6 +8,9 @@ use_condaenv('my_env_3') # just a Python 3 environment with the 'rbo' module ins
 
 rbo = import('rbo') # see https://github.com/changyaochen/rbo
 
+method_names_en = c('oxford','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
+method_names_fr = c('larousse','wikipedia')
+
 # = = = = = = = = = = = = = = = = functions
 
 dcg = function(x) {
@@ -76,8 +79,6 @@ score_ranking = function(evaluated,gt,metric){
 
 # = = = = = = = = = = = = = = = = arguments
 
-# TODO heatmap of score vs PCA dimensions and max levels
-
 args = commandArgs(trailingOnly=TRUE)
 
 # Rscript --vanilla heatmap.R path_root metric
@@ -103,6 +104,14 @@ if (is.na(language)){
 
 if (!language%in%c('english','french')){
   stop(paste(language,'is currently not supported!'))
+}
+
+if (language=='english'){
+  method_names = method_names_en
+}
+
+if (language=='french'){
+  method_names = method_names_fr
 }
 
 # relevant links about the metrics:
@@ -287,7 +296,8 @@ rankings[['random']] = lapply(1:n_runs,function(x){
 })
 
 # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
-method_names = c(best_name_renamed,'random','frequency','oxford','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
+method_names = c(c(best_name_renamed,'random','frequency'),method_names)
+
 method_names_pretty = gsub('_',' ',method_names)
 
 pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)

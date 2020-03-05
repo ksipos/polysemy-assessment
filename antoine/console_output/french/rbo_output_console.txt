@@ -1,0 +1,37 @@
+ [1] "pca10_L1" "pca11_L1" "pca12_L1" "pca13_L1" "pca14_L1" "pca15_L1"
+ [7] "pca16_L1" "pca17_L1" "pca18_L1" "pca19_L1" "pca2_L1"  "pca20_L1"
+[13] "pca3_L1"  "pca4_L1"  "pca5_L1"  "pca6_L1"  "pca7_L1"  "pca8_L1" 
+[19] "pca9_L1" 
+null device 
+          1 
+% latex table generated in R 3.4.4 by xtable 1.8-4 package
+% Thu Mar 05 16:11:32 2020
+\begin{table}[ht]
+\centering
+\begin{tabular}{rr}
+  \hline
+ & c(head(mean\_scores), tail(mean\_scores)) \\ 
+  \hline
+D5L2 & 1.75 \\ 
+  D4L2 & 1.66 \\ 
+  D4L3 & 1.60 \\ 
+  D4L4 & 1.60 \\ 
+  D5L3 & 1.56 \\ 
+  D5L4 & 1.43 \\ 
+  D2L11 & 0.12 \\ 
+  D2L9 & 0.11 \\ 
+  D2L2 & 0.09 \\ 
+  D2L8 & 0.09 \\ 
+  D2L6 & 0.08 \\ 
+  D2L7 & 0.07 \\ 
+   \hline
+\end{tabular}
+\end{table}
+null device 
+          1 
+[1] TRUE
+[1] TRUE
+null device 
+          1 
+null device 
+          1 

@@ -1,5 +1,5 @@
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Wed Mar 11 18:18:19 2020
+% Wed Mar 11 19:06:50 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrr}
@@ -7,7 +7,7 @@
  & ontonotes & oxford & wikipedia & wndomains & wordnet\_original & wordnet\_restricted \\ 
   \hline
 before & 1539 & 1537 & 1539 & 1539 & 1539 & 1539 \\ 
-  after & 723 & 1536 & 1042 & 1420 & 1535 & 1535 \\ 
+  after & 1539 & 1537 & 1539 & 1539 & 1539 & 1539 \\ 
    \hline
 \end{tabular}
 \end{table}
@@ -18,7 +18,7 @@ before & 1539 & 1537 & 1539 & 1539 & 1539 & 1539 \\
 null device 
           1 
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Wed Mar 11 18:18:40 2020
+% Wed Mar 11 19:07:08 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rr}
@@ -44,8 +44,7 @@ null device
           1 
 [1] TRUE
 [1] TRUE
-
-average ranking length: 1598null device 
+null device 
           1 
 null device 
           1 

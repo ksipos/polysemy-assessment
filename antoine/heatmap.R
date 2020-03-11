@@ -148,14 +148,13 @@ rankings = lapply(rankings,function(x) {
   })
 })
 
-rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
-names(rankings) = method_names
-
 for_latex = rbind(for_latex,unlist(lapply(rankings,length))) # after removing 0-score words
-
 rownames(for_latex) = c('before','after')
 colnames(for_latex) = method_names
 print(xtable(for_latex))
+
+rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
+names(rankings) = method_names
 
 # = = = = = = = = = = = = = = = =
 
@@ -277,7 +276,7 @@ file.copy(from=paste0(path_to_grid,best_name),to=paste0(path_to_best_combos,best
 
 method_names = list.files(path_to_evaluation)
 
-rankings = lapply(method_names,function(x) readLines(paste0(path_to_evaluation,x)))
+rankings = lapply(method_names,function(x) readLines(paste0(path_to_evaluation,x))) # this time, including frequency!
 
 method_names = unlist(lapply(method_names,function(x) if (grepl('wordnet',x)){unlist(strsplit(x,split='\\.'))[1]} else {unlist(strsplit(x,split='_'))[1]}))
 
@@ -294,14 +293,13 @@ rankings = lapply(rankings,function(x) {
 rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
 names(rankings) = method_names
 
-avg_len = round(mean(unlist(lapply(rankings,length))))
-
-cat('\naverage ranking length:',avg_len)
+#avg_len = round(mean(unlist(lapply(rankings,length)))) # TODO check that! I don't find the same result manually!
+#cat('\naverage ranking length:',avg_len)
 
 n_runs = 30
 rankings[['random']] = lapply(1:n_runs,function(x){
-  to_return = rlnorm(avg_len,meanlog=0,sdlog=1) # sample from lognormal distribution
-  names(to_return) = sample(names(rankings[['frequency']]),avg_len,replace=FALSE)
+  to_return = rlnorm(length(rankings[['frequency']]),meanlog=0,sdlog=1) # sample from lognormal distribution
+  names(to_return) = sample(names(rankings[['frequency']]),length(rankings[['frequency']]),replace=FALSE)
   sort(normalize_range(to_return,new_range),decreasing=TRUE)
 })
 

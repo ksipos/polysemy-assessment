@@ -293,15 +293,28 @@ rankings = lapply(rankings,function(x) {
 rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
 names(rankings) = method_names
 
-#avg_len = round(mean(unlist(lapply(rankings,length)))) # TODO check that! I don't find the same result manually!
-#cat('\naverage ranking length:',avg_len)
+# plot average distribution of GT rankings (including 'frequency')
+all_points_gt = c(rankings[['frequency']],rankings[['ontonotes']],rankings[['oxford']],rankings[['wikipedia']],rankings[['wndomains']],rankings[['wordnet_original']],rankings[['wordnet_restricted']])
+
+
+pdf(paste0(path_to_plots,'random_distribution_vs_all.pdf'),paper='a4r',width=5,height=5)
+
+hist(all_points_gt,probability=TRUE,xlab='normalized scores',ylab='probability',
+     main=NULL,col='skyblue',border=FALSE, ylim=c(0,0.06))
 
 n_runs = 30
 rankings[['random']] = lapply(1:n_runs,function(x){
-  to_return = rlnorm(length(rankings[['frequency']]),meanlog=0,sdlog=1) # sample from lognormal distribution
+  to_return = rlnorm(length(rankings[['frequency']]),meanlog=0,sdlog=0.6) # sample from lognormal distribution
   names(to_return) = sample(names(rankings[['frequency']]),length(rankings[['frequency']]),replace=FALSE)
   sort(normalize_range(to_return,new_range),decreasing=TRUE)
 })
+
+avg_random = unlist(rankings[['random']])
+avg_random_density = density(avg_random)
+
+lines(avg_random_density$x,avg_random_density$y, lwd=2, col='blue')
+
+dev.off()
 
 # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
 method_names = c(c(best_name_renamed,'random','frequency'),method_names_optim)
@@ -322,7 +335,6 @@ pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=
     }
     
 dev.off()
-
 
 scores = matrix(nrow=length(method_names),ncol=length(method_names))
 i = 1 # col index (evaluated methods)

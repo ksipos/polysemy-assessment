@@ -157,16 +157,6 @@ rownames(for_latex) = c('before','after')
 colnames(for_latex) = method_names
 print(xtable(for_latex))
 
-
-
-
-
-
-rbind(c(),c())
-
-cat('\nlength after removing no-entry words:')
-print(lapply(rankings,length))
-
 # = = = = = = = = = = = = = = = =
 
 combos = list.files(path_to_grid)
@@ -305,6 +295,8 @@ rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range)
 names(rankings) = method_names
 
 avg_len = round(mean(unlist(lapply(rankings,length))))
+
+cat('\naverage ranking length:',avg_len)
 
 n_runs = 30
 rankings[['random']] = lapply(1:n_runs,function(x){

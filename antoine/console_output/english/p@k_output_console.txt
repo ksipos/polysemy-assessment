@@ -1,3 +1,41 @@
+
+original lengths:[[1]]
+[1] 1539
+
+[[2]]
+[1] 1537
+
+[[3]]
+[1] 1198
+
+[[4]]
+[1] 1539
+
+[[5]]
+[1] 1539
+
+[[6]]
+[1] 1539
+
+
+length after removing no-entry words:$ontonotes
+[1] 723
+
+$oxford
+[1] 1536
+
+$wikipedia
+[1] 1042
+
+$wndomains
+[1] 1420
+
+$wordnet_original
+[1] 1535
+
+$wordnet_restricted
+[1] 1535
+
  [1] "pca10_L1" "pca11_L1" "pca12_L1" "pca13_L1" "pca14_L1" "pca15_L1"
  [7] "pca16_L1" "pca17_L1" "pca18_L1" "pca19_L1" "pca2_L1"  "pca20_L1"
 [13] "pca3_L1"  "pca4_L1"  "pca5_L1"  "pca6_L1"  "pca7_L1"  "pca8_L1" 
@@ -5,7 +43,7 @@
 null device 
           1 
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Thu Jan 30 10:32:17 2020
+% Wed Mar 11 16:47:09 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rr}
@@ -33,5 +71,86 @@ null device
 [1] TRUE
 null device 
           1 
-null device 
+
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restricted
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restricted
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restricted
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restricted
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restricted
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restricted
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restricted
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restricted
+ ground truth: D4L5
+ ground truth: random
+ ground truth: frequency
+ ground truth: oxford
+ ground truth: ontonotes
+ ground truth: wikipedia
+ ground truth: wndomains
+ ground truth: wordnet_original
+ ground truth: wordnet_restrictednull device 
           1 

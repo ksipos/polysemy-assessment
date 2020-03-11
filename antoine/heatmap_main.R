@@ -2,7 +2,7 @@ path_root = 'C:/Users/mvazirg/Desktop/polysemous_words/'
 
 setwd(paste0(path_root,'antoine/')) # where code is located
 
-languages = c('french') # c('english','french')
+languages = c('english') # c('english','french')
 metrics = c('kendall','spearman','ndcg','p@k','rbo')
 
 for (language in languages){

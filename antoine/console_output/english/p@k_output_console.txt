@@ -1,22 +1,17 @@
-
-original lengths:[[1]]
-[1] 1539
-
-[[2]]
-[1] 1537
-
-[[3]]
-[1] 1198
-
-[[4]]
-[1] 1539
-
-[[5]]
-[1] 1539
-
-[[6]]
-[1] 1539
-
+% latex table generated in R 3.4.4 by xtable 1.8-4 package
+% Wed Mar 11 17:11:15 2020
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrr}
+  \hline
+ & ontonotes & oxford & wikipedia & wndomains & wordnet\_original & wordnet\_restricted \\ 
+  \hline
+before & 1539 & 1537 & 1539 & 1539 & 1539 & 1539 \\ 
+  after & 723 & 1536 & 1042 & 1420 & 1535 & 1535 \\ 
+   \hline
+\end{tabular}
+\end{table}
+NULL
 
 length after removing no-entry words:$ontonotes
 [1] 723
@@ -43,25 +38,25 @@ $wordnet_restricted
 null device 
           1 
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Wed Mar 11 16:47:09 2020
+% Wed Mar 11 17:11:29 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rr}
   \hline
  & c(head(mean\_scores), tail(mean\_scores)) \\ 
   \hline
-D4L5 & 32.99 \\ 
-  D2L13 & 32.16 \\ 
-  D2L14 & 32.16 \\ 
-  D2L15 & 32.16 \\ 
-  D2L16 & 32.16 \\ 
-  D2L17 & 32.16 \\ 
-  D20L4 & 9.97 \\ 
-  D20L5 & 9.97 \\ 
-  D20L6 & 9.97 \\ 
-  D20L7 & 9.97 \\ 
-  D20L8 & 9.97 \\ 
-  D20L9 & 9.97 \\ 
+D4L5 & 31.29 \\ 
+  D2L13 & 30.46 \\ 
+  D2L14 & 30.46 \\ 
+  D2L15 & 30.46 \\ 
+  D2L16 & 30.46 \\ 
+  D2L17 & 30.46 \\ 
+  D20L4 & 10.26 \\ 
+  D20L5 & 10.26 \\ 
+  D20L6 & 10.26 \\ 
+  D20L7 & 10.26 \\ 
+  D20L8 & 10.26 \\ 
+  D20L9 & 10.26 \\ 
    \hline
 \end{tabular}
 \end{table}
@@ -71,86 +66,5 @@ null device
 [1] TRUE
 null device 
           1 
-
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restricted
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restricted
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restricted
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restricted
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restricted
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restricted
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restricted
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restricted
- ground truth: D4L5
- ground truth: random
- ground truth: frequency
- ground truth: oxford
- ground truth: ontonotes
- ground truth: wikipedia
- ground truth: wndomains
- ground truth: wordnet_original
- ground truth: wordnet_restrictednull device 
+null device 
           1 

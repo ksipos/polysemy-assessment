@@ -136,8 +136,7 @@ rankings = lapply(method_names,function(x) readLines(paste0(path_to_baselines,x)
 
 method_names = unlist(lapply(method_names,function(x) if (grepl('wordnet',x)){unlist(strsplit(x,split='\\.'))[1]} else {unlist(strsplit(x,split='_'))[1]}))
 
-cat('\noriginal lengths:')
-print(lapply(rankings,length))
+for_latex = unlist(lapply(rankings,length)) # original lengths
 
 rankings = lapply(rankings,function(x) {
   lapply(x,function(y){
@@ -151,6 +150,19 @@ rankings = lapply(rankings,function(x) {
 
 rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
 names(rankings) = method_names
+
+for_latex = rbind(for_latex,unlist(lapply(rankings,length))) # after removing 0-score words
+
+rownames(for_latex) = c('before','after')
+colnames(for_latex) = method_names
+print(xtable(for_latex))
+
+
+
+
+
+
+rbind(c(),c())
 
 cat('\nlength after removing no-entry words:')
 print(lapply(rankings,length))
@@ -332,8 +344,6 @@ for (name in method_names){ # column name
   
   for (gt_name in method_names){ # kept all names as a sanity check (to verify we get ones on the diagonal) 
     gt = rankings[[gt_name]]
-    
-    cat('\n ground truth:',gt_name)
     
     if (name == 'random' & gt_name != 'random'){
       all_scores = unlist(lapply(evaluated,function(x) score_ranking(x,gt,metric)))

@@ -8,7 +8,7 @@ use_condaenv('my_env_3') # just a Python 3 environment with the 'rbo' module ins
 
 rbo = import('rbo') # see https://github.com/changyaochen/rbo
 
-method_names_en = c('oxford','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
+method_names_en = c('wikipedia','oxford','ontonotes','wndomains','wordnet_original','wordnet_restricted')
 method_names_fr = c('larousse','wikipedia')
 
 my_metrics = c('cosine','kendall','spearman','ndcg','p@k','rbo')

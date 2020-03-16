@@ -37,3 +37,21 @@ for (i in 1:(n-1)){
 tau = 2*(n_concordant - n_discordant)/(n*(n-1))
 
 tau # which is equal to cor(x,y,method='kendall')
+
+
+# = = = more compact way = = =
+
+sum = 0 
+for (i in 1:(n-1)){
+  for (j in i:n){
+    if (i == j){
+      next
+    }
+    sum = sum + sign(x[i] - x[j]) * sign(y[i] - y[j])
+  }
+}
+
+tau = 2*sum/(n*(n-1))
+
+tau
+

@@ -1,5 +1,5 @@
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Mon Mar 16 16:34:30 2020
+% Mon Mar 16 23:53:42 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrr}
@@ -18,25 +18,25 @@ before & 1539 & 1537 & 1539 & 1539 & 1539 & 1539 \\
 null device 
           1 
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Mon Mar 16 16:34:52 2020
+% Mon Mar 16 23:54:01 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rr}
   \hline
  & c(head(mean\_scores), tail(mean\_scores)) \\ 
   \hline
-D3L13 & 11.78 \\ 
-  D3L14 & 11.78 \\ 
-  D3L15 & 11.78 \\ 
-  D3L16 & 11.78 \\ 
-  D3L17 & 11.78 \\ 
-  D3L18 & 11.78 \\ 
-  D20L5 & 0.23 \\ 
-  D20L8 & 0.23 \\ 
-  D20L9 & 0.23 \\ 
-  D20L3 & 0.22 \\ 
-  D20L4 & 0.22 \\ 
-  D20L2 & 0.21 \\ 
+D4L10 & 23.28 \\ 
+  D4L8 & 23.28 \\ 
+  D4L9 & 23.28 \\ 
+  D4L7 & 23.25 \\ 
+  D4L12 & 23.18 \\ 
+  D4L11 & 23.17 \\ 
+  D20L5 & 7.13 \\ 
+  D15L3 & 7.12 \\ 
+  D20L4 & 7.12 \\ 
+  D20L3 & 7.09 \\ 
+  D20L2 & 7.06 \\ 
+  D15L2 & 7.05 \\ 
    \hline
 \end{tabular}
 \end{table}

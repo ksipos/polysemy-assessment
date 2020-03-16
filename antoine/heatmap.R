@@ -65,7 +65,7 @@ score_ranking = function(evaluated,gt,metric){
     truth = sort(final_scores,decreasing=TRUE) # best possible way to position the evaluated words
     
     rs = rbo$RankingSimilarity(final_scores,truth)
-    to_return = rs$rbo(p=0.9)
+    to_return = rs$rbo(p=0.98)
     
   } else if (metric %in% c('kendall','spearman')){
     

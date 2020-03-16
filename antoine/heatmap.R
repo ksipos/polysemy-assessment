@@ -11,6 +11,8 @@ rbo = import('rbo') # see https://github.com/changyaochen/rbo
 method_names_en = c('oxford','ontonotes','wikipedia','wndomains','wordnet_original','wordnet_restricted')
 method_names_fr = c('larousse','wikipedia')
 
+my_metrics = c('cosine','kendall','spearman','ndcg','p@k','rbo')
+
 # = = = = = = = = = = = = = = = = functions
 
 dcg = function(x) {
@@ -22,14 +24,20 @@ normalize = function(x){
 }
 
 # taken from https://stackoverflow.com/questions/18303420/how-to-map-a-vector-to-a-different-range-in-r
-normalize_range = function(x, from_to){
+normalize_range = function(x,from_to){
   (x - min(x)) / max(x - min(x)) * (from_to[2] - from_to[1]) + from_to[1]
 }
 
+my_cos_sim = function(x,y){
+  dot_product = sum(x*y)
+  denominator = sqrt(sum(x^2)) * sqrt(sum(y^2))
+  stopifnot(denominator>0)
+  dot_product/denominator
+}
 
 score_ranking = function(evaluated,gt,metric){
   # evaluated and gt (ground truth) are named lists of words and their scores, sorted by decreasing order of scores
-  # metric should be one of c('kendall','spearman','ndcg','p@k','rbo')
+  # metric should be one of c('cosine','kendall','spearman','ndcg','p@k','rbo')
   
   evaluated_words = names(evaluated)
   overlapping_words = intersect(evaluated_words,names(gt))
@@ -62,6 +70,7 @@ score_ranking = function(evaluated,gt,metric){
   } else if (metric %in% c('kendall','spearman')){
     
     gt = gt[overlapping_words] # align the two rankings based on words
+    evaluated = evaluated[overlapping_words]
     to_return = cor(as.numeric(evaluated),as.numeric(gt),method=metric)
     
   } else if (metric == 'p@k'){
@@ -70,6 +79,12 @@ score_ranking = function(evaluated,gt,metric){
     top10pct_gt = names(gt)[1:round(0.1*length(gt))]
     to10pct_eval = names(evaluated)[1:round(0.1*length(evaluated))]
     to_return = length(which(to10pct_eval%in%top10pct_gt))/length(to10pct_eval)
+    
+  } else if (metric == 'cosine'){
+    
+    gt = gt[overlapping_words] # align the two rankings based on words
+    evaluated = evaluated[overlapping_words]
+    to_return = my_cos_sim(as.numeric(evaluated),as.numeric(gt))
     
   }
   
@@ -94,8 +109,8 @@ if (is.na(metric)){
   stop('please specify a metric')
 }
 
-if (!metric%in%c('kendall','spearman','ndcg','p@k','rbo')){
-  stop('metric is not one of kendall, spearman, ndcg, p@k, rbo')
+if (!metric%in%my_metrics){
+  stop('metric is not supported')
 }
 
 if (is.na(language)){
@@ -114,9 +129,7 @@ if (language=='french'){
   method_names_optim = method_names_fr
 }
 
-# relevant links about the metrics:
-# - https://en.wikipedia.org/wiki/Learning_to_rank#Evaluation_measures
-# see: https://stats.stackexchange.com/questions/8071/how-to-choose-between-pearson-and-spearman-correlation
+# relevant links about rbo:
 # - http://codalism.com/research/papers/wmz10_tois.pdf 
 
 path_to_plots = paste0(path_root,'/antoine/plots/',language,'/')
@@ -300,7 +313,7 @@ all_points_gt = c(rankings[['frequency']],rankings[['ontonotes']],rankings[['oxf
 pdf(paste0(path_to_plots,'random_distribution_vs_all.pdf'),paper='a4r',width=5,height=5)
 
 hist(all_points_gt,probability=TRUE,xlab='normalized scores',ylab='probability',
-     main=NULL,col='skyblue',border=FALSE, ylim=c(0,0.06))
+     main=NULL,col='skyblue',border=FALSE, ylim=c(0,0.07))
 
 n_runs = 30
 rankings[['random']] = lapply(1:n_runs,function(x){
@@ -318,7 +331,6 @@ dev.off()
 
 # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
 method_names = c(c(best_name_renamed,'random','frequency'),method_names_optim)
-
 method_names_pretty = gsub('_',' ',method_names)
 
 pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)

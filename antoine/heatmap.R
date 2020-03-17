@@ -8,7 +8,7 @@ use_condaenv('my_env_3') # just a Python 3 environment with the 'rbo' module ins
 
 rbo = import('rbo') # see https://github.com/changyaochen/rbo
 
-method_names_en = c('wikipedia','oxford','ontonotes','wndomains','wordnet_original','wordnet_restricted')
+method_names_en = c('wikipedia','oxford','ontonotes','wordnet_original','wordnet_restricted','wndomains')
 method_names_fr = c('larousse','wikipedia')
 
 my_metrics = c('cosine','kendall','spearman','ndcg','p@k','rbo')
@@ -331,8 +331,16 @@ dev.off()
 
 # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
 method_names = c(c(best_name_renamed,'random','frequency'),method_names_optim)
-method_names_pretty = gsub('wordnet_','wn',method_names)
+method_names_pretty = gsub('wikipedia','wiki',method_names)
+method_names_pretty = gsub('random','rand',method_names_pretty)
+method_names_pretty = gsub('frequency','freq',method_names_pretty)
+method_names_pretty = gsub('oxford','oxf',method_names_pretty)
+method_names_pretty = gsub('ontonotes','ON',method_names_pretty)
+method_names_pretty = gsub('wordnet_','wn',method_names_pretty)
 method_names_pretty = gsub('wn','WN',method_names_pretty)
+method_names_pretty = gsub('original','',method_names_pretty)
+method_names_pretty = gsub('domains','dom',method_names_pretty)
+method_names_pretty = gsub('restricted','red',method_names_pretty)
 
 pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)
     

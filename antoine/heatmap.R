@@ -205,6 +205,8 @@ combos = combos[!lens==0]
 
 # = = = = = = = = finding out the best combo = = = = = = = = = = = = 
 
+# the best combo is the one that for a given metric, performs the best across all methods (on average)
+
 stopifnot(names(rankings_combo)==combos)
 
 mean_scores = list()
@@ -346,16 +348,21 @@ pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=
     
     par(mfrow=c(2,4))
     
+    method_counter = 1
+    
     for (name in tail(method_names,-1)){ # all except pyramid (will be plotted separately)
       if (name=='random'){
         to_hist = rankings[[name]][[1]]
       } else {
         to_hist = rankings[[name]]
       }
-      hist(to_hist,xlim=new_range,col='skyblue',border=FALSE,main=name,xlab='normalized scores',ylab='counts')
+      hist(to_hist,xlim=new_range,col='skyblue',border=FALSE,main=tail(method_names_pretty,-1)[[method_counter]],xlab='normalized scores',ylab='counts')
+      method_counter = method_counter + 1
     }
     
 dev.off()
+
+# we plot the heatmap of average performance (across all methods) for each combination of D and L parameters
 
 scores = matrix(nrow=length(method_names),ncol=length(method_names))
 i = 1 # col index (evaluated methods)
@@ -406,7 +413,7 @@ if (metric != 'ndcg'){ # symmetric metric, show only one triangle
 
 pdf(paste0(path_to_plots,'heatmap_',metric,'.pdf'),paper='a4r',width=15,height=7.5)
     
-    pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=18,display_numbers=scores_show,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric,na_col='#FFFFFF') # evaluated methods as columns
+    pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=20,display_numbers=scores_show,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric,na_col='#FFFFFF') # evaluated methods as columns
     
 dev.off()
 

@@ -1,5 +1,5 @@
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Tue Mar 17 20:26:40 2020
+% Tue Mar 17 23:22:28 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrr}
@@ -18,7 +18,7 @@ before & 1539 & 1537 & 1539 & 1539 & 1539 & 1539 \\
 null device 
           1 
 % latex table generated in R 3.4.4 by xtable 1.8-4 package
-% Tue Mar 17 20:27:01 2020
+% Tue Mar 17 23:22:43 2020
 \begin{table}[ht]
 \centering
 \begin{tabular}{rr}

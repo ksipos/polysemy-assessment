@@ -331,7 +331,8 @@ dev.off()
 
 # re-order/re-name to optimize the heatmap (our method, random, and frequency first)
 method_names = c(c(best_name_renamed,'random','frequency'),method_names_optim)
-method_names_pretty = gsub('_',' ',method_names)
+method_names_pretty = gsub('wordnet_','wn',method_names)
+method_names_pretty = gsub('wn','WN',method_names_pretty)
 
 pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)
     

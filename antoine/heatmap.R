@@ -71,7 +71,9 @@ score_ranking = function(evaluated,gt,metric){
     
     gt = gt[overlapping_words] # align the two rankings based on words
     evaluated = evaluated[overlapping_words]
-    to_return = cor(as.numeric(evaluated),as.numeric(gt),method=metric)
+    cor_value = cor(as.numeric(evaluated),as.numeric(gt),method=metric)
+    p_value = cor.test(as.numeric(evaluated),as.numeric(gt),method=metric)$p.value
+    to_return = list(cor_value,p_value)
     
   } else if (metric == 'p@k'){
     
@@ -218,7 +220,11 @@ for (combo in combos){
   scores = list()
   for (gt_name in method_names){ # kept all names as a sanity check (to verify we get ones on the diagonal) 
     gt = rankings[[gt_name]]
-    scores[[gt_name]] = score_ranking(evaluated,gt,metric)
+    if (metric %in% c('kendall','spearman')){
+      scores[[gt_name]] = score_ranking(evaluated,gt,metric)[[1]]
+    } else {
+      scores[[gt_name]] = score_ranking(evaluated,gt,metric)
+    }
   }
   
   mean_scores[[combo]] = mean(unlist(scores))
@@ -308,21 +314,21 @@ rankings = lapply(rankings,function(x) {
 rankings = lapply(rankings,function(x) sort(normalize_range(unlist(x),new_range),decreasing=TRUE))
 names(rankings) = method_names
 
-# plot average distribution of GT rankings (including 'frequency')
-all_points_gt = c(rankings[['frequency']],rankings[['ontonotes']],rankings[['oxford']],rankings[['wikipedia']],rankings[['wndomains']],rankings[['wordnet_original']],rankings[['wordnet_restricted']])
-
-
-pdf(paste0(path_to_plots,'random_distribution_vs_all.pdf'),paper='a4r',width=5,height=5)
-
-hist(all_points_gt,probability=TRUE,xlab='normalized scores',ylab='probability',
-     main=NULL,col='skyblue',border=FALSE, ylim=c(0,0.07))
-
 n_runs = 30
 rankings[['random']] = lapply(1:n_runs,function(x){
   to_return = rlnorm(length(rankings[['frequency']]),meanlog=0,sdlog=0.6) # sample from lognormal distribution
   names(to_return) = sample(names(rankings[['frequency']]),length(rankings[['frequency']]),replace=FALSE)
   sort(normalize_range(to_return,new_range),decreasing=TRUE)
 })
+
+
+pdf(paste0(path_to_plots,'random_distribution_vs_all.pdf'),paper='a4r',width=5,height=5)
+
+# plot average distribution of GT rankings (including 'frequency')
+all_points_gt = c(rankings[['frequency']],rankings[['ontonotes']],rankings[['oxford']],rankings[['wikipedia']],rankings[['wndomains']],rankings[['wordnet_original']],rankings[['wordnet_restricted']])
+
+hist(all_points_gt,probability=TRUE,xlab='normalized scores',ylab='probability',
+     main=NULL,col='skyblue',border=FALSE, ylim=c(0,0.07))
 
 avg_random = unlist(rankings[['random']])
 avg_random_density = density(avg_random)
@@ -331,7 +337,8 @@ lines(avg_random_density$x,avg_random_density$y, lwd=2, col='blue')
 
 dev.off()
 
-# re-order/re-name to optimize the heatmap (our method, random, and frequency first)
+
+# re-order/re-name to optimize heatmap (our method, random, and frequency first)
 method_names = c(c(best_name_renamed,'random','frequency'),method_names_optim)
 method_names_pretty = gsub('wikipedia','wiki',method_names)
 method_names_pretty = gsub('random','rand',method_names_pretty)
@@ -343,6 +350,7 @@ method_names_pretty = gsub('wn','WN',method_names_pretty)
 method_names_pretty = gsub('original','',method_names_pretty)
 method_names_pretty = gsub('domains','dom',method_names_pretty)
 method_names_pretty = gsub('restricted','red',method_names_pretty)
+
 
 pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=7)
     
@@ -362,9 +370,11 @@ pdf(paste0(path_to_plots,'score_distributions.pdf'),paper='a4r',width=10,height=
     
 dev.off()
 
-# we plot the heatmap of average performance (across all methods) for each combination of D and L parameters
+
+# generate heatmap of pairwise similarities between rankings (ours best + baselines + GTs)
 
 scores = matrix(nrow=length(method_names),ncol=length(method_names))
+stat_sig = matrix(nrow=length(method_names),ncol=length(method_names))
 i = 1 # col index (evaluated methods)
 j = 1 # row index (GTs)
 
@@ -375,19 +385,62 @@ for (name in method_names){ # column name
   for (gt_name in method_names){ # kept all names as a sanity check (to verify we get ones on the diagonal) 
     gt = rankings[[gt_name]]
     
-    if (name == 'random' & gt_name != 'random'){
-      all_scores = unlist(lapply(evaluated,function(x) score_ranking(x,gt,metric)))
-      scores[j,i] = mean(all_scores)
-    } else if (name != 'random' & gt_name == 'random'){
-      all_scores = unlist(lapply(gt,function(x) score_ranking(evaluated,x,metric)))
-      scores[j,i] = mean(all_scores)
-    } else if (name == 'random' & gt_name == 'random'){
-      all_scores = unlist(lapply(evaluated,function(x){
-        mean(unlist(lapply(gt,function(y) score_ranking(x,y,metric))))
-      }))
-      scores[j,i] = mean(all_scores)
-    } else {
-      scores[j,i] = score_ranking(evaluated,gt,metric)
+    if (metric %in% c('kendall','spearman')){
+      
+      # random is a list!
+      if (name == 'random' & gt_name != 'random'){
+
+        all_scores = unlist(lapply(evaluated,function(x) score_ranking(x,gt,metric)[[1]]))
+        scores[j,i] = mean(all_scores)
+        
+        all_p_values = unlist(lapply(evaluated,function(x) score_ranking(x,gt,metric)[[2]]))
+        stat_sig[j,i] = mean(all_p_values)
+
+      } else if (name != 'random' & gt_name == 'random'){
+        
+        all_scores = unlist(lapply(gt,function(x) score_ranking(evaluated,x,metric)[[1]]))
+        scores[j,i] = mean(all_scores)
+        
+        all_p_values = unlist(lapply(gt,function(x) score_ranking(evaluated,x,metric)[[2]]))
+        stat_sig[j,i] = mean(all_p_values)
+        
+      } else if (name == 'random' & gt_name == 'random'){
+        
+        all_scores = unlist(lapply(evaluated,function(x){
+          mean(unlist(lapply(gt,function(y) score_ranking(x,y,metric)[[1]])))
+        }))
+        scores[j,i] = mean(all_scores)
+        
+        all_p_values = unlist(lapply(evaluated,function(x){
+          mean(unlist(lapply(gt,function(y) score_ranking(x,y,metric)[[2]])))
+        }))
+        stat_sig[j,i] = mean(all_p_values)
+        
+      } else {
+        
+        sr = score_ranking(evaluated,gt,metric)
+        scores[j,i] = sr[[1]]
+        stat_sig[j,i] = sr[[2]]
+        
+      }
+        
+    } else { # in that case we don't compute p-values
+      
+      if (name == 'random' & gt_name != 'random'){
+        all_scores = unlist(lapply(evaluated,function(x) score_ranking(x,gt,metric)))
+        scores[j,i] = mean(all_scores)
+      } else if (name != 'random' & gt_name == 'random'){
+        all_scores = unlist(lapply(gt,function(x) score_ranking(evaluated,x,metric)))
+        scores[j,i] = mean(all_scores)
+      } else if (name == 'random' & gt_name == 'random'){
+        all_scores = unlist(lapply(evaluated,function(x){
+          mean(unlist(lapply(gt,function(y) score_ranking(x,y,metric))))
+        }))
+        scores[j,i] = mean(all_scores)
+      } else {
+        scores[j,i] = score_ranking(evaluated,gt,metric)
+      }
+      
     }
     
     j = j + 1
@@ -411,6 +464,24 @@ if (metric != 'ndcg'){ # symmetric metric, show only one triangle
   scores_show = scores
 }
 
+
+if (metric %in% c('kendall','spearman')){
+  for (i in 1:nrow(scores_show)){
+    for (j in 1:ncol(scores_show)){
+      if (nchar(scores_show[i,j])>0){
+        if (stat_sig[i,j]<=0.0001){
+          scores_show[i,j] = paste0(scores_show[i,j],'***')
+        } else if (stat_sig[i,j]<=0.001){
+          scores_show[i,j] = paste0(scores_show[i,j],'**')
+        } else if (stat_sig[i,j]<=0.01){
+          scores_show[i,j] = paste0(scores_show[i,j],'*')
+        }
+      }
+    }
+  }
+}
+
+  
 pdf(paste0(path_to_plots,'heatmap_',metric,'.pdf'),paper='a4r',width=15,height=7.5)
     
     pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=20,display_numbers=scores_show,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric,na_col='#FFFFFF') # evaluated methods as columns

@@ -6,6 +6,9 @@ cor(c(1,2,10,100,1000),c(1,2,3,4,5),method='spearman')
 cor(c(1,2,10,100,1000),c(2,1,3,4,5),method='spearman')
 cor(c(1,2,10,100,1000),c(2,1,3,4,5),method='kendall')
 
+cor.test(c(1,2,10,100,1000),c(2,1,3,4,5),method='spearman')$p.value
+cor.test(c(1,2,10,100,1000),c(2,1,3,4,5),method='kendall')$p.value
+
 # spearman equals pearson on the ranks
 cor(c(1,2,10,100,1000),c(2,1,3,4,5),method='spearman')
 cor(order(c(1,2,10,100,1000)),order(c(2,1,3,4,5)),method='pearson')

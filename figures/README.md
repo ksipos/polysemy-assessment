@@ -1,1 +1,0 @@
-# polysemous_words

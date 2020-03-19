@@ -1,40 +1,52 @@
 import sys
 import string
 import re
-
-name = sys.argv[1]
-
-print(name)
-with open("llines/" + name + ".txt", "r") as f:
-    indexes = [int(line.replace("\n", "")) for line in f]
-print(len(indexes))
-output = open("wordsentencesAugust/" + name + ".txt", 'w')
-with open('sentences_full.txt', 'r') as f:
-    lines = [l.replace("\n", "") for l in f]
-
-max_length = 0
+import os
 import numpy as np
+from nltk.tokenize import sent_tokenize
 
-for index in np.random.choice(indexes, min(len(indexes), 10000), replace=False):
-    line = lines[index-1]
-    l = re.sub(r'[^\x00-\x7F]+',' ', line.replace("\n", "").lower().translate(str.maketrans(' ', ' ', string.punctuation)))
-    words = len(l.split())
-    if words > 80:
-        locations = [m.start(0) + 1 for m in re.finditer(r'[a-z]\.[A-Z]', l)]
-        ls = []
-        prev_loc = 0
-        for loc in locations:
-            ls.append(l[prev_loc:loc])
-            prev_loc = loc
-        ls.append(l[prev_loc:])
-        for l in ls:
-            words = len(l.split())
-            if words > max_length:
-                max_lengths = words
-            output.write(l + "\n")
-    else:
-        output.write(l + "\n")
-        if words > max_length:
-            max_length = words
-output.close()
+corpus = sys.argv[1]
+lines_files_dir = sys.argv[2]
+output_directory = sys.argv[3]
+threshold = int(sys.argv[4])
 
+# Load the corpus in memory
+with open(corpus, 'r') as f:
+    corpus_lines = [l.replace("\n", "") for l in f]
+
+line_files = sorted(os.listdir(lines_files_dir))
+exclude_finished = [n.split(".")[0] for n in os.listdir(output_directory)]
+for name in file_names:
+    if name in exclude_finished:
+        continue
+    print(name)
+    # Read the corresponding file that contains the indexes of the lines where
+    # the word appears into
+    with open(lines_files_dir + "/" + name, "r") as f:
+        indexes = [int(line.replace("\n", "")) for line in f]
+
+    stored_sentences = []
+    for index in indexes:
+        line = corpus_lines[index - 1]
+        # Use a regular expression to split the line into sentences
+        sentences = re.split(r'(?<=[^A-Z].[.?]) +(?=[A-Z])', line)
+        tmp_sentences = []
+        for s in sentences:
+            tmp_sentences += s.split("\n")
+        sentences = tmp_sentences
+        # Find the sentence that the word appears into and discard the sentences with more than 80 characters
+        for s in sentences:
+            s = re.sub(r'[^\x00-\x7F]+', ' ', s.replace("\n",
+                                                        "").lower().translate(str.maketrans(' ', ' ', string.punctuation)))
+            if len(s.split()) > 80:
+                continue
+            if name in s.split(): # Split the sentence to check the word is one of the tokens
+                stored_sentences.append(s)
+    if len(stored_sentences) < threshold:
+        continue
+    output = open(output_directory + "/" + name + ".txt", 'w')
+    # Shuffle the sentences and store them
+    for sentence in np.random.choice(stored_sentences, min(len(stored_sentences), threshold), replace=False):
+        output.write(sentence + "\n")
+    output.close()
+~

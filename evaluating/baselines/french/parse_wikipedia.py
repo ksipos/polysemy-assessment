@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 import requests
 import time
 
-#filenames = ['frwiki_homonymie2/'+ f for f in listdir('frwiki_homonymie2')]
-filenames = ["merged/" + f for f in listdir('merged')]
+#filenames = ['frwiki_homonymie/'+ f for f in listdir('frwiki_homonymie')]
+filenames = ["frwiki_merged/" + f for f in listdir('frwiki_merged')]
 output = open('frwiki_list_merged.txt', 'w')
+#output = open("frwiki_homonymie.txt", 'w') 
 
 total = len(filenames)
 for name in filenames:
@@ -16,8 +17,10 @@ for name in filenames:
 #        if "page d’homonymie" not in html.lower():
 #            continue
         soup = BeautifulSoup(html, 'lxml')
-        if len([href for href in soup.find_all('a', href=True) if href['href']=="/wiki/Aide:Homonymie"]) < 1:
+        if not soup.find(id="homonymie"):
             continue
+#        if len([href for href in soup.find_all('a', href=True) if href['href']=="/wiki/Aide:Homonymie"]) < 1:
+#            continue
         total_senses = 0
         try:
             content = soup.find(id="mw-content-text")

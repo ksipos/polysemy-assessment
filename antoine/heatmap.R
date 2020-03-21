@@ -249,7 +249,7 @@ for (i in 1:length(my_levels)){
   }
 }
 
-pdf(paste0(path_to_plots,'heatmap_parameters_',metric,'.pdf'),paper='a4r',width=7.5,height=7.5)
+pdf(paste0(path_to_plots,'heatmap_parameters_',gsub('@','_at_',metric),'.pdf'),paper='a4r',width=7.5,height=7.5)
 
 x = my_levels
 y = pca_dims
@@ -278,7 +278,7 @@ print(xtable(to_print))
 
 best_name_renamed = rownames(to_print)[1]
 
-pdf(paste0(path_to_plots,'boxplot_',metric,'.pdf'),width=4,height=6.5,paper='a4')
+pdf(paste0(path_to_plots,'boxplot_',gsub('@','_at_',metric),'.pdf'),width=4,height=6.5,paper='a4')
     
     par(mgp=c(1.5,0.5,0)) # title, tick labels, ticks
     par(mar=c(8,4,8,4)) # bottom, left, top, right
@@ -482,7 +482,7 @@ if (metric %in% c('kendall','spearman')){
 }
 
   
-pdf(paste0(path_to_plots,'heatmap_',metric,'.pdf'),paper='a4r',width=15,height=7.5)
+pdf(paste0(path_to_plots,'heatmap_',gsub('@','_at_',metric),'.pdf'),paper='a4r',width=15,height=7.5)
     
     pheatmap(scores,cluster_rows=FALSE,cluster_cols=FALSE,scale='none',fontsize=20,display_numbers=scores_show,col=colorRampPalette(brewer.pal(n=7,name='Blues'))(100)[1:55],angle_col=45,main=metric,na_col='#FFFFFF') # evaluated methods as columns
     

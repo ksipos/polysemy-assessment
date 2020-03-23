@@ -1,4 +1,4 @@
-# Unsupervised Polysemy Assessment
+# Unsupervised Polysemy Assessment (DRAFT)
 
 The number of senses of a given word, or polysemy, is a very subjective notion, which varies widely across annotators and resources. We propose a novel method to estimate polysemy, based on simple geometry in the contextual embedding space. Our approach is fully unsupervised and purely data-driven.
 

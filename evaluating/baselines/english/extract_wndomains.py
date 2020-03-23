@@ -17,12 +17,12 @@ with open("wndomains_senses.txt", 'w') as f:
     for k, v in synsets.items():
         f.write('"' + k + '" "' + " ".join(v) + '"\n')
 
-with open("pyramid_output2/pca4_L1", 'r') as f:
-    words = [line.replace("\n", "").split(",")[0] for line in f]
+with open("en_wordlist.txt", 'r') as f:
+    wordlist = [line.replace("\n", "") for line in f]
 
 
 detected = {}
-for word in words:
+for word in wordlist:
     word_synsets = wn.synsets(word)
     for synset in word_synsets:
         synset = synset.name()
@@ -31,5 +31,5 @@ for word in words:
 
 
 with open('wndomains_ranking.txt', 'w') as f:
-    for word in words:
+    for word in wordlist:
         f.write(word + "," + str(len(detected.get(word, []))) + "\n")

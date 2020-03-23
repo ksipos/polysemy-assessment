@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 
 path = 'ontonotes/ontonotes-release-5.0/data/files/data/english/metadata/sense-inventories'
 
-
 filenames = os.listdir(path)
 senses = {}
 for name in filenames:
@@ -29,8 +28,8 @@ with open("ontonotes_senses.txt", "w") as f:
         k, v = pair
         f.write(k + "," + str(v) + "\n")
 
-with open("pyramid_output2/pca4_L1", 'r') as f:
-    words = [line.replace("\n", "").split(",")[0] for line in f]
+with open("en_wordlist.txt", 'r') as f:
+    wordlist = [line.replace("\n", "") for line in f]
 
 intersection = {}
 count = 0

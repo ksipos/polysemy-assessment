@@ -10,7 +10,7 @@ The number of senses of a given word, or polysemy, is a very subjective notion, 
 @article{xypolopoulos2020polysemy,
   title={Unsupervised Word Polysemy Quantification with Multiresolution Grids of Contextual Embeddings},
   author={Xypolopoulos, Christos and Tixier, Antoine J-P and Vazirgiannis, Michalis},
-  journal={arXiv preprint arXiv:****},
+  journal={arXiv preprint arXiv:2003.10224},
   year={2020}
 }
 

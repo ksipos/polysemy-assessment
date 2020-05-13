@@ -45,9 +45,7 @@ If you use some of the code in this repository, or simply if you want to refer t
 }
 ```
 
-```
-Xypolopoulos, Christos, Antoine J-P. Tixier, and Michalis Vazirgiannis. "Unsupervised Word Polysemy Quantification with Multiresolution Grids of Contextual Embeddings." arXiv preprint arXiv:2003.10224 (2020).
-```
+> Xypolopoulos, Christos, Antoine J-P. Tixier, and Michalis Vazirgiannis. "Unsupervised Word Polysemy Quantification with Multiresolution Grids of Contextual Embeddings." arXiv preprint arXiv:2003.10224 (2020).
 
 ### Acknowledgements :thumbsup: 
 
